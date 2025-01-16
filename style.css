@@ -65,3 +65,13 @@ h1{
     margin-top: 50px;
     
 }
+.projetos h1{
+    text-align: center;
+    margin-top: 50px;
+}
+.projetos-lista{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
