@@ -75,3 +75,106 @@ h1{
     flex-wrap: wrap;
     margin-top: 50px;
 }
+
+/* Formulário */
+.formulario {
+    background-color: #002bc9;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 20.84px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.formulario h4 {
+    font-size: 1.6em;
+    margin-bottom: 1em;
+    color: white;
+    text-transform: uppercase;
+}
+
+.contato-class{
+    align-items: center;
+}
+.contato-text {
+    font-size: 1.0em;
+    margin-bottom: 1em;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+
+label {
+    display: block;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 0.1em;
+}
+
+/*texto formulario */
+input,
+textarea {
+    font: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    padding: 0.6em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    resize: none;
+}
+textarea:focus{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+textarea:focus{
+    height: auto;
+    min-height: 150px;
+}
+
+input:hover,
+textarea:hover{
+    transform: matrix3d(1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1);
+}
+input::placeholder,
+textarea::placeholder {
+    color: #000000;
+    font-style: italic;
+}
+/*botao formulario*/
+.button {
+    text-align: center;
+    padding-top: 25px;
+}
+
+button {
+    border-radius: 18px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    height: 55px;
+    width: 250px;
+    font-size: large;
+    padding: 0.5em 1.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(18, 216, 0);
+    transform: matrix3d(1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1);
+   color: #ffffff;
+    text-decoration: wavy;
+
+}
+button:active {
+    background-color: rgb(54, 27, 163);
+    transform: translateY(0);
+}
