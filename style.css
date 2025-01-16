@@ -8,3 +8,41 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff; 
+    padding: 3px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding-right: 60px;
+}
+
+.itens {
+    display: inline-flex;
+    list-style: none;
+    justify-content: center;
+}
+.itens a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 400;
+    position: relative;
+    justify-content: center;
+
+}
+.itens a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.2s ease;
+}
+.itens a:hover::after {
+    width: 100%;
+}
