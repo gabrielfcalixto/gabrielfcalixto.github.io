@@ -5,19 +5,26 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
 }
-h1{
+
+h1 {
     font-size: 50px;
 }
+
 .navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #fff; 
+    background-color: #fff;
     padding: 3px;
     font-size: 1.2em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding-right: 60px;
 }
 
@@ -26,6 +33,7 @@ h1{
     list-style: none;
     justify-content: center;
 }
+
 .itens a {
     margin: 0 25px;
     text-decoration: none;
@@ -36,6 +44,7 @@ h1{
     justify-content: center;
 
 }
+
 .itens a::after {
     content: '';
     position: absolute;
@@ -46,34 +55,56 @@ h1{
     bottom: -5px;
     transition: width 0.2s ease;
 }
+
 .itens a:hover::after {
     width: 100%;
 }
-.linguagens{
-    text-align: center  ;
+
+.linguagens {
+    text-align: center;
 }
-.linguagens-ferramentas{
+
+.linguagens-ferramentas {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
-.sobre{
-    
-}
-.sobre h1{
+
+.sobre {}
+
+.sobre h1 {
     text-align: left;
     margin-top: 50px;
-    
+
 }
-.projetos h1{
+
+.projetos {
     text-align: center;
-    margin-top: 50px;
+    margin: 50px auto;
 }
-.projetos-lista{
-    justify-content: center;
+
+.carousel {
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-track {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.projeto {
+    width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 /* Formulário */
@@ -86,6 +117,7 @@ h1{
     border-radius: 20.84px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .formulario h4 {
     font-size: 1.6em;
     margin-bottom: 1em;
@@ -93,9 +125,10 @@ h1{
     text-transform: uppercase;
 }
 
-.contato-class{
+.contato-class {
     align-items: center;
 }
+
 .contato-text {
     font-size: 1.0em;
     margin-bottom: 1em;
@@ -127,24 +160,28 @@ textarea {
     overflow: hidden;
     resize: none;
 }
-textarea:focus{
+
+textarea:focus {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-textarea:focus{
+
+textarea:focus {
     height: auto;
     min-height: 150px;
 }
 
 input:hover,
-textarea:hover{
+textarea:hover {
     transform: matrix3d(1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1);
 }
+
 input::placeholder,
 textarea::placeholder {
     color: #000000;
     font-style: italic;
 }
+
 /*botao formulario*/
 .button {
     text-align: center;
@@ -170,10 +207,11 @@ button {
 button:hover {
     background-color: rgb(18, 216, 0);
     transform: matrix3d(1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1);
-   color: #ffffff;
+    color: #ffffff;
     text-decoration: wavy;
 
 }
+
 button:active {
     background-color: rgb(54, 27, 163);
     transform: translateY(0);
