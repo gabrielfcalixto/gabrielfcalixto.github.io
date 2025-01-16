@@ -49,5 +49,12 @@ h1{
 .itens a:hover::after {
     width: 100%;
 }
-
+.linguagens{
+    text-align: center  ;
+}
+.linguagens-ferramentas{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 
