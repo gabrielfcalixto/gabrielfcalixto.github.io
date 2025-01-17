@@ -70,13 +70,32 @@ h1 {
     margin-bottom: 50px;
 }
 
-.sobre {}
-
-.sobre h1 {
-    text-align: left;
-    margin-top: 50px;
-
+.sobre {
+    text-align: center;
+    margin: 50px auto;
+    background-color: beige;
+    align-items: flex-start;
 }
+.sobre-content{
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    padding: 60px;
+    background-color: rgb(245, 158, 58);
+    width: 100%;
+    white-space: nowrap;
+}
+.sobre-img img{
+    width: 70%;
+    border-radius: 10%;
+    object-fit: cover;
+}
+.sobre-text{
+    width: 70%;
+    padding: 20px;
+    text-align: left;
+}
+
 
 .projetos {
     text-align: center;
