@@ -64,7 +64,7 @@ h1 {
 
 .linguagens {
     text-align: center;
-    background-color:coral;
+    background-color: coral;
 }
 
 .linguagens-ferramentas {
@@ -73,12 +73,15 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}.linguagem{
+}
+
+.linguagem {
     text-align: center;
     font-size: 1.5rem;
     flex: 0 1 120px;
 }
-.linguagem i{
+
+.linguagem i {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -89,25 +92,29 @@ h1 {
     background-color: beige;
     align-items: flex-start;
 }
-.sobre-content{
+
+.sobre-content {
     display: flex;
     align-items: center;
     padding: 60px;
     background-color: rgb(245, 158, 58);
 }
-.sobre-img img{
+
+.sobre-img img {
     width: 70%;
     border-radius: 5%;
-        
+
 }
-.sobre-text{
+
+.sobre-text {
     width: 70%;
     padding: 20px;
     text-align: left;
 }
+
 .projetos {
     text-align: center;
-    background-color:burlywood;
+    background-color: burlywood;
 }
 
 .carousel {
@@ -243,4 +250,31 @@ button:hover {
 button:active {
     background-color: rgb(54, 27, 163);
     transform: translateY(0);
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-button a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button a:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
 }
