@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: cornflowerblue;
 }
 
 h1,
@@ -21,8 +22,9 @@ h1 {
 .navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #fff;
+    background-color: #ff8181;
     padding: 3px;
+
     font-size: 1.2em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding-right: 60px;
@@ -62,44 +64,50 @@ h1 {
 
 .linguagens {
     text-align: center;
+    background-color:coral;
 }
 
 .linguagens-ferramentas {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}.linguagem{
+    text-align: center;
+    font-size: 1.5rem;
+    flex: 0 1 120px;
 }
+.linguagem i{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 
 .sobre {
     text-align: center;
-    margin: 50px auto;
     background-color: beige;
     align-items: flex-start;
 }
 .sobre-content{
     display: flex;
     align-items: center;
-    margin: 40px auto;
     padding: 60px;
     background-color: rgb(245, 158, 58);
-    width: 100%;
-    white-space: nowrap;
 }
 .sobre-img img{
     width: 70%;
-    border-radius: 10%;
-    object-fit: cover;
+    border-radius: 5%;
+        
 }
 .sobre-text{
     width: 70%;
     padding: 20px;
     text-align: left;
 }
-
-
 .projetos {
     text-align: center;
-    margin: 50px auto;
+    background-color:burlywood;
 }
 
 .carousel {
@@ -146,6 +154,7 @@ h1 {
 
 .contato-class {
     align-items: center;
+    background-color: antiquewhite;
 }
 
 .contato-text {
