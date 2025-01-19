@@ -29,7 +29,6 @@ function nextSlide() {
     const nextIndex = (currentIndex + 1) % slides.length;
     moveToSlide(nextIndex);
 }
-
 // Função para ir para o slide anterior
 function prevSlide() {
     const currentIndex = slides.findIndex(slide => slide === track.querySelector('.active'));
@@ -50,7 +49,22 @@ indicators.forEach((indicator, index) => {
 
 // Configuração de navegação automática
 let currentIndex = 0;
-setInterval(() => {
+let autoSlide = setInterval(() => {
     moveToSlide(currentIndex);
     currentIndex = (currentIndex + 1) % slides.length;
 }, 3000); // Muda a cada 3 segundos
+
+//pausar animação ao passar o mouse
+track.addEventListener('mouseover', () => {
+    track.style.animationPlayState = 'paused';
+    clearInterval(autoSlide);
+});
+
+//retornar animação
+track.addEventListener('mouseout', () => {
+    track.style.animationPlayState = 'running';
+    autoSlide = setInterval(() => {
+        moveToSlide(currentIndex);
+        currentIndex = (currentIndex + 1) % slides.length;
+    }, 3000);
+});
