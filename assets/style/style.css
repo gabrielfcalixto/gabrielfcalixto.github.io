@@ -1,11 +1,25 @@
+:root {
+    --primary-bg: #7a82b4;
+    --secondary-bg: #d5e5e7;
+    --description: #240b0b;
+
+    --fundo--:#121212;
+    --fundo--claro:#1D1D1D    ;
+    --letras--:#fff;
+    --cor-roxo-1--:#4F46E5;
+    --cor-roxo-2--:#23036A;
+    --cor-roxo-3--:#30009C;
+    --cor-rosa--:#FF4181;
+    --cor-verde-agua--:#86FFF4;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: cornflowerblue;
+    background-color: var(--fundo--);
 }
-
 h1,
 h2,
 h3,
@@ -18,22 +32,20 @@ h6 {
 h1 {
     font-size: 43px;
 }
-
 .navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #f5f5f5 ;
-    padding: 13px;
-    font-size: 1.5em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding-right: 60px;
+    background-color: var(--fundo--);
+    padding: 7px;
+    font-size: 1.1em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     z-index: 1000;
-
-
+    border-radius: 30px;
+   
 }
 
 .itens {
@@ -41,12 +53,13 @@ h1 {
     list-style: none;
     justify-content: center;
     gap: 15px;
+    padding-right: 60px;
 }
 
 .itens a {
     margin: 0 25px;
     text-decoration: none;
-    color: #000;
+    color: var(--letras--);
     font-size: 1.2em;
     font-weight: 400;
     position: relative;
@@ -55,7 +68,7 @@ h1 {
 }
 .itens a.active::after {
     width: 100%;
-    background-color: #ff4500; /* Cor de destaque para a seção ativa */
+    background-color: var(--cor-roxo-1--); /* Cor de destaque para a seção ativa */
 }
 
 
@@ -64,7 +77,7 @@ h1 {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #007BFF;
+    background-color: var(--cor-roxo-1--);
     left: 0;
     bottom: -5px;
     transition: width 0.2s ease;
@@ -111,7 +124,8 @@ h1 {
 
 .linguagens {
     text-align: center;
-    background-color: #fff;
+    background-color: var(--fundo--);
+    color: var(--letras--);
 
 }
 .linguagens h1 {
@@ -122,7 +136,7 @@ h1 {
 .linguagens-ferramentas {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 25px;
     padding: 70px;
@@ -138,24 +152,22 @@ h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
 }
-
-
 .sobre {
     text-align: center;
-    background-color: beige;
-    align-items: flex-start;
+    background-color: var(--fundo--);
+    color: var(--letras--);
 }
-
 .sobre-content {
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    background-color: #EEE5E9;
+    
+    padding: 80px;
+    background-color: var(--fundo--);
+    display: inline;
 }
 
 .sobre-img img {
-    width: 70%;
+    width: 30%;
     border-radius: 5%;
+
 
 }
 
@@ -169,8 +181,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: var(--fundo--);
     position: relative;
+    color: var(--letras--);
     
 }
 
@@ -190,6 +203,10 @@ h1 {
     position: relative;
     width: 512px;
 }
+input{
+    display: none;
+}
+
 
 #item-1:checked ~ .cards #img-5,
 #item-2:checked ~ .cards #img-1,
@@ -293,13 +310,14 @@ h1 {
 
 .contato-class {
     align-items: center;
-    background-color: antiquewhite;
+    background-color: var(--fundo--claro);
+    color: var(--letras--);
 }
 
 .contato-text {
     font-size: 1.0em;
     margin-bottom: 1em;
-    color: #000000;
+    color: var(--letras--);
     text-transform: uppercase;
 }
 
@@ -413,17 +431,19 @@ button:active {
 }
 
 footer {
-    background-color: #f5f5f5; /* Cor de fundo do rodapé */
+    background-color: var(--fundo--); /* Cor de fundo do rodapé */
     padding: 20px;
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--letras--);
 }
 /* Ícones e links sociais */
 .footer-content {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 15px; /* Espaço entre os ícones e o texto de copyright */
+    margin-bottom: 15px; 
+    color: var(--letras--);
 }
 
 .footer-content p {
@@ -433,7 +453,7 @@ footer {
 
 .footer-content a {
     text-decoration: none;
-    color: #333;
+    color:var(--letras--);
     transition: color 0.3s ease;
 }
 
@@ -478,7 +498,7 @@ footer {
 }
 
 .social-icon i.fa-github {
-    color: #171515;
+    color: #ffffff;
 }
 
 .social-icon i.fa-instagram {
