@@ -92,3 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach((section) => observer.observe(section));
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".itens");
+
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+});
