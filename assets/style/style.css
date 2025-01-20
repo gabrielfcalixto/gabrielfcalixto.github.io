@@ -127,23 +127,27 @@ h1 {
 }
 /* Estilos para dispositivos móveis */
 .sobre h1 {
-    color: var(--cor-roxo-1--);
-    animation: colorChange 1s linear infinite alternate;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #ff5733, #33c1ff, #a1ff33);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    animation: fadeBackground 5s infinite alternate;
 }
 
-/* Definindo a animação */
-@keyframes colorChange {
+@keyframes fadeBackground {
     0% {
-        color: var(--cor-roxo-1--); /* Cor inicial */
-        transform: translateY(0);  /* Posição inicial */
+        background-position: 0% 50%;
+        opacity: 0.3;
     }
     50% {
-        color: #ff5733; /* Cor intermediária */
-        transform: translateY(-10px); /* Movimento para cima */
+        background-position: 50% 50%;
+        opacity: 0.8;
     }
     100% {
-        color: #33c1ff; /* Cor final */
-        transform: translateY(0); /* Retorno à posição inicial */
+        background-position: 100% 50%;
+        opacity: 0.3;
     }
 }
 
