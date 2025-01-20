@@ -126,12 +126,33 @@ h1 {
     color: #333;
 }
 /* Estilos para dispositivos móveis */
+.sobre h1 {
+    color: var(--cor-roxo-1--);
+    animation: colorChange 1s linear infinite alternate;
+}
+
+/* Definindo a animação */
+@keyframes colorChange {
+    0% {
+        color: var(--cor-roxo-1--); /* Cor inicial */
+        transform: translateY(0);  /* Posição inicial */
+    }
+    50% {
+        color: #ff5733; /* Cor intermediária */
+        transform: translateY(-10px); /* Movimento para cima */
+    }
+    100% {
+        color: #33c1ff; /* Cor final */
+        transform: translateY(0); /* Retorno à posição inicial */
+    }
+}
+
 .sobre-content {
     display: flex;
     align-items: center; /* Alinha verticalmente */
     justify-content: space-between; /* Espaça os itens horizontalmente */
-    gap: 5px; /* Espaço entre texto e imagem */
-    padding: 20px;
+    gap: 0px; /* Espaço entre texto e imagem */
+    padding: 190px;
 }
 
 .sobre-text {
@@ -139,7 +160,7 @@ h1 {
 }
 
 .sobre-img-div {
-    flex: 0 0 250px; /* Define a largura fixa para a imagem */
+    flex: 0 0 400; /* Define a largura fixa para a imagem */
     max-width: 250px; /* Limita o tamanho máximo */
 }
 
@@ -149,9 +170,10 @@ h1 {
 }
 
 .sobre {
-    background-color: #f4f4f4; /* Cor de fundo para destacar */
+    background-color: var(--fundo--); /* Cor de fundo para destacar */
     padding: 40px 20px;
     border-radius: 10px;
+    color: var(--letras--);
 }
 
 
