@@ -44,9 +44,12 @@ h1 {
     top: 0;
     left: 50%; /* Centraliza a posição horizontalmente */
     transform: translateX(-50%); /* Ajusta a posição para ficar centralizado */
-    width: 30%;
+    width: auto;
     z-index: 1000;
     border-radius: 30px;
+    top: 30px;
+    height: auto;
+    flex: none;
 }
 
 
@@ -123,31 +126,34 @@ h1 {
     color: #333;
 }
 /* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    /* Esconde os itens da barra de navegação por padrão */
-    .itens {
-        display: none;
-        flex-direction: column;
-        background-color: #f5f5f5;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Exibe o botão de menu */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Exibe os itens de navegação quando o menu estiver ativo */
-    .itens.active {
-        display: flex;
-    }
+.sobre-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça os itens horizontalmente */
+    gap: 5px; /* Espaço entre texto e imagem */
+    padding: 20px;
 }
+
+.sobre-text {
+    flex: 1; /* Ocupa o espaço restante */
+}
+
+.sobre-img-div {
+    flex: 0 0 250px; /* Define a largura fixa para a imagem */
+    max-width: 250px; /* Limita o tamanho máximo */
+}
+
+.sobre-img-div img {
+    width: 100%; /* Ajusta a imagem ao tamanho do container */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.sobre {
+    background-color: #f4f4f4; /* Cor de fundo para destacar */
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
 
 .linguagens {
     text-align: center;
@@ -179,31 +185,6 @@ h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
 }
-.sobre {
-    text-align: center;
-    background-color: var(--fundo--);
-    color: var(--letras--);
-}
-.sobre-content {
-    
-    padding: 80px;
-    background-color: var(--fundo--);
-    display: inline;
-}
-
-.sobre-img img {
-    width: 30%;
-    border-radius: 5%;
-
-
-}
-
-.sobre-text {
-    width: 70%;
-    padding: 20px;
-    text-align: left;
-}
-
 .projetos {
     display: flex;
     justify-content: center;
@@ -211,7 +192,6 @@ h1 {
     background-color: var(--fundo--);
     position: relative;
     color: var(--letras--);
-    
 }
 
 .card {

@@ -75,3 +75,28 @@
         display: none; /* Esconde os botões de navegação em telas pequenas */
     }
 }
+@media (max-width: 768px) {
+    /* Esconde os itens da barra de navegação por padrão */
+    .itens {
+        display: none;
+        flex-direction: column;
+        background-color: #f5f5f5;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Exibe o botão de menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Exibe os itens de navegação quando o menu estiver ativo */
+    .itens.active {
+        display: flex;
+    }
+}
