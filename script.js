@@ -68,3 +68,27 @@ track.addEventListener('mouseout', () => {
         currentIndex = (currentIndex + 1) % slides.length;
     }, 3000);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".itens a");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Remove a classe ativa de todos os links
+                    navLinks.forEach((link) => link.classList.remove("active"));
+
+                    // Adiciona a classe ativa ao link correspondente
+                    const activeLink = document.querySelector(
+                        `.itens a[href="#${entry.target.id}"]`
+                    );
+                    activeLink.classList.add("active");
+                }
+            });
+        },
+        { threshold: 0.7 } // Define quando a seção é considerada visível (70%)
+    );
+
+    sections.forEach((section) => observer.observe(section));
+});
