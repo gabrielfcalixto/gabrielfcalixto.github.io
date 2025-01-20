@@ -402,6 +402,13 @@ footer {
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
+/* Ícones e links sociais */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px; /* Espaço entre os ícones e o texto de copyright */
+}
 
 .footer-content p {
     margin: 5px 0;
@@ -427,4 +434,47 @@ footer {
 
 .footer-content .social-icon i:hover {
     color: #C13584; /* Cor ao passar o mouse */
+}
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    display: flex;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+.social-icon i {
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007BFF;
+}
+
+.social-icon i:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon i.fa-linkedin {
+    color: #0A66C2;
+}
+
+.social-icon i.fa-github {
+    color: #171515;
+}
+
+.social-icon i.fa-instagram {
+    color: #E4405F;
+}
+
+/* Texto de copyright */
+.footer-copyright {
+    font-size: 1.5em;
+    color: #666;
+}
+
+.footer-copyright p {
+    margin: 0;
 }
