@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfólio de Gabriel Calixto, desenvolvedor de software com experiência em Java, React, Spring e outras tecnologias.">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/style/style.css">
     <script src="script.js" defer></script>
@@ -14,6 +16,7 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div>
@@ -47,25 +50,26 @@
                         </a>
                     </li>
                 </ul>
-                
+
             </nav>
 
         </div>
-        
+
     </header>
     <article>
-        <section class="sobre" id="about"> 
+        <section class="sobre" id="about">
             <div class="sobre-content">
                 <div class="sobre-text">
                     <h1>Gabriel Calixto</h1>
                     <h2>Desenvolvedor de Software</h2>
-                    <p>Profissional em Análise e Desenvolvimento de Sistemas,<br> com experiência prática em linguagens de
-                    programação, e em projetos.</p>
+                    <p>Profissional em Análise e Desenvolvimento de Sistemas,<br> com experiência prática em linguagens
+                        de
+                        programação, e em projetos.</p>
                     <a href="https://www.linkedin.com/in/gabrielfcalixto/" target="_blank" class="social-icon-sobre">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://github.com/gabrielfcalixto/" target="_blank" class="social-icon-sobre">
-                        <i class="fab fa-github"></i> 
+                        <i class="fab fa-github"></i>
                     </a>
                     <a href="https://instagram.com" target="_blank" class="social-icon-sobre">
                         <i class="fab fa-instagram"></i>
@@ -76,7 +80,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="linguagens" id="skills">
             <h1>Linguagens e Ferramentas</h1>
             <div class="linguagens-ferramentas">
@@ -141,10 +145,26 @@
                     </div>
                 </div>
             </div>
+            <!-- Seção adicional para os números -->
+            <div class="community-stats">
+                <div class="stat">
+                    <h2>7.308.684</h2>
+                    <p>Community-made UI elements</p>
+                </div>
+                <div class="stat">
+                    <h2>100%</h2>
+                    <p>Free for personal and commercial use</p>
+                </div>
+                <div class="stat">
+                    <h2>133,937</h2>
+                    <p>Contributors to the community</p>
+                </div>
+            </div>
         </section>
-        
-        <section class="projetos" id="projets">
+
+        <section class="projetos" id="projects">
             <h1>Projetos</h1>
+            <p>Confira alguns dos projetos realizados!</p>
             <div>
                 <input type="radio" name="slider" id="item-1" checked>
                 <input type="radio" name="slider" id="item-2">
@@ -159,8 +179,10 @@
                                 <h2>1_pirateShip.</h2>
                                 <p>Imagem gerada por IA.</p>
                             </div>
-                            <p class="desc-sub">preset: céu estrelado, lanternas brilhantes, detalhes de luz, textura robusta,
-                                atmosfera misteriosa, composição equilibrada, brilho intenso nas lanternas, transições suaves.
+                            <p class="desc-sub">preset: céu estrelado, lanternas brilhantes, detalhes de luz, textura
+                                robusta,
+                                atmosfera misteriosa, composição equilibrada, brilho intenso nas lanternas, transições
+                                suaves.
                             </p>
                         </div>
                     </label>
@@ -171,8 +193,10 @@
                                 <h2>2_womanHallucinations.</h2>
                                 <p>Imagem gerada por IA.</p>
                             </div>
-                            <p class="desc-sub">preset: mulher alucinada, tons de rosa, padrões ondulantes, texturas surreais,
-                                iluminação caleidoscópica, composição dinâmica, contornos fluidos, brilho intenso, transições
+                            <p class="desc-sub">preset: mulher alucinada, tons de rosa, padrões ondulantes, texturas
+                                surreais,
+                                iluminação caleidoscópica, composição dinâmica, contornos fluidos, brilho intenso,
+                                transições
                                 oníricas.</p>
                         </div>
                     </label>
@@ -183,7 +207,8 @@
                                 <h2>3_appleGalaxies.</h2>
                                 <p>Imagem gerada por IA.</p>
                             </div>
-                            <p class="desc-sub">preset: maçã cósmica, fundo estrelado, galáxias suaves, textura marcante, brilho
+                            <p class="desc-sub">preset: maçã cósmica, fundo estrelado, galáxias suaves, textura
+                                marcante, brilho
                                 intenso.</p>
                         </div>
                     </label>
@@ -194,7 +219,8 @@
                                 <h2>4_humanoidAvatar.</h2>
                                 <p>Imagem gerada por IA.</p>
                             </div>
-                            <p class="desc-sub">preset: humanóide Avatar, linhas suaves, tons metálicos, iluminação futurista,
+                            <p class="desc-sub">preset: humanóide Avatar, linhas suaves, tons metálicos, iluminação
+                                futurista,
                                 olhar expressivo, composição equilibrada, atmosfera tecnológica.</p>
                         </div>
                     </label>
@@ -211,39 +237,67 @@
                     </label>
                 </div>
             </div>
-        
+
         </section>
-        
-        <section class="contato-content" id="contact">
-            <div class="contato-class">
-                <div class="contato-text">
+
+        <section class="contato" id="contact">
+            <div class="contato-content">
                     <h1>Vamos falar sobre seu projeto?</h1>
-                </div>
                 <div class="formulario">
-                    <form action="" method="post">
-                        <h4>Entre em contato</h4>
+                    <form id="emailForm" action="/pagina-processa-dados-do-form" method="post">
+                        <h4>Preencha somente se você organiza eventos e precisa de ajuda de um consultor!</h4>
                         <div>
-                            <label for="nome">Seu nome</label>
-                            <input type="text" id="nome" name="nome" />
+                            <label for="nome">Nome*</label>
+                            <input type="text" style="color: #4F4F4F;" id="nome" name="nome" />
                         </div>
                         <div>
-                            <label for="email">Seu E-mail</label>
+                            <label for="email">E-mail*</label>
                             <input type="email" id="email" name="email" />
                         </div>
                         <div>
-                            <label for="fone">Seu Celular</label>
+                            <label for="fone">Celular*</label>
                             <input type="tel" id="telefone" name="telefone" />
                         </div>
-                        <div class="mensagem">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                        <div>
+                            <label for="evento">Nome da Organização/Evento*</label>
+                            <input type="text" id="nomeevento" name="nomeevento" />
                         </div>
+                        <div>
+                            <label for="seletorinscricao">Quando você pretende abrir as inscrições do seu próximo evento
+                                ou curso?*</label>
+                            <select name="inscricao" id="inscricao">
+                                <option value="Selecione">Selecione</option>
+                                <option value="Não tenho essa definição">Não tenho essa definição</option>
+                                <option value="Imediatamente">Imediatamente</option>
+                                <option value="Em um mês">Em um mês</option>
+                                <option value="Entre 2 e 3 meses">Entre 2 e 3 meses</option>
+                                <option value="Daqui 4 ou 5 meses">Daqui 4 ou 5 meses</option>
+                                <option value="Mais de 5 meses">Mais de 5 meses</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="radiotext">Você organiza eventos?*</label>
+                            <label class="container">Sim, sou organizador(a) de eventos!
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Não, não sou organizador(a) de eventos!
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="soma">11 + 5 = ?*</label>
+                            <input type="text" id="soma" name="nomeevento" />
+                        </div>
+
                         <div class="button">
-                            <button type="submit">Enviar</button>
+                            <button type="submit">Confirmar inscrição</button>
                         </div>
                     </form>
-                </div>
-                </div>
+                    <p id="resultMessage"></p>
+            </div>
 
         </section>
     </article>
@@ -255,20 +309,20 @@
                 <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://github.com/gabrielfcalixto/" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i> 
+                <i class="fab fa-github"></i>
             </a>
             <a href="https://instagram.com" target="_blank" class="social-icon">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
-      
+
     </footer>
     <div class="whatsapp-button">
         <a href="https://wa.me/5543988047618?text=Desejo%20saber%20mais%20sobre%20o%20servi%C3%A7o!" target="_blank">
-          <img src="assets/images/icone_whatsapp.png" alt="WhatsApp">
+            <img src="assets/images/icone_whatsapp.png" alt="WhatsApp">
         </a>
     </div>
 
 </body>
-    
+
 </html>

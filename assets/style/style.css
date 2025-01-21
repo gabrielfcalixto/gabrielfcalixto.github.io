@@ -311,36 +311,65 @@ h1 {
     font-size: 18px;
     color: var(--letras--);
 }
+/* Estilo para a seção de estatísticas */
+.community-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
 
+.stat {
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #666;
+}
 
 .projetos {
-    display: flex;
     background-color: var(--fundo--);
-    position: relative;
     color: var(--letras--);
-    padding: 190px;
+    padding: 20px 0; /* Adiciona espaçamento interno */
+    overflow: hidden; /* Impede que elementos internos ultrapassem */
+   
 }
+
 
 .card {
-    position: absolute;
+    position: relative; /* Altere para relative se possível */
     cursor: pointer;
     transition: transform 0.4s ease;
+    display: inline-block; /* Alinha os cards no fluxo normal */
+    margin: 10px; /* Adicione margens para espaçamento entre os cards */
 }
 
+
 .card img {
-    width: 512px;
     width: 100%;
     border-radius: 15px;
 }
 
 .cards {
     position: relative;
-    width: 512px;
-}
-input{
-    display: none;
+    width: 100%;
+    max-width: 500px;
+    height: auto; /* Adicione para ajustar a altura conforme o conteúdo */
+    display: flex; /* Caso necessário para alinhar os elementos filhos */
+    justify-content: center; /* Centraliza os cards */
 }
 
+input {
+    position: absolute;
+    opacity: 0;
+}
 
 #item-1:checked ~ .cards #img-5,
 #item-2:checked ~ .cards #img-1,
@@ -356,8 +385,8 @@ input{
 #item-3:checked ~ .cards #img-1,
 #item-4:checked ~ .cards #img-2,
 #item-5:checked ~ .cards #img-3 {
-    transform: translateX(-70%) scale(0.5);
-    opacity: 0.4;
+    transform: translateX(-70%) scale(0.7);
+    opacity: 0.6;
     z-index: 0;
 }
 
@@ -366,8 +395,8 @@ input{
 #item-3:checked ~ .cards #img-5,
 #item-4:checked ~ .cards #img-1,
 #item-5:checked ~ .cards #img-2 {
-    transform: translateX(70%) scale(0.5);
-    opacity: 0.4;
+    transform: translateX(70%) scale(0.7);
+    opacity: 0.6;
     z-index: 0;
 }
 
@@ -388,18 +417,19 @@ input{
     transform: translateX(0) scale(1);
     opacity: 1;
     z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* DESCRIÇÃO ##### */
 
 .description {
     width: 100%;
-    height: 80px;
-    background-color: var(--secondary-bg);
+    min-height: 80px;
+    background-color: var(--cor-roxo-1--);
     border-radius: 15px;
-    padding: 5px 12px;
+    padding: 10px;
     display: none;
-    color: var(--description);
+    color: var(--letras--);
 }
 
 .desc-title {
@@ -408,12 +438,12 @@ input{
 }
 
 .desc-title h2 {
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: -0.8px;
 }
 
 .desc-sub {
-    font-size: 14px;
+    font-size: 10px;
 }
 
 #item-1:checked ~ .cards #img-1 .description,
@@ -426,97 +456,150 @@ input{
 
 /* Formulário */
 .formulario {
-    background-color: #002bc9;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    margin: 20px auto;
-    width: 300px;
-    border-radius: 20.84px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 2em;
+    border-radius: 2em;
+    background-color: var(--cor-roxo-1--);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 90%;
+    max-width: 400px;
+    justify-content: space-between;
 }
 
-.formulario h4 {
-    font-size: 1.6em;
+h4 {
+    font-size: 1.2em;
     margin-bottom: 1em;
-    color: white;
-    text-transform: uppercase;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
 }
 
-.contato-class {
-    align-items: center;
-    background-color: var(--fundo--claro);
-    color: var(--letras--);
-}
-
-.contato-text {
-    font-size: 1.0em;
+form div {
     margin-bottom: 1em;
-    color: var(--letras--);
-    text-transform: uppercase;
 }
-
 
 label {
     display: block;
     text-align: left;
-    color: #ffffff;
-    margin-bottom: 0.1em;
+    color: var(--letras--);
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
-/*texto formulario */
-input,
-textarea {
-    font: 1em;
+/* Estilo dos campos de texto */
+input, textarea, select {
+    font: 1em sans-serif;
     width: 100%;
     box-sizing: border-box;
     border: none;
-    background-color: #ffffff;
-    border-radius: 10px;
-    color: #000000;
-    padding: 0.6em;
+    background-color: #DBDBDB;
+    border-radius: 20px;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    padding: 0.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    overflow: hidden;
-    resize: none;
 }
 
-textarea:focus {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+input:focus, textarea:focus, select:focus {
+    border-color: #0400ff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
-textarea:focus {
-    height: auto;
-    min-height: 150px;
-}
-
-input:hover,
-textarea:hover {
-    transform: matrix3d(1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1);
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: #000000;
+input::placeholder, textarea::placeholder {
+    color: #888;
     font-style: italic;
 }
 
-/*botao formulario*/
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+option {
+    font-size: 14px;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid #ccc;
+}
+
+/* Checkbox personalizado */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font: 1em Roboto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #DBDBDB;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #DBDBDB;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: var(--cor-rosa--);
+}
+
+.checkmark:after {
+    content: "";
+    position: fixed;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Botão */
 .button {
     text-align: center;
     padding-top: 25px;
-
 }
 
 button {
-    border-radius: 18px;
+    border-radius: 27px;
     text-align: center;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: var(--letras--);
+    color: var(--fundo--claro);
     font-weight: bold;
     border: none;
     height: 55px;
-    width: 250px;
+    width: 100%; /* Responsivo */
+    max-width: 300px; /* Limita o tamanho */
     font-size: large;
     padding: 0.5em 1.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -525,17 +608,15 @@ button {
 }
 
 button:hover {
-    background-color: rgb(18, 216, 0);
-    transform: matrix3d(1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1);
-    color: #ffffff;
-    text-decoration: wavy;
-
+    background-color: rgb(69, 34, 204);
+    transform: translateY(-2px);
 }
 
 button:active {
     background-color: rgb(54, 27, 163);
     transform: translateY(0);
 }
+
 
 .whatsapp-button {
     position: fixed;
@@ -548,7 +629,7 @@ button:active {
     display: block;
     width: 60px;
     height: 60px;
-    background-color: #25D366;
+    background-color: var(--cor-roxo-1--);
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -564,19 +645,24 @@ button:active {
     padding: 0px;
 }
 
+
+
 footer {
     background-color: var(--fundo--); /* Cor de fundo do rodapé */
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     color: var(--letras--);
+    margin-top: 20px;
+
+    
 }
 /* Ícones e links sociais */
 .footer-content {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 15px; 
+    margin-bottom: 5px; 
     color: var(--letras--);
 }
 
@@ -588,7 +674,9 @@ footer {
 .footer-content a {
     text-decoration: none;
     color:var(--letras--);
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
+     display: inline-block;
+  
 }
 
 .footer-content a:hover {
@@ -600,6 +688,7 @@ footer {
     color: #E4405F; /* Cor do Instagram */
     margin-top: 10px;
     transition: color 0.3s ease;
+  
 }
 
 .footer-content .social-icon i:hover {
@@ -609,12 +698,12 @@ footer {
     text-decoration: none;
     color: #333;
     font-size: 1.5em;
-    display: flex;
-    gap: 8px;
+    display: flexbox;
+ 
     transition: color 0.3s ease;
 }
 .social-icon i {
-    font-size: 1.5em;
+    font-size: 3.5em;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
