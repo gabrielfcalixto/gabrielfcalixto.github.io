@@ -9,100 +9,17 @@
     --cor-verde-agua--:#86FFF4;
 }
 
-body {
+body, html{
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: var(--fundo--);
+    scroll-behavior: smooth; /* Suaviza a rolagem */
+    overflow: hidden; /* Evita barras de rolagem */
 }
-footer {
-    background-color: var(--fundo--); /* Cor de fundo do rodapé */
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    color: var(--letras--);
-    margin-top: 20px;
-
-    
-}
-/* Ícones e links sociais */
-.footer-content {
-    display: inline-block;
+section {
+    height: 100vh; /* Cada seção ocupa 100% da altura da tela */
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 5px; 
-    color: var(--letras--);
-}
-
-.footer-content p {
-    margin: 5px 0;
-    font-size: 1.2em;
-}
-
-.footer-content a {
-    text-decoration: none;
-    color:var(--letras--);
-    transition: color 0.5s ease;
-     display: inline-block;
-  
-}
-
-.footer-content a:hover {
-    color: #007BFF; /* Cor de destaque ao passar o mouse */
-}
-
-.footer-content .social-icon i {
-    font-size: 1.5em; /* Tamanho do ícone */
-    color: #E4405F; /* Cor do Instagram */
-    margin-top: 10px;
-    transition: color 0.3s ease;
-  
-}
-
-.footer-content .social-icon i:hover {
-    color: #C13584; /* Cor ao passar o mouse */
-}
-.social-icon {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5em;
-    display: flexbox;
- 
-    transition: color 0.3s ease;
-}
-.social-icon i {
-    font-size: 3.5em;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #007BFF;
-}
-
-.social-icon i:hover {
-    transform: scale(1.5);
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icon i.fa-linkedin {
-    color: #0A66C2;
-}
-
-.social-icon i.fa-github {
-    color: #ffffff;
-}
-
-.social-icon i.fa-instagram {
-    color: #E4405F;
-}
-
-/* Texto de copyright */
-.footer-copyright {
-    font-size: 1.5em;
-    color: #666;
-}
-
-.footer-copyright p {
-    margin: 0;
-}
+    align-items: center;
+  }

@@ -102,3 +102,30 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("active");
     });
 });
+
+const sections = document.querySelectorAll('section');
+let currentSectionIndex = 0;
+let isThrottled = false; // Controla o atraso entre os eventos
+
+window.addEventListener('wheel', (event) => {
+  if (isThrottled) return; // Ignora eventos se estiver no intervalo de espera
+  
+  const sensitivity = 50; // Valor mínimo de movimento para acionar a mudança (ajuste conforme necessário)
+  
+  if (event.deltaY > sensitivity) {
+    // Rolagem para baixo
+    currentSectionIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
+  } else if (event.deltaY < -sensitivity) {
+    // Rolagem para cima
+    currentSectionIndex = Math.max(currentSectionIndex - 1, 0);
+  } else {
+    return; // Ignora se o movimento for menor que a sensibilidade
+  }
+
+  // Rola para a seção correspondente
+  sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+
+  // Ativa o atraso
+  isThrottled = true;
+  setTimeout(() => (isThrottled = false), 500); // 500ms de espera entre eventos
+});
