@@ -1,12 +1,27 @@
+
+.projetos{
+    display: block;
+    align-content: center;
+}
+.projetos h1{
+    text-align: center;
+    font-size: 5.2rem;
+    color: var(--letras--);
+}
+.projetos p{
+    font-size: 2.9rem;
+    margin-bottom: 70px;
+    color: var(--letras--);
+    text-align: center;
+}
 /* Estilo do Carousel */
 .carousel {
     position: relative;
-    position:sticky;
-    width: 100%;
-    height: 400px; /* Ajuste conforme necessário */
-    height: 700px; /* Ajuste conforme necessário */
+    width: 60%;
+    height: auto; /* Ajuste conforme necessário */
     overflow: hidden;
     margin: 0 auto;
+    border-radius: 50px;
 }
 
 /* Container do track (onde as imagens ficam) */
@@ -35,10 +50,9 @@
 }
 
 .slide img {
-    width: 70%;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
 }
 /* Estilo do overlay */
 .slide-overlay {
@@ -70,16 +84,15 @@
 .carousel-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    transform: matrix3d();
+    transform: matrix3d( 0.71);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border: none;
-    padding: 10px;
-    padding: 5px;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     z-index: 10;
+    height: auto;
+    width: auto;
+
 }
 
 .prev {
@@ -93,12 +106,13 @@
 /* Indicadores de navegação */
 .carousel-indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .indicator {
