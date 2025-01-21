@@ -33,11 +33,11 @@ h1 {
     font-size: 43px;
 }
 .navbar {
-    padding-top: 60px;
+    padding-top: 50px;
     display: flex;
     justify-content: center; /* Alinha os itens da navbar ao centro */
     background-color: var(--fundo--claro);
-    padding: 2px;
+    padding: 1px;
     font-size: 1.3em;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -46,7 +46,7 @@ h1 {
     transform: translateX(-50%); /* Ajusta a posição para ficar centralizado */
     width: auto;
     z-index: 1000;
-    border-radius: 30px;
+    border-radius: 20px;
     top: 30px;
     height: auto;
     flex: none;
@@ -116,7 +116,6 @@ h1 {
 .itens a:hover::after {
     width: 100%;
 }
-/* Estilo para o botão de menu (dispositivos móveis) */
 .menu-toggle {
     display: none;
     background: none;
@@ -125,15 +124,16 @@ h1 {
     cursor: pointer;
     color: #333;
 }
-/* Estilos para dispositivos móveis */
 .sobre h1 {
-    font-size: 2.5rem;
+    font-size: 5.0rem;
+    text-transform: uppercase;
     font-weight: bold;
-    color: white;
-    background: linear-gradient(90deg, #ff5733, #33c1ff, #a1ff33);
-    background-size: 300%;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-rosa--));
+    background-size: 100%;
     -webkit-background-clip: text;
     animation: fadeBackground 5s infinite alternate;
+    margin-bottom: 9px;
 }
 
 @keyframes fadeBackground {
@@ -155,10 +155,8 @@ h1 {
     display: flex;
     align-items: center; /* Alinha verticalmente */
     justify-content: space-between; /* Espaça os itens horizontalmente */
-    gap: 0px; /* Espaço entre texto e imagem */
     padding: 190px;
 }
-
 .sobre-text {
     flex: 1; /* Ocupa o espaço restante */
 }
@@ -167,17 +165,68 @@ h1 {
     flex: 0 0 400; /* Define a largura fixa para a imagem */
     max-width: 250px; /* Limita o tamanho máximo */
 }
+@keyframes pulsar {
+    0% {
+        border-color:var(--cor-roxo-2--);
+    }
+    50% {
+        border-color:var(--cor-roxo-1--);
+    }
+    100% {
+        border-color: var(--cor-roxo-3--);
+    }
+}
 
 .sobre-img-div img {
-    width: 100%; /* Ajusta a imagem ao tamanho do container */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
+    width: 100%;
+    border-radius: 10px;
+    border-style: outset;
+    border-width: 5px;
+    animation: pulsar 2s infinite; /* Aplica a animação */
 }
 
 .sobre {
     background-color: var(--fundo--); /* Cor de fundo para destacar */
-    padding: 40px 20px;
-    border-radius: 10px;
+    padding: 30px 60px;
     color: var(--letras--);
+}
+.sobre h2{
+    font-size: 3.2em;
+    margin-top: 10px ;
+    margin-bottom: 5px;
+    
+}
+.sobre p{
+    font-size: 1.5em;
+}
+.social-icon-sobre i {
+    font-size: 2.5rem; /* Tamanho do ícone */
+    background: linear-gradient(50deg, var(--cor-roxo-1--), var(--cor-rosa--));
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+    color: transparent; /* Torna o texto transparente para exibir o gradiente */
+    animation: fadeBackground 5s infinite alternate; /* Aplica a animação */
+    margin: 0 10px; /* Espaçamento entre ícones */
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+    
+}
+
+.social-icon-sobre i:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.3;
+    }
+    50% {
+        background-position: 50% 50%;
+        opacity: 0.8;
+    }
+    100% {
+        background-position: 100% 50%;
+        opacity: 0.3;
+    }
 }
 
 
@@ -188,17 +237,38 @@ h1 {
 
 }
 .linguagens h1 {
-    font-size: 3.5em;
-    padding: 15px;
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-rosa--));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    animation: fadeBackground 5s infinite alternate;
+    margin-bottom: 2px;
 }
+
+@keyframes fadeBackground {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.3;
+    }
+    50% {
+        background-position: 50% 50%;
+        opacity: 0.8;
+    }
+    100% {
+        background-position: 100% 50%;
+        opacity: 0.3;
+    }
+}
+
 
 .linguagens-ferramentas {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 25px;
-    padding: 70px;
+    padding: 190px;
 }
 
 .linguagem {
@@ -208,16 +278,14 @@ h1 {
 }
 
 .linguagem i {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
+    font-size: 4.1rem;
 }
 .projetos {
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--fundo--);
     position: relative;
     color: var(--letras--);
+    padding: 190px;
 }
 
 .card {
