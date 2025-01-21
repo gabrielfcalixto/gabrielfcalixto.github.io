@@ -1,0 +1,103 @@
+/* Estilo da seção linguagens */
+.linguagens {
+    text-align: center;
+    background-color: var(--fundo--);
+    color: var(--letras--);
+}
+
+/* Título da seção */
+.linguagens h1 {
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    animation: fadeBackground 5s infinite alternate;
+    margin-bottom: 5px;
+}
+
+/* Animação de fundo do título */
+@keyframes fadeBackground {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.3;
+    }
+    50% {
+        background-position: 50% 50%;
+        opacity: 0.8;
+    }
+    100% {
+        background-position: 100% 50%;
+        opacity: 0.3;
+    }
+}
+
+/* Estilo dos ícones */
+.linguagem i {
+    font-size: 3.5rem;
+}
+
+/* Estilo do container das ferramentas */
+.linguagens-ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 200px;
+}
+
+.linguagem {
+    flex: 1 1 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    padding: 20px;
+    border: 2px solid var(--cor-roxo-1--);
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card1:hover {
+    border-color: #007BFF;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.card1 i {
+    font-size: 60px;
+    color: var(--letras--)
+}
+
+.card1 h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--letras--);
+}
+/* Estilo para a seção de estatísticas */
+.community-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    color: var(--letras--);
+}
+
+.stat p {
+    font-size: 1.9rem;
+    color: var(--letras--);
+}

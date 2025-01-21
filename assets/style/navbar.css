@@ -1,0 +1,92 @@
+.navbar {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; /* Alinha os itens da navbar ao centro */
+    background-color: var(--fundo--claro);
+    padding: 1px;
+    font-size: 1.3em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 50%; /* Centraliza a posição horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para ficar centralizado */
+    width: auto;
+    z-index: 1000;
+    border-radius: 20px;
+    top: 30px;
+    height: auto;
+    flex: none;
+}
+
+
+.itens {
+    display: inline-flex;
+    list-style: none;
+    justify-content: center;
+    gap: 15px;
+    padding-right: 60px;
+}
+.itens li{
+    position: relative;
+}
+
+
+.itens a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: var(--letras--);
+    font-size: 1.2em;
+    font-weight: 400;
+    justify-content: center;
+
+}
+.tooltip {
+    position: absolute;
+    top: 140%; /* Exibe acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition:  0.2s ease, visibility 0.5s ease;
+    pointer-events: none;
+    
+}
+.itens li:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.itens a.active::after {
+    width: 100%;
+    background-color: var(--cor-roxo-1--); /* Cor de destaque para a seção ativa */
+}
+
+
+.itens a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-roxo-1--);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.2s ease;
+}
+
+.itens a:hover::after {
+    width: 100%;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}

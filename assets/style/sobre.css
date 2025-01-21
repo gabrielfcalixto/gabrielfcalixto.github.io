@@ -1,0 +1,118 @@
+.sobre h1 {
+    font-size: 9.0rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-rosa--));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    animation: fadeBackground 5s infinite alternate;
+    margin-bottom: 9px;
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.3;
+    }
+    50% {
+        background-position: 50% 50%;
+        opacity: 0.8;
+    }
+    100% {
+        background-position: 100% 50%;
+        opacity: 0.3;
+    }
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça os itens horizontalmente */
+    padding: 190px;
+    align-content: center;
+}
+
+
+
+.sobre-text {
+    flex: 1; /* Ocupa o espaço restante */
+}
+
+.sobre-img-div {
+    flex: 1; /* Ocupa o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    border-radius: 10px;
+    border-style: outset;
+    border-width: 5px;
+    animation: pulsar 2s infinite; /* Aplica a animação */
+    max-width: 500px;
+    
+}
+@keyframes pulsar {
+    0% {
+        border-color:var(--cor-roxo-2--);
+    }
+    50% {
+        border-color:var(--cor-roxo-1--);
+    }
+    100% {
+        border-color: var(--cor-roxo-3--);
+    }
+}
+
+.sobre-img-div img {
+    width: 100%;
+    border-radius: 10px;
+    border-style: outset;
+    border-width: 5px;
+    animation: pulsar 2s infinite; /* Aplica a animação */
+}
+
+.sobre {
+    background-color: var(--fundo--); /* Cor de fundo para destacar */
+    padding: 30px 60px;
+    color: var(--letras--);
+}
+.sobre h2{
+    font-size: 3.2em;
+    margin-top: 10px ;
+    margin-bottom: 5px;
+    
+}
+.sobre p{
+    font-size: 1.5em;
+}
+.social-icon-sobre i {
+    font-size: 2.5rem; /* Tamanho do ícone */
+    background: linear-gradient(50deg, var(--cor-roxo-1--), var(--cor-rosa--));
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+    color: transparent; /* Torna o texto transparente para exibir o gradiente */
+    animation: fadeBackground 5s infinite alternate; /* Aplica a animação */
+    margin: 0 10px; /* Espaçamento entre ícones */
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+    
+}
+
+.social-icon-sobre i:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.3;
+    }
+    50% {
+        background-position: 50% 50%;
+        opacity: 0.8;
+    }
+    100% {
+        background-position: 100% 50%;
+        opacity: 0.3;
+    }
+}
+

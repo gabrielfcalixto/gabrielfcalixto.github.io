@@ -1,21 +1,3 @@
-:root {
-    --fundo--:#151312;
-    --fundo--claro:#1C1A19    ;
-    --letras--:#fff;
-    --cor-roxo-1--:#4F46E5;
-    --cor-roxo-2--:#23036A;
-    --cor-roxo-3--:#30009C;
-    --cor-rosa--:#FF4181;
-    --cor-verde-agua--:#86FFF4;
-}
-
-body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: var(--fundo--);
-}
 footer {
     background-color: var(--fundo--); /* Cor de fundo do rodapé */
     padding: 15px;

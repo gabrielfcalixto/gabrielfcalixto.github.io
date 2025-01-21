@@ -8,6 +8,13 @@
         content="Portfólio de Gabriel Calixto, desenvolvedor de software com experiência em Java, React, Spring e outras tecnologias.">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/navbar.css">
+    <link rel="stylesheet" href="assets/style/sobre.css">
+    <link rel="stylesheet" href="assets/style/projetos.css">
+    <link rel="stylesheet" href="assets/style/contato.css">
+    <link rel="stylesheet" href="assets/style/footer.css">
+    <link rel="stylesheet" href="assets/style/skills.css">
+
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,80 +168,43 @@
                 </div>
             </div>
         </section>
-
         <section class="projetos" id="projects">
             <h1>Projetos</h1>
-            <p>Confira alguns dos projetos realizados!</p>
-            <div>
-                <input type="radio" name="slider" id="item-1" checked>
-                <input type="radio" name="slider" id="item-2">
-                <input type="radio" name="slider" id="item-3">
-                <input type="radio" name="slider" id="item-4">
-                <input type="radio" name="slider" id="item-5">
-                <div class="cards">
-                    <label class="card" for="item-1" id="img-1">
-                        <img src="assets/images/1_pirateShip.jpg" alt="">
-                        <div class="description">
-                            <div class="desc-title">
-                                <h2>1_pirateShip.</h2>
-                                <p>Imagem gerada por IA.</p>
+            <div class="carousel">
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <div class="slide">
+                            <img src="assets/images/img-lp.PNG" alt="Projeto 1">
+                            <div class="slide-overlay">
+                                <p>Este é o Projeto 1, uma landing page incrível!</p>
                             </div>
-                            <p class="desc-sub">preset: céu estrelado, lanternas brilhantes, detalhes de luz, textura
-                                robusta,
-                                atmosfera misteriosa, composição equilibrada, brilho intenso nas lanternas, transições
-                                suaves.
-                            </p>
                         </div>
-                    </label>
-                    <label class="card" for="item-2" id="img-2">
-                        <img src="assets/images/2_womaHallucinations.jpg" alt="">
-                        <div class="description">
-                            <div class="desc-title">
-                                <h2>2_womanHallucinations.</h2>
-                                <p>Imagem gerada por IA.</p>
+                        <div class="slide">
+                            <img src="" alt="Projeto 2">
+                            <img src="assets/images/daily-motivation.jpg"Projeto 2">
+                            <div class="slide-overlay">
+                                <p>Este é o Projeto 1, uma landing page incrível!</p>
                             </div>
-                            <p class="desc-sub">preset: mulher alucinada, tons de rosa, padrões ondulantes, texturas
-                                surreais,
-                                iluminação caleidoscópica, composição dinâmica, contornos fluidos, brilho intenso,
-                                transições
-                                oníricas.</p>
                         </div>
-                    </label>
-                    <label class="card" for="item-3" id="img-3">
-                        <img src="assets/images/3_appleGalaxies.jpg" alt="">
-                        <div class="description">
-                            <div class="desc-title">
-                                <h2>3_appleGalaxies.</h2>
-                                <p>Imagem gerada por IA.</p>
+                        <div class="slide">
+                            <img src="assets/images/chatbot.jpg" alt="Projeto 3">
+                            <img src="img/chatbot.jpg" alt="Projeto 3">
+                            <div class="slide-overlay">
+                                <p>Este é o Projeto 1, uma landing page incrível!</p>
                             </div>
-                            <p class="desc-sub">preset: maçã cósmica, fundo estrelado, galáxias suaves, textura
-                                marcante, brilho
-                                intenso.</p>
+                            
                         </div>
-                    </label>
-                    <label class="card" for="item-4" id="img-4">
-                        <img src="assets/images/4_humanoidAvatar.jpg" alt="">
-                        <div class="description">
-                            <div class="desc-title">
-                                <h2>4_humanoidAvatar.</h2>
-                                <p>Imagem gerada por IA.</p>
-                            </div>
-                            <p class="desc-sub">preset: humanóide Avatar, linhas suaves, tons metálicos, iluminação
-                                futurista,
-                                olhar expressivo, composição equilibrada, atmosfera tecnológica.</p>
-                        </div>
-                    </label>
-                    <label class="card" for="item-5" id="img-5">
-                        <img src="assets/images/5_styleWoman.jpg" alt="">
-                        <div class="description">
-                            <div class="desc-title">
-                                <h2>5_stylishWoman.</h2>
-                                <p>Imagem gerada por IA.</p>
-                            </div>
-                            <p class="desc-sub">preset: mulher estilizada, traços africanos, paleta vibrante, cabelos
-                                exuberantes, expressão confiante, estilo moderno, composição elegante.</p>
-                        </div>
-                    </label>
+                    </div>
+                </div>
+                <!-- Botões de navegação -->
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+                <!-- Indicadores de navegação -->
+                <div class="carousel-indicators">
+                    <span class="indicator"></span>
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
                 </div>
             </div>
 
