@@ -129,3 +129,39 @@ window.addEventListener('wheel', (event) => {
   isThrottled = true;
   setTimeout(() => (isThrottled = false), 500); // 500ms de espera entre eventos
 });
+// Função para animar o número
+function animateNumbers() {
+    const stats = document.querySelectorAll('.stat h2');
+    
+    stats.forEach(stat => {
+        const targetValue = parseInt(stat.textContent.replace(/[^\d]/g, ''), 10); // Remove qualquer texto não numérico
+        let currentValue = 0;
+        
+        const increment = targetValue / 200; // Define o incremento por quadro
+        
+        const interval = setInterval(() => {
+            currentValue += increment;
+            stat.textContent = Math.floor(currentValue).toLocaleString(); // Atualiza o número na tela
+            
+            if (currentValue >= targetValue) {
+                clearInterval(interval); // Para a animação quando o valor atingir o final
+                stat.textContent = targetValue.toLocaleString(); // Garante que o número final seja exibido
+            }
+        }, 10); // Intervalo de 10ms para o efeito suave
+    });
+}
+
+// Função para verificar se a seção está visível
+function checkVisibility() {
+    const statsSection = document.querySelector('.community-stats');
+    const rect = statsSection.getBoundingClientRect();
+    
+    // Verifica se a seção está visível na tela
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        animateNumbers();
+        window.removeEventListener('scroll', checkVisibility); // Remove o evento de rolagem após a animação
+    }
+}
+
+// Adiciona o evento de rolagem para verificar a visibilidade
+window.addEventListener('scroll', checkVisibility);

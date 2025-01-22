@@ -89,13 +89,16 @@
 .stat h2 {
     font-size: 4.5rem; /* Define o tamanho do número da estatística */
     margin-bottom: 10px; /* Adiciona espaçamento inferior ao número */
+    color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
     background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
     background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
     -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
     animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
+    transition: all 1s ease-in-out; 
 }
 
 .stat p {
     font-size: 1.9rem; /* Define o tamanho do texto descritivo */
     color: var(--letras--); /* Define a cor do texto */
 }
+
