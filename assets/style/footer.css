@@ -1,10 +1,9 @@
 footer {
     background-color: var(--fundo--); /* Cor de fundo do rodapé */
-    padding: 15px;
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     color: var(--letras--);
-    margin-top: 20px;
+
 
     
 }
@@ -13,7 +12,6 @@ footer {
     display: inline-block;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 5px; 
     color: var(--letras--);
 }
 

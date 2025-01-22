@@ -1,18 +1,36 @@
 
-.contato{
+.contato {
+    color: var(--letras--);
+    margin-top: 60px;
+    display: flex; /* Torna o contêiner flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha os itens no centro horizontalmente */
+    justify-content: center; /* Alinha os itens no centro verticalmente */
+    text-align: center; /* Alinha o texto dentro do contêiner */
+}
 
-    color: var(--letras--);
+.contato h1 {
+    font-size: 4.0rem; /* Define o tamanho da fonte do título */
+    font-weight: bold; /* Define o texto em negrito */
+    color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
+    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
+    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
+    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
+    margin-bottom:60px; /* Define o espaçamento inferior */
+    text-align: center; /* Centraliza o texto */
 }
-.contato h1{
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    color: var(--letras--);
-    font-weight: 700;
-    text-align: center;
+
+.contato-content {
+    display: flex; /* Torna o contêiner flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha os itens no centro horizontalmente */
+    justify-content: center; /* Alinha os itens no centro verticalmente */
+    margin-top: 90px;
 }
+
 /* Formulário */
 .formulario {
-    display: inline-block;
     padding: 2em;
     border-radius: 2em;
     background-color: var(--cor-roxo-1--);
@@ -153,7 +171,7 @@ button {
     color: var(--fundo--claro);
     font-weight: bold;
     border: none;
-    height: 55px;
+    height: auto;
     width: 100%; /* Responsivo */
     max-width: 300px; /* Limita o tamanho */
     font-size: large;
@@ -174,27 +192,24 @@ button:active {
 }
 
 
-/* Media Queries para Responsividade */
-
-/* Para telas pequenas (celulares) */
 @media (max-width: 600px) {
     .formulario {
         padding: 1.5em; /* Reduz o padding para telas pequenas */
-        width: 95%; /* Aumenta a largura do formulário */
+        width: 90%; /* Ajusta a largura do formulário para 90% da tela */
         max-width: 100%; /* Permite que o formulário ocupe toda a largura da tela */
     }
 
     h4 {
-        font-size: 1.1em; /* Ajusta o tamanho da fonte do título */
+        font-size: 1.2em; /* Ajusta o tamanho da fonte do título */
     }
 
     input, textarea, select {
-        font-size: 0.9em; /* Ajusta o tamanho da fonte dos campos */
+        font-size: 1em; /* Ajusta o tamanho da fonte dos campos */
     }
 
     button {
-        font-size: 1.1em; /* Ajusta o tamanho da fonte do botão */
-        padding: 0.5em 1em; /* Ajusta o padding do botão */
+        font-size: 1.2em; /* Ajusta o tamanho da fonte do botão */
+        padding: 0.8em 1.2em; /* Ajusta o padding do botão */
     }
 }
 
@@ -202,15 +217,20 @@ button:active {
 @media (max-width: 900px) {
     .formulario {
         padding: 2em; /* Mantém o padding para telas médias */
-        width: 90%; /* Mantém a largura do formulário */
+        width: 80%; /* Ajusta a largura do formulário para 80% da tela */
     }
 
     h4 {
-        font-size: 1.2em; /* Ajusta o tamanho do título */
+        font-size: 1.3em; /* Ajusta o tamanho do título */
+    }
+
+    input, textarea, select {
+        font-size: 1.1em; /* Ajusta o tamanho da fonte dos campos */
     }
 
     button {
-        font-size: 1.2em; /* Ajusta o tamanho do botão */
+        font-size: 1.3em; /* Ajusta o tamanho do botão */
+        padding: 1em 1.5em; /* Ajusta o padding do botão */
     }
 }
 
@@ -218,10 +238,19 @@ button:active {
 @media (min-width: 1200px) {
     .formulario {
         padding: 2em; /* Mantém o padding */
-        width: 90%; /* Mantém a largura do formulário */
+        width: 50%; /* Ajusta a largura do formulário para 50% da tela */
+    }
+
+    h4 {
+        font-size: 1.5em; /* Ajusta o tamanho do título */
+    }
+
+    input, textarea, select {
+        font-size: 1.2em; /* Ajusta o tamanho da fonte dos campos */
     }
 
     button {
-        font-size: 1.2em; /* Tamanho padrão do botão */
+        font-size: 1.4em; /* Tamanho maior do botão */
+        padding: 1.2em 1.8em; /* Ajusta o padding do botão */
     }
 }
