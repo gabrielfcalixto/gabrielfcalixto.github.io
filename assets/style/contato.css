@@ -157,13 +157,10 @@ option {
     border-radius: 50%;
     background: white;
 }
-
-/* Botão */
 .button {
     text-align: center;
     padding-top: 25px;
 }
-
 button {
     border-radius: 27px;
     text-align: center;
