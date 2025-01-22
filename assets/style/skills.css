@@ -1,103 +1,101 @@
 /* Estilo da seção linguagens */
 .linguagens {
-    text-align: center;
-    background-color: var(--fundo--);
-    color: var(--letras--);
+    text-align: center; /* Centraliza o texto dentro da seção */
+    background-color: var(--fundo--); /* Define a cor de fundo da seção */
+    color: var(--letras--); /* Define a cor padrão do texto */
+    padding: 100px 0; /* Adiciona espaçamento interno à seção */
+    margin-top: 50px;
 }
 
 /* Título da seção */
 .linguagens h1 {
-    font-size: 4.0rem;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0);
-    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--));
-    background-size: 100%;
-    -webkit-background-clip: text;
-    animation: fadeBackground 5s infinite alternate;
-    margin-bottom: 5px;
+    font-size: 4.0rem; /* Define o tamanho da fonte do título */
+    font-weight: bold; /* Define o texto em negrito */
+    color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
+    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
+    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
+    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
+    margin-bottom: 60px; /* Define o espaçamento inferior */
 }
 
-/* Animação de fundo do título */
-@keyframes fadeBackground {
-    0% {
-        background-position: 0% 50%;
-        opacity: 0.3;
-    }
-    50% {
-        background-position: 50% 50%;
-        opacity: 0.8;
-    }
-    100% {
-        background-position: 100% 50%;
-        opacity: 0.3;
-    }
-}
-
-/* Estilo dos ícones */
 .linguagem i {
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* Define o tamanho dos ícones */
+    /* Adicione estilos adicionais, se necessário, para ajustar alinhamento ou cores */
+    color: var(--letras--); /* Garante que os ícones usem a cor definida no tema */
+    margin: 10px; /* Adiciona espaçamento ao redor dos ícones, se necessário */
 }
 
-/* Estilo do container das ferramentas */
+
 .linguagens-ferramentas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 200px;
+    display: flex; /* Define um layout flexível para organizar os elementos */
+    flex-wrap: wrap; /* Permite que os elementos se ajustem automaticamente em várias linhas */
+    gap: 20px; /* Espaçamento horizontal e vertical entre os elementos */
+    padding: 50px; /* Reduz o espaçamento interno para evitar áreas vazias excessivas */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Alinha os elementos verticalmente */
+    max-width: 1200px; /* Limita a largura do container para manter a estética */
+    margin: 0 auto; /* Centraliza o container dentro da página */
 }
+
 
 .linguagem {
-    flex: 1 1 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: auto; /* Permite que os elementos internos ocupem o mesmo espaço */
+    display: flex; /* Torna o elemento flexível para centralizar conteúdo interno */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
 }
 
+/* Estilo para os cards */
 .card1 {
-    padding: 20px;
-    border: 2px solid var(--cor-roxo-1--);
-    border-radius: 8px;
-    text-align: center;
-    width: 150px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 32px; /* Adiciona espaçamento interno no card */
+    border: 2px solid var(--cor-roxo-1--); /* Define a borda do card */
+    border-radius: 8px; /* Arredonda os cantos do card */
+    text-align: center; /* Centraliza o conteúdo do card */
+    width: 150px; /* Define a largura fixa do card */
+    transition: all 0.3s ease; /* Animação suave para mudanças no card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao card */
 }
 
 .card1:hover {
-    border-color: #007BFF;
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
-    transform: translateY(-5px);
+    border-color: #007BFF; /* Altera a cor da borda ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Aumenta a sombra ao passar o mouse */
+    transform: translateY(-10px); /* Move o card ligeiramente para cima */
 }
 
 .card1 i {
-    font-size: 60px;
-    color: var(--letras--)
+    font-size: 60px; /* Define o tamanho do ícone no card */
+    color: var(--letras--); /* Define a cor do ícone */
 }
 
 .card1 h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: var(--letras--);
+    margin-top: 10px; /* Adiciona espaçamento superior ao título do card */
+    font-size: 18px; /* Define o tamanho do título do card */
+    color: var(--letras--); /* Define a cor do título */
 }
+
 /* Estilo para a seção de estatísticas */
 .community-stats {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
+    display: flex; /* Define um layout flexível para alinhar as estatísticas */
+    justify-content: center; /* Centraliza os elementos no container */
+    gap: 50px; /* Espaçamento entre as estatísticas */
+    margin-top: 40px; /* Adiciona um espaçamento superior à seção */
 }
 
 .stat {
-    text-align: center;
+    text-align: center; /* Centraliza o texto das estatísticas */
 }
 
 .stat h2 {
-    font-size: 4.5rem;
-    margin-bottom: 10px;
-    color: var(--letras--);
+    font-size: 4.5rem; /* Define o tamanho do número da estatística */
+    margin-bottom: 10px; /* Adiciona espaçamento inferior ao número */
+    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
+    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
+    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
 }
 
 .stat p {
-    font-size: 1.9rem;
-    color: var(--letras--);
+    font-size: 1.9rem; /* Define o tamanho do texto descritivo */
+    color: var(--letras--); /* Define a cor do texto */
 }
