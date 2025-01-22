@@ -112,3 +112,80 @@
         border-color: var(--cor-roxo-3--);
     }
 }
+/* Media Queries */
+@media (max-width: 1200px) {
+    .sobre-content {
+        padding: 150px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre h1, .sobre h2 {
+        font-size: 6rem;
+    }
+
+    .sobre p {
+        font-size: 1.4em;
+        max-width: 90%;
+    }
+
+    .sobre-img-div {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-content {
+        padding: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre h1, .sobre h2 {
+        font-size: 4.5rem;
+    }
+
+    .sobre p {
+        font-size: 1.2em;
+        max-width: 90%;
+    }
+
+    .sobre-img-div {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-content {
+        padding: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre h1, .sobre h2 {
+        font-size: 3.5rem;
+    }
+
+    .sobre p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    .sobre-img-div {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .sobre-content {
+        padding: 350px;
+    }
+
+    .sobre h1, .sobre h2 {
+        font-size: 12rem;
+    }
+
+    .sobre-img-div {
+        max-width: 600px;
+    }
+}

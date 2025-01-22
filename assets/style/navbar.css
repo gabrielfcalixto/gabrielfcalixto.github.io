@@ -90,3 +90,57 @@
     cursor: pointer;
     color: #333;
 }
+/* Media Queries para responsividade */
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .navbar {
+        padding-top: 20px;
+        font-size: 1em;
+        top: 10px;
+    }
+
+    .itens {
+        display: none; /* Oculta os itens da navbar em telas pequenas */
+        flex-direction: column; /* Organiza os itens em coluna */
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão de menu */
+    }
+}
+
+/* Para tablets (600px a 900px) */
+@media (max-width: 900px) {
+    .navbar {
+        padding-top: 30px;
+        font-size: 1.2em;
+    }
+
+    .itens {
+        gap: 20px;
+    }
+}
+
+/* Para telas grandes (notebooks, desktop, ultrawide) */
+@media (min-width: 1200px) {
+    .navbar {
+        font-size: 1.3em;
+    }
+
+    .itens {
+        gap: 25px;
+    }
+}
+
+/* Para dispositivos com menu toggle */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Exibe o botão de menu */
+    }
+
+    .itens.active {
+        display: flex; /* Exibe os itens quando o menu for ativado */
+    }
+}

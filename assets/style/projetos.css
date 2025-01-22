@@ -133,3 +133,68 @@
 .indicator.active {
     background-color: white;
 }
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .projetos h1 {
+        font-size: 3.5rem; /* Reduz o tamanho da fonte do título */
+        margin-bottom: 30px;
+    }
+
+    .projetos p {
+        font-size: 1.8rem; /* Ajusta o tamanho do texto */
+        margin-bottom: 30px;
+    }
+
+    .carousel {
+        width: 90%; /* Aumenta a largura do carrossel para ocupar mais espaço */
+    }
+
+    .carousel-button {
+        font-size: 24px; /* Diminui o tamanho dos botões de navegação */
+    }
+
+    .carousel-indicators {
+        bottom: 20px; /* Ajusta a posição dos indicadores */
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px; /* Ajusta o tamanho dos indicadores */
+    }
+}
+
+/* Para telas médias (tablets) */
+@media (max-width: 900px) {
+    .projetos h1 {
+        font-size: 4rem; /* Ajusta o tamanho do título */
+    }
+
+    .carousel {
+        width: 80%; /* Ajusta a largura do carrossel */
+    }
+
+    .carousel-button {
+        font-size: 26px; /* Ajusta o tamanho dos botões */
+    }
+
+    .carousel-indicators {
+        bottom: 30px; /* Ajusta a posição dos indicadores */
+    }
+}
+
+/* Para telas grandes (notebooks e desktops) */
+@media (min-width: 1200px) {
+    .projetos h1 {
+        font-size: 5.2rem; /* Tamanho do título para telas grandes */
+    }
+
+    .carousel {
+        width: 60%; /* Mantém a largura do carrossel para telas grandes */
+    }
+
+    .carousel-button {
+        font-size: 30px; /* Tamanho padrão dos botões */
+    }
+}

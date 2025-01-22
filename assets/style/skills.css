@@ -102,3 +102,80 @@
     color: var(--letras--); /* Define a cor do texto */
 }
 
+/* Media Queries para responsividade */
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .linguagens h1 {
+        font-size: 2.5rem;
+    }
+
+    .linguagens-ferramentas {
+        padding: 20px;
+    }
+
+    .card1 {
+        width: 120px;
+    }
+
+    .stat h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Para tablets (600px a 900px) */
+@media (max-width: 900px) {
+    .linguagens h1 {
+        font-size: 3rem;
+    }
+
+    .linguagens-ferramentas {
+        padding: 30px;
+    }
+
+    .card1 {
+        width: 130px;
+    }
+
+    .stat h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Para telas grandes (notebooks, desktop, ultrawide) */
+@media (min-width: 1200px) {
+    .linguagens h1 {
+        font-size: 5rem;
+    }
+
+    .linguagens-ferramentas {
+        padding: 60px;
+    }
+
+    .card1 {
+        width: 180px;
+    }
+
+    .stat h2 {
+        font-size: 5rem;
+    }
+}
+
+/* Para TV e telas ultra largas */
+@media (min-width: 1800px) {
+    .linguagens h1 {
+        font-size: 6rem;
+    }
+
+    .linguagens-ferramentas {
+        padding: 100px;
+    }
+
+    .card1 {
+        width: 220px;
+    }
+
+    .stat h2 {
+        font-size: 6rem;
+    }
+}

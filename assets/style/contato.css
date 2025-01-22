@@ -164,3 +164,54 @@ button:active {
 }
 
 
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .formulario {
+        padding: 1.5em; /* Reduz o padding para telas pequenas */
+        width: 95%; /* Aumenta a largura do formulário */
+        max-width: 100%; /* Permite que o formulário ocupe toda a largura da tela */
+    }
+
+    h4 {
+        font-size: 1.1em; /* Ajusta o tamanho da fonte do título */
+    }
+
+    input, textarea, select {
+        font-size: 0.9em; /* Ajusta o tamanho da fonte dos campos */
+    }
+
+    button {
+        font-size: 1.1em; /* Ajusta o tamanho da fonte do botão */
+        padding: 0.5em 1em; /* Ajusta o padding do botão */
+    }
+}
+
+/* Para telas médias (tablets) */
+@media (max-width: 900px) {
+    .formulario {
+        padding: 2em; /* Mantém o padding para telas médias */
+        width: 90%; /* Mantém a largura do formulário */
+    }
+
+    h4 {
+        font-size: 1.2em; /* Ajusta o tamanho do título */
+    }
+
+    button {
+        font-size: 1.2em; /* Ajusta o tamanho do botão */
+    }
+}
+
+/* Para telas grandes (notebooks e desktops) */
+@media (min-width: 1200px) {
+    .formulario {
+        padding: 2em; /* Mantém o padding */
+        width: 90%; /* Mantém a largura do formulário */
+    }
+
+    button {
+        font-size: 1.2em; /* Tamanho padrão do botão */
+    }
+}
