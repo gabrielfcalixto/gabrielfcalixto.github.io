@@ -8,6 +8,7 @@
     animation: fadeBackground 5s infinite alternate;
     margin-top: auto;
     margin-bottom: 0; /* Remove o espaçamento inferior */
+    line-height: 1.0;
 }
 
 .sobre h2{
@@ -18,20 +19,27 @@
     margin-top: 0; /* Remove o espaçamento superior */
     margin-bottom: 40px; /* Adiciona um pequeno espaçamento inferior */
 }
-.sobre p{
-    font-size: 1.8em;
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-    color:var(--cor-cinza-p--);
-    margin-top: 0; /* Remove o espaçamento superior */
+.sobre p {
+    font-size: 1.8em; /* Tamanho da fonte */
+    font-family: "Poppins", serif; /* Família da fonte */
+    font-weight: 400; /* Peso da fonte */
+    font-style: normal; /* Estilo da fonte */
+    color: var(--cor-cinza-p--); /* Cor do texto */
+    margin: 0; /* Remove margens externas */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+    text-align: justify; /* Justifica o texto */
+    max-width: 800px; /* Define uma largura máxima para o parágrafo */
+    width: 100%; /* Garante que o parágrafo ocupe todo o espaço disponível */
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: normal; /* Permite quebra de linhas */
 }
+
 .sobre-content {
     display: flex;
     align-items: center; /* Alinha verticalmente */
     justify-content: space-between; /* Espaça os itens horizontalmente */
     padding: 300px;
-    align-content: center;
+    gap: 20px; /* Espaçamento entre os itens */
 }
 .sobre-img-div {
     flex: 1; /* Ocupa o espaço restante */
@@ -44,10 +52,13 @@
     border-width: 10px;
     animation: pulsar 2s infinite; /* Aplica a animação */
     max-width: 500px;
+    width: 100%;
     
 }
 .sobre-img-div img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
     border-style: outset;
     border-width: 5px;
@@ -62,14 +73,14 @@
 
 
 .social-icon-sobre i {
-    font-size: 2.5rem; /* Tamanho do ícone */
+    font-size: 3.6rem; /* Tamanho do ícone */
     background: linear-gradient(50deg, var(--cor-roxo-1--), var(--cor-rosa--));
     -webkit-background-clip: text; /* Aplica o gradiente ao texto */
     color: transparent; /* Torna o texto transparente para exibir o gradiente */
     animation: fadeBackground 5s infinite alternate; /* Aplica a animação */
-    margin: 0 10px; /* Espaçamento entre ícones */
+    margin: 0 15px; /* Espaçamento entre ícones */
     transition: transform 0.3s; /* Animação ao passar o mouse */
-    
+    margin-top: 30px;
 }
 
 .social-icon-sobre i:hover {
