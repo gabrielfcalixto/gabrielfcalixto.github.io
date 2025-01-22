@@ -7,18 +7,6 @@
     margin-top: 50px;
 }
 
-/* Título da seção */
-.linguagens h1 {
-    font-size: 4.0rem; /* Define o tamanho da fonte do título */
-    font-weight: bold; /* Define o texto em negrito */
-    color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
-    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
-    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
-    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
-    margin-bottom: 5px; /* Define o espaçamento inferior */
-}
-
 .linguagem i {
     font-size: 3.5rem; /* Define o tamanho dos ícones */
     /* Adicione estilos adicionais, se necessário, para ajustar alinhamento ou cores */
