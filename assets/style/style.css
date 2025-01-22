@@ -29,6 +29,43 @@ section {
   h1{
     font-weight: 600;
   }
+/* Telas pequenas (celulares em modo retrato) */
+@media (max-width: 576px) {
+  body, html {
+      overflow: auto; /* Permite a rolagem */
+      scroll-behavior: auto; /* Remove a suavização, se necessário */
+  }
+  section {
+      height: auto; /* Ajusta a altura para conteúdo longo */
+}
+
+/* Telas médias (celulares em modo paisagem ou tablets menores) */
+@media (min-width: 577px) and (max-width: 768px) {
+  body, html {
+      overflow: auto;
+  }
+  section {
+      height: auto;
+  }
+
+}
+
+/* Telas grandes (tablets maiores ou laptops menores) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body, html {
+      overflow: auto;
+  }
+  section {
+      height: auto;
+
+}
+
+/* Telas muito grandes (monitores grandes) */
+@media (min-width: 1025px) {
+  section {
+      height: auto;
+
+}
 
   /*fontes*/
   .poppins-thin {

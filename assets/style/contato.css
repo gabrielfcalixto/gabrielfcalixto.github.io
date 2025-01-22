@@ -1,5 +1,15 @@
 
+.contato{
 
+    color: var(--letras--);
+}
+.contato h1{
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: var(--letras--);
+    font-weight: 700;
+    text-align: center;
+}
 /* Formulário */
 .formulario {
     display: inline-block;
