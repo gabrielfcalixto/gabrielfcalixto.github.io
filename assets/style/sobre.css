@@ -1,91 +1,112 @@
 .sobre h1 {
-    font-size: 10.1rem;
+    font-size: 5.6rem;
     text-transform: uppercase;
     font-weight: bold;
     color: rgba(255, 255, 255, 0);
-    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-rosa--));
-    -webkit-background-clip: text;
-    animation: fadeBackground 5s infinite alternate;
-    margin-top: auto;
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-roxo-3--),var(--cor-cinza-p--));
+    background-size: 300% 300%;
+    animation: gradientShift 5s infinite; /* Aplica o gradiente animado */
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
+    margin-top: 2px;
     margin-bottom: 0; /* Remove o espaçamento inferior */
     line-height: 1.0;
 }
 
 .sobre h2{
-    font-size: 10.1rem;
+    font-size: 5.6rem;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 1.0;
     margin-top: 0; /* Remove o espaçamento superior */
-    margin-bottom: 40px; /* Adiciona um pequeno espaçamento inferior */
+    margin-bottom: 8px; /* Adiciona um pequeno espaçamento inferior */
 }
 .sobre p {
-    font-size: 1.8em; /* Tamanho da fonte */
+    font-size: 1.4em; /* Tamanho da fonte */
     font-family: "Poppins", serif; /* Família da fonte */
     font-weight: 400; /* Peso da fonte */
-    font-style: normal; /* Estilo da fonte */
     color: var(--cor-cinza-p--); /* Cor do texto */
     margin: 0; /* Remove margens externas */
-    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
-    text-align: justify; /* Justifica o texto */
-    max-width: 800px; /* Define uma largura máxima para o parágrafo */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+    text-align: left; /* Justifica o texto */
+    max-width: 500px; /* Define uma largura máxima para o parágrafo */
     width: 100%; /* Garante que o parágrafo ocupe todo o espaço disponível */
     word-wrap: break-word; /* Quebra palavras longas */
     white-space: normal; /* Permite quebra de linhas */
+    margin-top: 2px;
 }
 
 .sobre-content {
     display: flex;
     align-items: center; /* Alinha verticalmente */
     justify-content: space-between; /* Espaça os itens horizontalmente */
-    padding: 300px;
+    padding: 150px; /* Espaçamento interno */
     gap: 20px; /* Espaçamento entre os itens */
 }
+
 .sobre-img-div {
     flex: 1; /* Ocupa o espaço restante */
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     margin: 0 20px;
     border-radius: 20px;
     border-style: outset;
     border-width: 10px;
     animation: pulsar 2s infinite; /* Aplica a animação */
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
+    overflow: hidden;
     
+}
+.social-icons{
+    position: absolute; /* Posiciona em relação ao .sobre-img-div */
+    bottom: 10px; /* Fica próximo da borda inferior */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para o centro exato */
+    display: flex; /* Alinha os ícones em linha */
+    gap: 15px; /* Espaçamento entre os ícones */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
 }
 .sobre-img-div img {
     width: auto;
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
-    border-radius: 20px;
-    border-style: outset;
-    border-width: 5px;
-    animation: pulsar 2s infinite; /* Aplica a animação */
+    border-radius: 10px;
+    animation: pulsar 5s infinite; /* Aplica a animação */
 }
-
-.sobre {
-    background-color: var(--fundo--); /* Cor de fundo para destacar */
-    padding: 30px 60px;
-    color: var(--letras--);
-}
-
-
-.social-icon-sobre i {
-    font-size: 3.6rem; /* Tamanho do ícone */
-    background: linear-gradient(50deg, var(--cor-roxo-1--), var(--cor-rosa--));
+.social-icons i {
+    font-size: 2.5rem; /* Tamanho dos ícones */
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-roxo-3--));
+    background-size: 300% 300%;
+    animation: gradientShift 5s infinite; /* Aplica o gradiente animado */
     -webkit-background-clip: text; /* Aplica o gradiente ao texto */
-    color: transparent; /* Torna o texto transparente para exibir o gradiente */
-    animation: fadeBackground 5s infinite alternate; /* Aplica a animação */
-    margin: 0 15px; /* Espaçamento entre ícones */
-    transition: transform 0.3s; /* Animação ao passar o mouse */
-    margin-top: 30px;
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
 }
 
-.social-icon-sobre i:hover {
+.social-icons i:hover {
     transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
+
+/* Animação do gradiente */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 
 @keyframes fadeBackground {
     0% {
