@@ -83,20 +83,7 @@
         font-size: 1.2rem; 
         margin-bottom: 20px;
     }
-    .carousel {
-        width: 90%;
-    }
-    .carousel-button {
-        font-size: 24px; 
-    }
-    .carousel-indicators {
-        bottom: 20px; 
-    }
-    .indicator {
-        width: 8px;
-        height: 8px; 
-    }
-}
+
 @media (max-width: 900px) {
     .projetos h1 {
         font-size: 4rem; 
