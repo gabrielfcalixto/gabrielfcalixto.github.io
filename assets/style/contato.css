@@ -6,12 +6,10 @@
     align-items: center; /* Centraliza horizontalmente */
     justify-content: center; /* Centraliza verticalmente */
     text-align: center;
-    padding: 20px;
     min-height: 100vh; 
     background-color: var(--cor-fundo--); 
 }
 .contato h1 {
-    flex: 1; /* Permite que o título ocupe o espaço necessário */
     font-size: 2.5rem; /* Define o tamanho da fonte */
     font-weight: bold; /* Define o texto em negrito */
     color: rgba(255, 255, 255, 0); 
@@ -19,20 +17,18 @@
     -webkit-background-clip: text; 
     animation: fadeBackground 5s infinite alternate;
     text-align: left; /* Alinha o texto à esquerda */
-    word-wrap: break-word; /* Permite quebra de linha automática */
     max-width: 100%; /* Garante que o título não ultrapasse a largura do contêiner */
 }
 
 
 .formulario {
-    padding: 0.9em; /* Reduz o espaçamento interno */
+    padding: 1.5em; /* Reduz o espaçamento interno */
     border-radius: 20px; /* Ajusta os cantos arredondados */
     background-color: var(--cor-roxo-1--);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 100%; /* Reduz a largura inicial */
     max-width: 300px; /* Define um limite máximo de largura */
-    flex: 1; /* Mantém a proporção flexível */
     
 }
 h4 {
@@ -59,9 +55,9 @@ input, textarea, select {
     box-sizing: border-box;
     border: none;
     background-color: #DBDBDB;
-    border-radius: 15px;
+    border-radius: 10px;
     color: var(--cor-fundo--);
-    padding: 0.5em;
+    padding: 1.1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -90,10 +86,11 @@ option {
     text-align: center;
     background-color: var(--letras--);
     box-sizing: border-box;
+    margin-top: 20px;
     
     width: 100%; 
     text-transform: uppercase;
-    padding: 0.5em;
+    padding: 1.0em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
