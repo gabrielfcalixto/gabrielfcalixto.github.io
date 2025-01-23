@@ -13,7 +13,7 @@
 
 /* Estilo do título */
 .projetos-content h1 {
-    font-size: 2rem; /* Tamanho do título */
+    font-size: 1.5rem; /* Tamanho do título */
     color: #333; /* Cor do texto */
     margin: 0;
 }
@@ -68,6 +68,7 @@
 .slide{
     width: 25%;
     position: relative;
+    transition: 2s;
 }
 .slide img{
     width: 800px;
@@ -96,13 +97,58 @@
 #radio1:checked ~ .first{
     margin: 0;
 }
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+.navigation-auto div{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: white;
+
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: white;
+
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: white;
+
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: white;
+
+}
 
 
 
 
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .projetos h1 {
         font-size: 1.3rem; 
         margin-bottom: 20px;
@@ -137,4 +183,4 @@
     .carousel-button {
         font-size: 30px; 
     }
-}
+} */
