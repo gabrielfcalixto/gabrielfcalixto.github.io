@@ -1,13 +1,13 @@
-/* Estilo da seção linguagens */
-.linguagens {
-    text-align: center; /* Centraliza o texto dentro da seção */
-    background-color: var(--fundo--); /* Define a cor de fundo da seção */
-    color: var(--letras--); /* Define a cor padrão do texto */
-    padding: 100px 0; /* Adiciona espaçamento interno à seção */
-    margin-top: 50px;
+.linguagens-content{
+    display: block;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça os itens horizontalmente */
+    padding: 160px; /* Espaçamento interno */
+    gap: 5px; /* Espaçamento entre os itens */
+    text-align: center;
 }
 .linguagens h1 {
-    font-size: 3.0rem; /* Define o tamanho do título da seção */
+    font-size: 4.1rem; /* Define o tamanho do título da seção */
     margin-bottom: 20px; /* Adiciona espaçamento inferior ao título */
     background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-rosa--));
     background-size: 300% 300%;
@@ -21,8 +21,6 @@
     color: var(--letras--); /* Garante que os ícones usem a cor definida no tema */
     margin: 10px; /* Adiciona espaçamento ao redor dos ícones, se necessário */
 }
-
-
 .linguagens-ferramentas {
     display: flex; /* Define um layout flexível para organizar os elementos */
     flex-wrap: wrap; /* Permite que os elementos se ajustem automaticamente em várias linhas */
@@ -33,8 +31,6 @@
     max-width: 1200px; /* Limita a largura do container para manter a estética */
     margin: 0 auto; /* Centraliza o container dentro da página */
 }
-
-
 .linguagem {
     flex: auto; /* Permite que os elementos internos ocupem o mesmo espaço */
     display: flex; /* Torna o elemento flexível para centralizar conteúdo interno */

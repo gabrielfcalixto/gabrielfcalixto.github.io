@@ -1,22 +1,22 @@
 
-.projetos{
+.projetos-content{
     display: block;
-    align-content: center;
-}
-.projetos h1{
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
     text-align: center;
-    font-size: 5.2rem;
-    font-weight: bold; 
+}
+.projetos-content h1{
+    text-align: center;
+    font-size: 4.1rem;
     color: rgba(255, 255, 255, 0); 
     background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
     background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
     -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
     animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
-    margin-bottom: 60px; /* Define o espaçamento inferior */
 }
-.projetos p{
-    font-size: 2.5rem;
-    margin-bottom: 50px;
+.projetos-content p{
+    font-size: 1.5rem;
     color: var(--letras--);
     text-align: center;
 }
@@ -135,7 +135,6 @@
 }
 /* Media Queries para Responsividade */
 
-/* Para telas pequenas (celulares) */
 @media (max-width: 600px) {
     .projetos h1 {
         font-size: 3.5rem; /* Reduz o tamanho da fonte do título */
