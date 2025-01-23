@@ -101,41 +101,38 @@
 
 /* Media Queries para responsividade */
 
-/* Para telas pequenas (celulares) */
 @media (max-width: 600px) {
-    .linguagens h1 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-        margin-top: auto;
-        
-    }
-
-    .linguagens-ferramentas {
+    .linguagens-content{
         padding: 2px;
         flex-direction: column;
-        
+        align-items: center;
+        margin-top: 5px;
+    }
+    .linguagens h1 {
+        font-size: 2.5rem;
+        padding: 20px;
+        margin-top: 5px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+
     }
 
     .card1 {
         width: auto;
-        padding: 20px;
-        display: flexbox;
+        padding: 10px;
+        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 0.9rem;
         
 
 
     }
     .card1 i {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
 
         color: var(--letras--); /* Define a cor do ícone */
-    }
-
-    .stat h2 {
-        font-size: 2.5rem;
     }
     .community-stats {
         margin-top: auto;
@@ -154,8 +151,9 @@
     }
     
     .stat p {
-        font-size: 1.2rem; /* Define o tamanho do texto descritivo */
+        font-size: 0.9rem; /* Define o tamanho do texto descritivo */
         color: var(--letras--); /* Define a cor do texto */
+        text-align: center;
     }
 }
 

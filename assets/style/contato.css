@@ -159,11 +159,6 @@ option {
 }
 
 .button {
-    text-align: center;
-    padding-top: 25px;
-}
-
-button {
     border-radius: 27px;
     text-align: center;
     background-color: var(--letras--);
@@ -171,8 +166,8 @@ button {
     font-weight: bold;
     border: none;
     height: auto;
-    width: 100%; /* Responsivo */
-    max-width: 300px; /* Limita o tamanho */
+    width: 100%; 
+    max-width: 300px; 
     font-size: large;
     padding: 0.5em 1.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -180,35 +175,40 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
+.button:hover {
     background-color: rgb(69, 34, 204);
     transform: translateY(-2px);
 }
 
-button:active {
+.button:active {
     background-color: rgb(54, 27, 163);
     transform: translateY(0);
 }
 
 
 @media (max-width: 600px) {
-    .formulario {
-        padding: 1.5em; /* Reduz o padding para telas pequenas */
-        width: 90%; /* Ajusta a largura do formulário para 90% da tela */
-        max-width: 100%; /* Permite que o formulário ocupe toda a largura da tela */
+    .contato h1 {
+        font-size: 2.5rem;
+        padding: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        line-height: 1.0;
     }
-
+    .formulario {
+        padding: 0.9em; /* Reduz o padding para telas pequenas */
+        max-width: 70%; /* Permite que o formulário ocupe toda a largura da tela */
+    }
     h4 {
-        font-size: 1.2em; /* Ajusta o tamanho da fonte do título */
+        font-size: 0.9em; /* Ajusta o tamanho da fonte do título */
     }
 
     input, textarea, select {
-        font-size: 1em; /* Ajusta o tamanho da fonte dos campos */
+        font-size: 0.5em; /* Ajusta o tamanho da fonte dos campos */
     }
 
-    button {
+    .button {
         font-size: 1.2em; /* Ajusta o tamanho da fonte do botão */
-        padding: 0.8em 1.2em; /* Ajusta o padding do botão */
+        padding: 0.1em 0.5em; /* Ajusta o padding do botão */
     }
 }
 
