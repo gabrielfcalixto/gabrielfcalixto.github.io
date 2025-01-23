@@ -4,7 +4,6 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const indicators = document.querySelectorAll('.indicator');
 
-// Definindo a largura do slide
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 // Função para mover os slides
