@@ -70,11 +70,12 @@
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 5px;
     background-color: var(--cor-roxo-1--);
     left: 0;
     bottom: -5px;
     transition: width 0.2s ease;
+    border-radius: 3px;
 }
 
 .itens a:hover::after {
@@ -136,13 +137,28 @@
 
 @media (min-width: 1200px) {
     .navbar {
-        font-size: 1.3em;
+        font-size: 0.8em;
+        display: flex; /* Ativa o Flexbox */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        padding: 15px 0; /* Aumenta o espaço interno na vertical */
+        min-height: 10px; /* Define uma altura mínima para a navbar */
     }
 
     .itens {
-        gap: 25px;
+        display: flex; /* Torna os itens uma linha flexível */
+        gap: 2px; /* Espaçamento entre os itens */
+        list-style: none; /* Remove os marcadores padrão da lista */
+        padding: 0; /* Remove o padding padrão */
+        margin: 0; /* Remove a margem padrão */
+    }
+
+    .itens li {
+        text-align: center; /* Garante alinhamento central nos itens */
+        padding: 1px;
     }
 }
+
 
 @media (max-width: 600px) {
     .menu-toggle {

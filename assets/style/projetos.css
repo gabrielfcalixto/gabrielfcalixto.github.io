@@ -1,10 +1,39 @@
+/* Centralizar todo o conteúdo da seção */
+.projetos-content {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+    padding: 20px;
+    gap: 20px; /* Espaçamento entre o título, descrição e slider */
+    min-height: 100vh; /* Altura mínima para ocupar a tela */
+    background-color: var(--cor-fundo--); /* Fundo opcional */
+}
 
-.projetos-content{
-    /* display: block;
-    align-items: center;
-    justify-content: space-between; */
-    padding: 60px;
-    /* text-align: center; */
+/* Estilo do título */
+.projetos-content h1 {
+    font-size: 2rem; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+    margin: 0;
+}
+
+/* Estilo do parágrafo */
+.projetos-content p {
+    font-size: 1rem; /* Tamanho do texto */
+    color: #666; /* Cor do texto */
+    max-width: 600px; /* Limita a largura do texto */
+    margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+/* Estilo do slider */
+.slider {
+    position: relative;
+    width: 80%; /* Largura do slider */
+    max-width: 800px; /* Largura máxima */
+    height: 400px; /* Altura do slider */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa */
+    border-radius: 10px;
 }
 .projetos-content h1{
     text-align: center;

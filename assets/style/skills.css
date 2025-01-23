@@ -1,10 +1,12 @@
 .linguagens-content{
-    display: block;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: space-between; /* Espaça os itens horizontalmente */
-    padding: 160px; /* Espaçamento interno */
-    gap: 5px; /* Espaçamento entre os itens */
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
     text-align: center;
+    gap: 20px; /* Espaçamento entre os elementos */
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    padding: 20px; /* Espaço interno */
 }
 .linguagens h1 {
     font-size: 4.1rem; /* Define o tamanho do título da seção */
