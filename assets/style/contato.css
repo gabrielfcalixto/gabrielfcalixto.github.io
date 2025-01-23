@@ -7,12 +7,9 @@
     justify-content: center; /* Centraliza verticalmente */
     text-align: center;
     padding: 20px;
-    gap: 5px; 
     min-height: 100vh; 
     background-color: var(--cor-fundo--); 
 }
-
-
 .contato h1 {
     flex: 1; /* Permite que o título ocupe o espaço necessário */
     font-size: 2.5rem; /* Define o tamanho da fonte */
@@ -22,20 +19,18 @@
     -webkit-background-clip: text; 
     animation: fadeBackground 5s infinite alternate;
     text-align: left; /* Alinha o texto à esquerda */
-    margin-bottom: 0; /* Remove espaçamento inferior */
     word-wrap: break-word; /* Permite quebra de linha automática */
     max-width: 100%; /* Garante que o título não ultrapasse a largura do contêiner */
 }
 
 
-/* Formulário */
 .formulario {
     padding: 0.9em; /* Reduz o espaçamento interno */
     border-radius: 20px; /* Ajusta os cantos arredondados */
     background-color: var(--cor-roxo-1--);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 80%; /* Reduz a largura inicial */
+    width: 100%; /* Reduz a largura inicial */
     max-width: 300px; /* Define um limite máximo de largura */
     flex: 1; /* Mantém a proporção flexível */
     
@@ -45,11 +40,11 @@ h4 {
     color: var(--letras--);
     font-weight: 700;
     text-align: center;
-    text-shadow: #333 1px 0px;
+    text-shadow: #000000 1px 0px;
     text-transform: uppercase;
 }
 form div {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 label {
     text-align: left;
