@@ -1,53 +1,46 @@
 
-.contato {
-    color: var(--letras--);
-    margin-top: 60px;
-    display: flex; /* Torna o contêiner flexível */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Alinha os itens no centro horizontalmente */
-    justify-content: center; /* Alinha os itens no centro verticalmente */
-    text-align: center; /* Alinha o texto dentro do contêiner */
+/* Estilo geral da seção de contato */
+.contato-content {
+
 }
 
+
 .contato h1 {
-    font-size: 4.0rem; /* Define o tamanho da fonte do título */
+    flex: 1; /* Permite que o título ocupe o espaço necessário */
+    font-size: 3.2rem; /* Define o tamanho da fonte */
     font-weight: bold; /* Define o texto em negrito */
     color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
     background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
     background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
     -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
-    margin-bottom:60px; /* Define o espaçamento inferior */
-    text-align: center; /* Centraliza o texto */
+    animation: fadeBackground 5s infinite alternate; /* Animação no gradiente */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 0; /* Remove espaçamento inferior */
+    word-wrap: break-word; /* Permite quebra de linha automática */
+    max-width: 100%; /* Garante que o título não ultrapasse a largura do contêiner */
 }
 
-.contato-content {
-    display: flex; /* Torna o contêiner flexível */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Alinha os itens no centro horizontalmente */
-    justify-content: center; /* Alinha os itens no centro verticalmente */
-    margin-top: 90px;
-}
 
 /* Formulário */
 .formulario {
-    padding: 2em;
-    border-radius: 2em;
+    padding: 1.5em; /* Reduz o espaçamento interno */
+    border-radius: 1.5em; /* Ajusta os cantos arredondados */
     background-color: var(--cor-roxo-1--);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 90%;
-    max-width: 400px;
-    justify-content: space-between;
-    flex: 2;
+    width: 80%; /* Reduz a largura inicial */
+    max-width: 300px; /* Define um limite máximo de largura */
+    flex: 1; /* Mantém a proporção flexível */
 }
 
+
 h4 {
-    font-size: 1.2em;
-    margin-bottom: 1em;
+    font-size: 0.9em;
     color: var(--letras--);
     font-weight: 700;
     text-align: center;
+    text-shadow: #333 1px 0px;
+    text-transform: uppercase;
 }
 
 form div {
@@ -58,7 +51,7 @@ label {
     text-align: left;
     color: var(--letras--);
     margin-bottom: 0.5em;
-    font-weight: bold;
+    font-weight: light;
 }
 
 /* Estilo dos campos de texto */
@@ -184,9 +177,24 @@ option {
     background-color: rgb(54, 27, 163);
     transform: translateY(0);
 }
+@media (max-width: 768px) {
+    .contato-content {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center; /* Centraliza os itens */
+    }
+
+    .contato h1 {
+        text-align: center; /* Centraliza o título */
+        margin-bottom: 20px; /* Espaçamento inferior */
+    }
+
+    .formulario {
+        width: 100%; /* O formulário ocupa toda a largura */
+    }
+}
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .contato h1 {
         font-size: 2.5rem;
         padding: 20px;
@@ -195,61 +203,59 @@ option {
         line-height: 1.0;
     }
     .formulario {
-        padding: 0.9em; /* Reduz o padding para telas pequenas */
-        max-width: 70%; /* Permite que o formulário ocupe toda a largura da tela */
+        padding: 0.9em; 
+        max-width: 70%; 
     }
     h4 {
-        font-size: 0.9em; /* Ajusta o tamanho da fonte do título */
+        font-size: 0.9em; 
     }
 
     input, textarea, select {
-        font-size: 0.5em; /* Ajusta o tamanho da fonte dos campos */
+        font-size: 0.5em; /
     }
 
     .button {
-        font-size: 1.2em; /* Ajusta o tamanho da fonte do botão */
-        padding: 0.1em 0.5em; /* Ajusta o padding do botão */
+        font-size: 1.2em; 
+        padding: 0.1em 0.5em; 
     }
 }
 
-/* Para telas médias (tablets) */
 @media (max-width: 900px) {
     .formulario {
-        padding: 2em; /* Mantém o padding para telas médias */
-        width: 80%; /* Ajusta a largura do formulário para 80% da tela */
+        padding: 2em; 
+        width: 80%; 
     }
 
     h4 {
-        font-size: 1.3em; /* Ajusta o tamanho do título */
+        font-size: 1.3em; 
     }
 
     input, textarea, select {
-        font-size: 1.1em; /* Ajusta o tamanho da fonte dos campos */
+        font-size: 1.1em; /
     }
 
     button {
-        font-size: 1.3em; /* Ajusta o tamanho do botão */
-        padding: 1em 1.5em; /* Ajusta o padding do botão */
+        font-size: 1.3em; 
+        padding: 1em 1.5em; 
     }
 }
 
-/* Para telas grandes (notebooks e desktops) */
 @media (min-width: 1200px) {
     .formulario {
-        padding: 2em; /* Mantém o padding */
-        width: 50%; /* Ajusta a largura do formulário para 50% da tela */
+        padding: 2em; 
+        width: 50%; 
     }
 
     h4 {
-        font-size: 1.5em; /* Ajusta o tamanho do título */
+        font-size: 1.5em; 
     }
 
     input, textarea, select {
-        font-size: 1.2em; /* Ajusta o tamanho da fonte dos campos */
+        font-size: 1.2em; 
     }
 
     button {
-        font-size: 1.4em; /* Tamanho maior do botão */
-        padding: 1.2em 1.8em; /* Ajusta o padding do botão */
+        font-size: 1.4em; 
+        padding: 1.2em 1.8em; 
     }
-}
+} */

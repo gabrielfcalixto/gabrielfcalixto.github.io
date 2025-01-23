@@ -112,7 +112,7 @@
         font-size: 1.2rem; 
         margin-bottom: 20px;
     }
-
+}
 @media (max-width: 900px) {
     .projetos h1 {
         font-size: 4rem; 
