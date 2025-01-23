@@ -241,18 +241,18 @@
                         <h4>Preencha com seus dados e entrarei em contato com você!</h4>
                         <div>
                             <label for="nome">Nome*</label>
-                            <input type="text" style="color: #4F4F4F;" id="nome" name="nome" />
+                            <input type="text" id="nome" name="nome" required />
                         </div>
                         <div>
                             <label for="email">E-mail*</label>
-                            <input type="email" id="email" name="email" />
+                            <input type="email" id="email" name="email" required />
                         </div>
                         <div>
                             <label for="fone">Celular*</label>
-                            <input type="tel" id="telefone" name="telefone" />
+                            <input type="tel" id="telefone" name="telefone" required />
                         </div>
                         <div>
-                            <label for="seletorinscricao">Quando você pretende iniciar o seu projeto?*</label>
+                            <label for="inscricao">Quando você pretende iniciar o seu projeto?*</label>
                             <select name="inscricao" id="inscricao">
                                 <option value="Selecione">Selecione</option>
                                 <option value="Não tenho essa definição">Não tenho essa definição</option>
@@ -264,19 +264,8 @@
                             </select>
                         </div>
                         <div>
-                            <label for="radiotext">Você é empresa ou pessoa física?*</label>
-                            <label class="container">Sim, sou empresa!
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Não, sou pessoa física!
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
                             <label for="soma">11 + 5 = ?*</label>
-                            <input type="text" id="soma" name="nomeevento" />
+                            <input type="text" id="soma" name="soma" required />
                         </div>
 
                         <div class="button">

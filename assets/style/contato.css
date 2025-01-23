@@ -1,19 +1,26 @@
 
 /* Estilo geral da seção de contato */
 .contato-content {
-
+    display: flex;
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+    padding: 20px;
+    gap: 5px; 
+    min-height: 100vh; 
+    background-color: var(--cor-fundo--); 
 }
 
 
 .contato h1 {
     flex: 1; /* Permite que o título ocupe o espaço necessário */
-    font-size: 3.2rem; /* Define o tamanho da fonte */
+    font-size: 2.5rem; /* Define o tamanho da fonte */
     font-weight: bold; /* Define o texto em negrito */
-    color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
-    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
-    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
-    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-    animation: fadeBackground 5s infinite alternate; /* Animação no gradiente */
+    color: rgba(255, 255, 255, 0); 
+    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); 
+    -webkit-background-clip: text; 
+    animation: fadeBackground 5s infinite alternate;
     text-align: left; /* Alinha o texto à esquerda */
     margin-bottom: 0; /* Remove espaçamento inferior */
     word-wrap: break-word; /* Permite quebra de linha automática */
@@ -23,17 +30,16 @@
 
 /* Formulário */
 .formulario {
-    padding: 1.5em; /* Reduz o espaçamento interno */
-    border-radius: 1.5em; /* Ajusta os cantos arredondados */
+    padding: 0.9em; /* Reduz o espaçamento interno */
+    border-radius: 20px; /* Ajusta os cantos arredondados */
     background-color: var(--cor-roxo-1--);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 80%; /* Reduz a largura inicial */
     max-width: 300px; /* Define um limite máximo de largura */
     flex: 1; /* Mantém a proporção flexível */
+    
 }
-
-
 h4 {
     font-size: 0.9em;
     color: var(--letras--);
@@ -42,155 +48,68 @@ h4 {
     text-shadow: #333 1px 0px;
     text-transform: uppercase;
 }
-
 form div {
     margin-bottom: 1em;
 }
-
 label {
     text-align: left;
     color: var(--letras--);
-    margin-bottom: 0.5em;
     font-weight: light;
 }
 
 /* Estilo dos campos de texto */
 input, textarea, select {
-    font: 1em sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: 100%;
     box-sizing: border-box;
     border: none;
     background-color: #DBDBDB;
-    border-radius: 20px;
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
+    border-radius: 15px;
+    color: var(--cor-fundo--);
     padding: 0.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
-
 input:focus, textarea:focus, select:focus {
-    border-color: #0400ff;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     outline: none;
 }
-
 input::placeholder, textarea::placeholder {
-    color: #888;
+    color: var(--cor-fundo--);
     font-style: italic;
 }
-
 select {
     padding: 10px;
-    font-size: 16px;
-    border-radius: 20px;
+    border-radius:15px;
 }
-
 option {
     font-size: 14px;
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding: 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
     margin: 2px;
-    border: 1px solid #ccc;
 }
-
-/* Checkbox personalizado */
-.container {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font: 1em Roboto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 15px;
-    width: 15px;
-    background-color: #DBDBDB;
-    border-radius: 50%;
-}
-
-.container:hover input ~ .checkmark {
-    background-color: #DBDBDB;
-}
-
-.container input:checked ~ .checkmark {
-    background-color: var(--cor-rosa--);
-}
-
-.checkmark:after {
-    content: "";
-    position: fixed;
-    display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.container .checkmark:after {
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
-}
-
 .button {
-    border-radius: 27px;
+    border-radius: 15px;
     text-align: center;
     background-color: var(--letras--);
-    color: var(--fundo--claro);
-    font-weight: bold;
-    border: none;
-    height: auto;
+    box-sizing: border-box;
+    
     width: 100%; 
-    max-width: 300px; 
-    font-size: large;
-    padding: 0.5em 1.5em;
+    text-transform: uppercase;
+    padding: 0.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .button:hover {
     background-color: rgb(69, 34, 204);
-    transform: translateY(-2px);
+    transform: scale3d(1, 1, 1) 0.5s;
 }
-
 .button:active {
     background-color: rgb(54, 27, 163);
     transform: translateY(0);
-}
-@media (max-width: 768px) {
-    .contato-content {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        text-align: center; /* Centraliza os itens */
-    }
-
-    .contato h1 {
-        text-align: center; /* Centraliza o título */
-        margin-bottom: 20px; /* Espaçamento inferior */
-    }
-
-    .formulario {
-        width: 100%; /* O formulário ocupa toda a largura */
-    }
 }
 
 
@@ -259,3 +178,60 @@ option {
         padding: 1.2em 1.8em; 
     }
 } */
+
+
+/* .container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font: 1em Roboto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #DBDBDB;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #DBDBDB;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: var(--cor-rosa--);
+}
+
+.checkmark:after {
+    content: "";
+    position: fixed;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}  */
