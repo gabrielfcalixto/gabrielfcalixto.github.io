@@ -9,7 +9,7 @@
     padding: 20px; /* Espaço interno */
 }
 .linguagens h1 {
-    font-size: 4.1rem; /* Define o tamanho do título da seção */
+    font-size: 3.0rem; /* Define o tamanho do título da seção */
     margin-bottom: 20px; /* Adiciona espaçamento inferior ao título */
     background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-rosa--));
     background-size: 300% 300%;
@@ -19,7 +19,7 @@
     transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
 }
 .linguagem i {
-    font-size: 3.5rem; /* Define o tamanho dos ícones */
+    font-size: 3.0rem; /* Define o tamanho dos ícones */
     color: var(--letras--); /* Garante que os ícones usem a cor definida no tema */
     margin: 10px; /* Adiciona espaçamento ao redor dos ícones, se necessário */
 }
@@ -84,7 +84,7 @@
 }
 
 .stat h2 {
-    font-size: 3.1rem; 
+    font-size: 3.0rem; 
     margin-bottom: 1px;
     color: rgba(255, 255, 255, 0);
     background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--));
@@ -96,13 +96,12 @@
 }
 
 .stat p {
-    font-size: 1.4rem; /* Define o tamanho do texto descritivo */
-    color: var(--cor-cinza-p--); /* Define a cor do texto */
+    font-size: 1.4rem; 
+    color: var(--cor-cinza-p--);
     margin-top: 1px;
 }
 
-/* Media Queries para responsividade */
-
+/* 
 @media (max-width: 600px) {
     .linguagens-content{
         padding: 2px;
@@ -135,7 +134,7 @@
     .card1 i {
         font-size: 1.5rem;
 
-        color: var(--letras--); /* Define a cor do ícone */
+        color: var(--letras--);
     }
     .community-stats {
         margin-top: auto;
@@ -146,7 +145,7 @@
     }
     
     .stat {
-        text-align: center; /* Centraliza o texto das estatísticas */
+        text-align: center;
     }
     
     .stat h2 {
@@ -154,13 +153,13 @@
     }
     
     .stat p {
-        font-size: 0.9rem; /* Define o tamanho do texto descritivo */
-        color: var(--letras--); /* Define a cor do texto */
+        font-size: 0.9rem; 
+        color: var(--letras--);
         text-align: center;
     }
 }
 
-/* Para tablets (600px a 900px) */
+
 @media (max-width: 900px) {
     .linguagens h1 {
         font-size: 3rem;
@@ -181,7 +180,7 @@
     }
     
     .stat {
-        text-align: center; /* Centraliza o texto das estatísticas */
+        text-align: center; 
     }
     
     .stat h2 {
@@ -189,13 +188,12 @@
     }
     
     .stat p {
-        font-size: 1.2rem; /* Define o tamanho do texto descritivo */
-        color: var(--letras--); /* Define a cor do texto */
+        font-size: 1.2rem; 
+        color: var(--letras--); 
     }
 }
 
 
-/* Para TV e telas ultra largas */
 @media (min-width: 1800px) {
     .linguagens h1 {
         font-size: 6rem;
@@ -212,4 +210,4 @@
     .stat h2 {
         font-size: 6rem;
     }
-}
+} */
