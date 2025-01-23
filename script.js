@@ -4,7 +4,6 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const indicators = document.querySelectorAll('.indicator');
 
-// Definindo a largura do slide
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 // Função para mover os slides
@@ -134,18 +133,21 @@ function animateNumbers() {
     const stats = document.querySelectorAll('.stat h2');
     
     stats.forEach(stat => {
-        const targetValue = parseInt(stat.textContent.replace(/[^\d]/g, ''), 10); // Remove qualquer texto não numérico
+        const textContent = stat.textContent;
+        const hasPlusSign = textContent.trim().startsWith('+'); // Verifica se há o símbolo +
+        const targetValue = parseInt(textContent.replace(/[^\d]/g, ''), 10); // Remove qualquer texto não numérico, exceto números
         let currentValue = 0;
         
         const increment = targetValue / 200; // Define o incremento por quadro
         
         const interval = setInterval(() => {
             currentValue += increment;
-            stat.textContent = Math.floor(currentValue).toLocaleString(); // Atualiza o número na tela
+            const formattedNumber = Math.floor(currentValue).toLocaleString(); // Formata o número
+            stat.textContent = (hasPlusSign ? '+' : '') + formattedNumber; // Adiciona o símbolo + de volta
             
             if (currentValue >= targetValue) {
                 clearInterval(interval); // Para a animação quando o valor atingir o final
-                stat.textContent = targetValue.toLocaleString(); // Garante que o número final seja exibido
+                stat.textContent = (hasPlusSign ? '+' : '') + targetValue.toLocaleString(); // Garante que o número final seja exibido
             }
         }, 10); // Intervalo de 10ms para o efeito suave
     });
@@ -165,3 +167,4 @@ function checkVisibility() {
 
 // Adiciona o evento de rolagem para verificar a visibilidade
 window.addEventListener('scroll', checkVisibility);
+

@@ -5,7 +5,18 @@
     --cor-roxo-1--:#4F46E5;
     --cor-roxo-2--:#23036A;
     --cor-roxo-3--:#30009C;
+    --cor-roxo-4--: #7C4DFF; /* Roxo médio vibrante */
+    --cor-roxo-5--: #D1C4E9; /* Roxo claro pastel */
+    --cor-roxo-6--: #B388FF; /* Roxo lavanda */
+    --cor-roxo-7--: #6A1B9A; /* Roxo escuro intenso */
+    --cor-roxo-8--: #9575CD; /* Roxo suave */
+    --cor-roxo-9--: #EDE7F6; /* Roxo muito claro */
+    --cor-roxo-10--: #1A237E; /* Roxo quase preto */
     --cor-rosa--:#FF4181;
+    --cor-rosa-1--: #E91E63; /* Rosa vibrante */
+    --cor-rosa-2--: #880E4F; /* Rosa escuro */
+    --cor-rosa-3--: #F8BBD0; /* Rosa claro pastel */
+    --cor-rosa-4--: #F06292; /* Rosa médio */
     --cor-verde-agua--:#86FFF4;
     --cor-cinza--:#353334;
     --cor-cinza-p--:#998F8F;
@@ -15,59 +26,14 @@ body, html{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     background-color: var(--fundo--);
-    scroll-behavior: smooth; /* Suaviza a rolagem */
-    overflow: hidden; /* Evita barras de rolagem */
+    scroll-behavior: smooth; 
+
 }
-section {
-    height: 100vh; /* Cada seção ocupa 100% da altura da tela */
-    justify-content: center;
-    align-items: center;
-  }
 
   h1{
     font-weight: 600;
   }
-/* Telas pequenas (celulares em modo retrato) */
-@media (max-width: 576px) {
-  body, html {
-      overflow: auto; /* Permite a rolagem */
-      scroll-behavior: auto; /* Remove a suavização, se necessário */
-  }
-  section {
-      height: auto; /* Ajusta a altura para conteúdo longo */
-}
-
-/* Telas médias (celulares em modo paisagem ou tablets menores) */
-@media (min-width: 577px) and (max-width: 768px) {
-  body, html {
-      overflow: auto;
-  }
-  section {
-      height: auto;
-  }
-
-}
-
-/* Telas grandes (tablets maiores ou laptops menores) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  body, html {
-      overflow: auto;
-  }
-  section {
-      height: auto;
-
-}
-
-/* Telas muito grandes (monitores grandes) */
-@media (min-width: 1025px) {
-  section {
-      height: auto;
-
-}
-
-  /*fontes*/
   .poppins-thin {
     font-family: "Poppins", serif;
     font-weight: 100;

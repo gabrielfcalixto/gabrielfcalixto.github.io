@@ -1,32 +1,26 @@
-/* Estilo da seção linguagens */
-.linguagens {
-    text-align: center; /* Centraliza o texto dentro da seção */
-    background-color: var(--fundo--); /* Define a cor de fundo da seção */
-    color: var(--letras--); /* Define a cor padrão do texto */
-    padding: 100px 0; /* Adiciona espaçamento interno à seção */
-    margin-top: 50px;
+.linguagens-content{
+    display: block;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça os itens horizontalmente */
+    padding: 160px; /* Espaçamento interno */
+    gap: 5px; /* Espaçamento entre os itens */
+    text-align: center;
 }
-
-/* Título da seção */
 .linguagens h1 {
-    font-size: 4.0rem; /* Define o tamanho da fonte do título */
-    font-weight: bold; /* Define o texto em negrito */
-    color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
-    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
-    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
-    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
-    margin-bottom: 5px; /* Define o espaçamento inferior */
+    font-size: 4.1rem; /* Define o tamanho do título da seção */
+    margin-bottom: 20px; /* Adiciona espaçamento inferior ao título */
+    background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-rosa--));
+    background-size: 300% 300%;
+    animation: gradientShift 4s infinite; /* Aplica o gradiente animado */
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
 }
-
 .linguagem i {
     font-size: 3.5rem; /* Define o tamanho dos ícones */
-    /* Adicione estilos adicionais, se necessário, para ajustar alinhamento ou cores */
     color: var(--letras--); /* Garante que os ícones usem a cor definida no tema */
     margin: 10px; /* Adiciona espaçamento ao redor dos ícones, se necessário */
 }
-
-
 .linguagens-ferramentas {
     display: flex; /* Define um layout flexível para organizar os elementos */
     flex-wrap: wrap; /* Permite que os elementos se ajustem automaticamente em várias linhas */
@@ -37,28 +31,29 @@
     max-width: 1200px; /* Limita a largura do container para manter a estética */
     margin: 0 auto; /* Centraliza o container dentro da página */
 }
-
-
 .linguagem {
     flex: auto; /* Permite que os elementos internos ocupem o mesmo espaço */
     display: flex; /* Torna o elemento flexível para centralizar conteúdo interno */
     justify-content: center; /* Centraliza os elementos horizontalmente */
     align-items: center; /* Centraliza os elementos verticalmente */
 }
-
-/* Estilo para os cards */
 .card1 {
-    padding: 32px; /* Adiciona espaçamento interno no card */
+    /* alinhamento */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; /* Adiciona espaçamento interno no card */
     border: 2px solid var(--cor-roxo-1--); /* Define a borda do card */
-    border-radius: 8px; /* Arredonda os cantos do card */
+    border-radius: 10px; /* Arredonda os cantos do card */
     text-align: center; /* Centraliza o conteúdo do card */
     width: 100%; /* Define a largura fixa do card */
-    transition: all 0.3s ease; /* Animação suave para mudanças no card */
+    transition: all 0.4s ease; /* Animação suave para mudanças no card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao card */
 }
 
 .card1:hover {
-    border-color: #007BFF; /* Altera a cor da borda ao passar o mouse */
+    border-color: var(--cor-roxo-1--); /* Altera a cor da borda ao passar o mouse */
     box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Aumenta a sombra ao passar o mouse */
     transform: translateY(-10px); /* Move o card ligeiramente para cima */
 }
@@ -69,7 +64,7 @@
 }
 
 .card1 h2 {
-    margin-top: 10px; /* Adiciona espaçamento superior ao título do card */
+    margin-top: 5px; /* Adiciona espaçamento superior ao título do card */
     font-size: 18px; /* Define o tamanho do título do card */
     color: var(--letras--); /* Define a cor do título */
 }
@@ -79,7 +74,7 @@
     display: flex; /* Define um layout flexível para alinhar as estatísticas */
     justify-content: center; /* Centraliza os elementos no container */
     gap: 50px; /* Espaçamento entre as estatísticas */
-    margin-top: 40px; /* Adiciona um espaçamento superior à seção */
+    margin-top: 30px; /* Adiciona um espaçamento superior à seção */
 }
 
 .stat {
@@ -87,59 +82,58 @@
 }
 
 .stat h2 {
-    font-size: 4.5rem; /* Define o tamanho do número da estatística */
-    margin-bottom: 1px; /* Adiciona espaçamento inferior ao número */
-    color: rgba(255, 255, 255, 0); /* Torna o texto transparente para aplicar o gradiente */
-    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
-    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
-    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
+    font-size: 3.1rem; 
+    margin-bottom: 1px;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--));
+    background-size: 100%; 
+    -webkit-background-clip: text; 
+    animation: fadeBackground 5s infinite alternate; 
     transition: all 1s ease-in-out; 
     margin-top: 5px;
 }
 
 .stat p {
-    font-size: 1.9rem; /* Define o tamanho do texto descritivo */
-    color: var(--letras--); /* Define a cor do texto */
+    font-size: 1.4rem; /* Define o tamanho do texto descritivo */
+    color: var(--cor-cinza-p--); /* Define a cor do texto */
+    margin-top: 1px;
 }
 
 /* Media Queries para responsividade */
 
-/* Para telas pequenas (celulares) */
 @media (max-width: 600px) {
-    .linguagens h1 {
-        font-size: 1.5rem;
-        line-height: 1.2;
-        margin-top: auto;
-        
-    }
-
-    .linguagens-ferramentas {
+    .linguagens-content{
         padding: 2px;
         flex-direction: column;
-        
+        align-items: center;
+        margin-top: 5px;
+
+    }
+    .linguagens h1 {
+        font-size: 1.1rem;
+        padding: 20px;
+        margin-top: 5px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+
     }
 
     .card1 {
         width: auto;
-        padding: 20px;
-        display: flexbox;
+        padding: 10px;
+        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 0.9rem;
         
 
 
     }
     .card1 i {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
 
         color: var(--letras--); /* Define a cor do ícone */
-    }
-
-    .stat h2 {
-        font-size: 2.5rem;
     }
     .community-stats {
         margin-top: auto;
@@ -158,8 +152,9 @@
     }
     
     .stat p {
-        font-size: 1.2rem; /* Define o tamanho do texto descritivo */
+        font-size: 0.9rem; /* Define o tamanho do texto descritivo */
         color: var(--letras--); /* Define a cor do texto */
+        text-align: center;
     }
 }
 
@@ -197,24 +192,6 @@
     }
 }
 
-/* Para telas grandes (notebooks, desktop, ultrawide) */
-@media (min-width: 1200px) {
-    .linguagens h1 {
-        font-size: 5rem;
-    }
-
-    .linguagens-ferramentas {
-        padding: 60px;
-    }
-
-    .card1 {
-        width: 180px;
-    }
-
-    .stat h2 {
-        font-size: 5rem;
-    }
-}
 
 /* Para TV e telas ultra largas */
 @media (min-width: 1800px) {

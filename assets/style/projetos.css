@@ -1,200 +1,111 @@
 
-.projetos{
-    display: block;
-    align-content: center;
-}
-.projetos h1{
-    text-align: center;
-    font-size: 5.2rem;
-    font-weight: bold; 
-    color: rgba(255, 255, 255, 0); 
-    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--)); /* Aplica o gradiente de cores */
-    background-size: 100%; /* Garante que o gradiente ocupe todo o texto */
-    -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-    animation: fadeBackground 5s infinite alternate; /* Aplica uma animação de gradiente alternado */
-    margin-bottom: 60px; /* Define o espaçamento inferior */
-}
-.projetos p{
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: var(--letras--);
-    text-align: center;
-}
-/* Estilo do Carousel */
-.carousel {
-    position: relative;
-    width: 60%;
-    height: auto; /* Ajuste conforme necessário */
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 50px;
-}
-
-/* Container do track (onde as imagens ficam) */
-.carousel-track-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-/* Track do slider */
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Animação suave */
-    animation: slideAnimation 10s infinite linear;
-    animation-play-state: running;
-}
-
-/* Estilo de cada slide */
-.slide {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
-    object-fit: cover;
-    padding-right: 100px;
-    overflow: hidden;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-
-}
-/* Estilo do overlay */
-.slide-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    backdrop-filter: blur(8px); /* Efeito de desfoque */
-    display: flex;
-    justify-content: center;
+.projetos-content{
+    /* display: block;
     align-items: center;
-    color: white;
-    font-size: 18px;
+    justify-content: space-between; */
+    padding: 60px;
+    /* text-align: center; */
+}
+.projetos-content h1{
     text-align: center;
-    opacity: 0; /* Invisível por padrão */
-    transition: opacity 0.3s ease; /* Transição suave */
-    pointer-events: none; /* Para não interferir com o clique no slide */
+    font-size: 4.1rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-rosa--));
+    background-size: 300% 300%;
+    animation: gradientShift 4s infinite; /* Aplica o gradiente animado */
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
 }
-/* Exibir o overlay ao passar o mouse */
-.slide:hover .slide-overlay {
-    opacity: 1;
-    pointer-events: auto;
+.projetos-content p{
+    font-size: 1.5rem;
+    color: var(--cor-cinza-p--);
+    text-align: center;
 }
-
-/* Botões de navegação */
-.carousel-button {
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+.slide img{
+    width: 800px;
+}
+.manual-navigation{
     position: absolute;
-    top: 50%;
-    transform: matrix3d( 0.71);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10;
-    height: auto;
-    width: auto;
-
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* Indicadores de navegação */
-.carousel-indicators {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 800px;
+    margin-top: -40px;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-
-.indicator {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
+.manual-btn{
+    border: 2px solid var(--letras--);
+    padding: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    transition: 0.3;
+
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background: var(--cor-roxo-1--);
+}
+#radio1:checked ~ .first{
+    margin: 0;
 }
 
-.indicator.active {
-    background-color: white;
-}
-/* Media Queries para Responsividade */
 
-/* Para telas pequenas (celulares) */
+
+
+
+
 @media (max-width: 600px) {
     .projetos h1 {
-        font-size: 3.5rem; /* Reduz o tamanho da fonte do título */
-        margin-bottom: 30px;
+        font-size: 1.3rem; 
+        margin-bottom: 20px;
+        margin-top: 5px;
     }
-
     .projetos p {
-        font-size: 1.8rem; /* Ajusta o tamanho do texto */
-        margin-bottom: 30px;
+        font-size: 1.2rem; 
+        margin-bottom: 20px;
     }
 
-    .carousel {
-        width: 90%; /* Aumenta a largura do carrossel para ocupar mais espaço */
-    }
-
-    .carousel-button {
-        font-size: 24px; /* Diminui o tamanho dos botões de navegação */
-    }
-
-    .carousel-indicators {
-        bottom: 20px; /* Ajusta a posição dos indicadores */
-    }
-
-    .indicator {
-        width: 8px;
-        height: 8px; /* Ajusta o tamanho dos indicadores */
-    }
-}
-
-/* Para telas médias (tablets) */
 @media (max-width: 900px) {
     .projetos h1 {
-        font-size: 4rem; /* Ajusta o tamanho do título */
+        font-size: 4rem; 
     }
-
     .carousel {
-        width: 80%; /* Ajusta a largura do carrossel */
+        width: 80%;
     }
-
     .carousel-button {
-        font-size: 26px; /* Ajusta o tamanho dos botões */
+        font-size: 26px; 
     }
-
     .carousel-indicators {
-        bottom: 30px; /* Ajusta a posição dos indicadores */
+        bottom: 30px;
     }
 }
-
-/* Para telas grandes (notebooks e desktops) */
 @media (min-width: 1200px) {
     .projetos h1 {
-        font-size: 5.2rem; /* Tamanho do título para telas grandes */
+        font-size: 5.2rem; 
     }
-
     .carousel {
-        width: 60%; /* Mantém a largura do carrossel para telas grandes */
+        width: 60%; 
     }
-
     .carousel-button {
-        font-size: 30px; /* Tamanho padrão dos botões */
+        font-size: 30px; 
     }
 }
