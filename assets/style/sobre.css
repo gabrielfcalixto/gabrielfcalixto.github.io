@@ -51,12 +51,12 @@
     position: relative;
     margin: 0 20px;
     border-radius: 20px;
+    border-width: 7px;
     border-style: outset;
-    border-width: 10px;
-    animation: pulsar 2s infinite; 
+    animation: pulsar 5s infinite; 
     max-width: 400px;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden;  /* Oculta o conteúdo que ultrapassa a largura do contêiner */
 }
 .sobre-img-div img {
     width: auto;
@@ -80,7 +80,7 @@
 }
 .social-icons i {
     font-size: 2.5rem;
-    background: linear-gradient(90deg,var(--cor-roxo-4--) , var(--cor-roxo-6--));
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-roxo-6--));
     background-size: 300% 300%;
     animation: gradientShift 5s infinite; 
     -webkit-background-clip: text; 
@@ -98,7 +98,7 @@
         flex-direction: column;
         gap: 20px; 
         align-items: center;
-        margin-top: 20px;
+        margin-top: 60px;
     }
     .sobre h1, .sobre h2 {
         font-size: 3.1rem;
@@ -117,6 +117,7 @@
         padding: 20px;
         flex-direction: column;
         gap: 40px; 
+        margin-top: 70px;
     }
     .sobre h1, .sobre h2 {
         font-size: 3.2rem;
@@ -127,10 +128,14 @@
     .sobre-img-div {
         max-width: 350px;
     }
+    .social-icons i {
+        font-size: 1.5rem;
+
+    }
 }
 @media (min-width: 901px) and (max-width: 1200px) {
     .sobre-content {
-        padding: 50px;
+        padding: 40px;
         flex-direction: row;
         gap: 50px;
     }
@@ -138,7 +143,7 @@
         font-size: 4rem;
     }
     .sobre p {
-        font-size: 1.4em;
+        font-size: 1.1em;
     }
     .sobre-img-div {
         max-width: 400px;
@@ -146,14 +151,20 @@
 }
 @media (min-width: 1201px) {
     .sobre-content {
-        padding: 40px;
+        padding: 90px;
         gap: 60px;
+        padding: 10px;
+        gap: 50px; 
+        align-items: center;
+        margin-top: 20px;
     }
     .sobre h1, .sobre h2 {
-        font-size: 5.6rem;
+        font-size: 4.3rem;
+
     }
     .sobre p {
-        font-size: 1.6em;
+        font-size: 1.1em;
+        max-width: 400px;
     }
     .sobre-img-div {
         max-width:auto;

@@ -1,6 +1,3 @@
-
-
-// Função para a contagem até o número
 document.addEventListener('DOMContentLoaded', function () {
     const stats = document.querySelectorAll('.stat h2');
 
@@ -16,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, 50);
     }
-
-    // Função para verificar se a seção está visível
     function checkVisibility() {
         const rect = document.querySelector('.community-stats').getBoundingClientRect();
         if (rect.top <= window.innerHeight && rect.bottom >= 0) {
@@ -28,8 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
             window.removeEventListener('scroll', checkVisibility); // Remover o ouvinte após a animação
         }
     }
-
-    // Inicializar a animação ao rolar até a seção
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Verificar se já está visível ao carregar a página
 });
