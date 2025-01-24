@@ -21,15 +21,14 @@
     transition: transform 0.3s ease, color 0.3s ease;
 }
 .formulario {
-    padding: 1.5em; /* Reduz o espaçamento interno */
-    border-radius: 20px; /* Ajusta os cantos arredondados */
-    /* background-color: var(--cor-roxo-1--); */
+    padding: 1.5em; 
+    border-radius: 20px; 
     background: linear-gradient(50deg, var(--cor-roxo-3--), var(--cor-roxo-4--));
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 100%; /* Reduz a largura inicial */
-    max-width: 300px; /* Define um limite máximo de largura */
+    width: 100%; 
+    max-width: 300px; 
     
 }
 h4 {
@@ -88,7 +87,6 @@ option {
     margin-top: 20px;
     width: 100%;
 }
-
 .button button {
     border-radius: 15px;
     background-color: var(--letras--);
@@ -102,19 +100,16 @@ option {
     font-size: 1em;
     font-weight: bold;
 }
-
 .button button:hover {
     background-color: var(--cor-roxo-4--);
     transform: scale(1.05);
     color: #fff;
 
 }
-
 .button button:active {
     background-color: rgb(54, 27, 163);
     transform: translateY(2px);
 }
-
 @media (max-width: 600px) {
     .contato h1 {
         font-size: 1.8rem;
@@ -140,7 +135,6 @@ option {
         padding: 0.1em 0.5em; 
     }
 }
-
 @media (max-width: 900px) {
     .formulario {
         padding: 2em; 
@@ -160,7 +154,6 @@ option {
         padding: 1em 1.5em; 
     }
 }
-
 @media (min-width: 1200px) {
     .formulario {
         padding: 2em; 
@@ -180,60 +173,3 @@ option {
         padding: 1.2em 1.8em; 
     }
 } 
-
-
- /* .container {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font: 1em Roboto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 15px;
-    width: 15px;
-    background-color: #DBDBDB;
-    border-radius: 50%;
-}
-
-.container:hover input ~ .checkmark {
-    background-color: #DBDBDB;
-}
-
-.container input:checked ~ .checkmark {
-    background-color: var(--cor-rosa--);
-}
-
-.checkmark:after {
-    content: "";
-    position: fixed;
-    display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.container .checkmark:after {
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
-}  */
