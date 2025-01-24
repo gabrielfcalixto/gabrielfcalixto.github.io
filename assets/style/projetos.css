@@ -13,7 +13,7 @@
     text-align: center;
     font-size: 2.1rem;
     margin-bottom:1px;
-    background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-rosa--));
+    background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-roxo-8--));
     background-size: 300% 300%;
     animation: gradientShift 4s infinite; 
     -webkit-background-clip: text; 

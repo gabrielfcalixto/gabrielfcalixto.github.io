@@ -11,7 +11,7 @@
 .linguagens h1 {
     font-size: 2.6rem; /* Define o tamanho do título da seção */
     margin-bottom: 20px; /* Adiciona espaçamento inferior ao título */
-    background: linear-gradient(50deg,var(--cor-roxo-1--), var(--cor-roxo-8--), var(--cor-verde-agua--));
+    background: linear-gradient(50deg,var(--cor-roxo-1--), var(--cor-roxo-8--), var(--cor-roxo-7--));
     background-size: 300% 300%;
     animation: gradientShift 4s infinite; /* Aplica o gradiente animado */
     -webkit-background-clip: text; /* Aplica o gradiente ao texto */
@@ -80,7 +80,7 @@
     font-size: 2.5rem; 
     margin-bottom: 1px;
     color: rgba(255, 255, 255, 0);
-    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-rosa--));
+    background: linear-gradient(90deg, var(--cor-roxo-1--), var(--cor-roxo-7--));
     background-size: 100%; 
     -webkit-background-clip: text; 
     animation: fadeBackground 5s infinite alternate; 

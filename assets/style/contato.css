@@ -113,7 +113,7 @@ option {
     .contato h1 {
         font-size: 0.9rem;
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
     .formulario {
         width:80%; /* Ocupa 90% da largura da tela */
@@ -153,8 +153,8 @@ option {
 @media (min-width: 601px) and (max-width: 900px) {
     .contato h1 {
         font-size: 1.5rem;
-        margin-top: 0;
-        margin-bottom: 40px;
+        margin-top: 1px;
+        margin-bottom: 20px;
     }
     .formulario {
         width:60%; /* Ocupa 90% da largura da tela */
