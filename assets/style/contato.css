@@ -49,7 +49,6 @@ label {
     font-weight: light;
 }
 
-/* Estilo dos campos de texto */
 input, textarea, select {
     font-family: 'Poppins', sans-serif;
     width: 100%;

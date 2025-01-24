@@ -63,3 +63,22 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Verificar se já está visível ao carregar a página
 });
+// Obtém todas as seções e os links da navbar
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar .itens a');
+
+// Função para adicionar a classe 'active' ao link correspondente à seção visível
+function setActiveLink() {
+    let index = sections.length;
+
+    while (--index && window.scrollY + 50 < sections[index].offsetTop) {} // Ajuste de 50px para considerar a navbar fixa
+
+    navLinks.forEach(link => link.classList.remove('active')); // Remove a classe 'active' de todos os links
+    navLinks[index].classList.add('active'); // Adiciona a classe 'active' ao link correspondente
+}
+
+// Chama a função sempre que o usuário rolar a página
+window.addEventListener('scroll', setActiveLink);
+
+// Chama a função quando a página for carregada (caso a página já esteja com algum scroll)
+document.addEventListener('DOMContentLoaded', setActiveLink);

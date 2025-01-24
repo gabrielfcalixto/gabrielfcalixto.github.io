@@ -136,8 +136,7 @@
         border-color: var(--cor-roxo-3--);
     }
 }
-/* Media Queries */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .sobre-content {
         padding: 150px;
         flex-direction: column;
@@ -217,4 +216,4 @@
     .sobre-img-div {
         max-width: 600px;
     }
-}
+} */

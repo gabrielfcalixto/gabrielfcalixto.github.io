@@ -1,5 +1,4 @@
 .navbar {
-    padding-top: 50px;
     display: flex;
     justify-content: center; /* Alinha os itens da navbar ao centro */
     background-color: var(--fundo--claro);
@@ -12,8 +11,8 @@
     transform: translateX(-50%); /* Ajusta a posição para ficar centralizado */
     width: auto;
     z-index: 1000;
-    border-radius: 20px;
-    top: 30px;
+    border-radius: 15px;
+    top: 10px;
     height: auto;
     flex: content;
 }
@@ -30,10 +29,12 @@
 
 
 .itens a {
-    margin: 0 20px;
+    position: relative; /* Necessário para o posicionamento absoluto do marcador */
+    padding-bottom: 5px; 
+    margin: 0 18px;
     text-decoration: none;
     color: var(--letras--);
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 400;
     justify-content: center;
 
@@ -61,8 +62,14 @@
 }
 
 .itens a.active::after {
-    width: 100%;
+    content: '';
+    position: absolute;
+    width: 100%; /* Largura do marcador */
+    height: 4px; /* Altura do marcador */
     background-color: var(--cor-roxo-1--); /* Cor de destaque para a seção ativa */
+    left: 0;
+    bottom: 0; /* Alinha o marcador com a base do item */
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 
