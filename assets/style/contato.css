@@ -120,9 +120,9 @@ option {
         max-width: 270px; /* Limita a largura máxima */
         margin: 0 auto; /* Centraliza o formulário */
         padding: 1em; /* Adiciona espaço interno */
-        background-color: #fff; /* Adiciona um fundo branco */
         border-radius: 30px; /* Bordas arredondadas */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        
     }
    .formulario h4{
     font-size: 0.7rem;
@@ -148,6 +148,8 @@ option {
     .button {
         font-size: 0.9em; 
         padding: 0.1em 0.1em; 
+        color: #fff;
+        
     }
 }
 @media (min-width: 601px) and (max-width: 900px) {
