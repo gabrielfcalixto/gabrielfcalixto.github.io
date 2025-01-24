@@ -2,7 +2,7 @@ footer {
     background-color: var(--fundo--); /* Cor de fundo do rodapé */
     text-align: center;
     color: var(--letras--);
-    margin-top: 60px; /* Empurra o footer para o final */
+    margin-top: 80px; /* Empurra o footer para o final */
     text-align: center;
  
 
@@ -10,23 +10,22 @@ footer {
 }
 /* Ícones e links sociais */
 .footer-content {
-    display: inline-block;
+    display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     color: var(--letras--);
 }
 
 .footer-content p {
-    margin: 5px 0;
     font-size: 1.2em;
 }
 
-.footer-content a {
-    text-decoration: none;
-    color:var(--letras--);
-    transition: color 0.5s ease;
-     display: inline-block;
-  
+.icons-social{
+   display: flex;
+}
+
+.icons-social a { /* Supondo que os itens sejam links dentro da classe .icons-social */
+    margin-right: 10px; /* Espaço à direita de cada item */
 }
 
 .footer-content a:hover {
@@ -40,7 +39,6 @@ footer {
     transition: color 0.3s ease;
   
 }
-
 .footer-content .social-icon i:hover {
     color: #C13584; /* Cor ao passar o mouse */
 }
@@ -62,7 +60,7 @@ footer {
 }
 
 .social-icon i:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
