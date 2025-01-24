@@ -200,7 +200,7 @@
 /* Para telas grandes (acima de 1200px) */
 @media (min-width: 1201px) {
     .sobre-content {
-        padding: 80px;
+        padding: 40px;
         gap: 60px;
     }
 
@@ -213,6 +213,6 @@
     }
 
     .sobre-img-div {
-        max-width: 450px;
+        max-width:auto;
     }
 }

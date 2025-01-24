@@ -88,13 +88,13 @@ footer {
 /* Estilos para telas pequenas (até 600px) */
 @media (max-width: 600px) {
     footer {
-        margin-top: 40px; /* Reduz o espaçamento superior */
+        margin-top: 20px; /* Reduz o espaçamento superior */
         padding: 10px; /* Adiciona padding para melhor visualização */
     }
 
     .footer-content {
         flex-direction: column; /* Alinha itens em coluna */
-        gap: 20px; /* Reduz o espaçamento entre itens */
+        align-items: center;
     }
 
     .footer-content p {
@@ -102,7 +102,7 @@ footer {
     }
 
     .social-icon i {
-        font-size: 2em; /* Reduz o tamanho dos ícones */
+        font-size: 1em; /* Reduz o tamanho dos ícones */
     }
 
     .footer-copyright {
