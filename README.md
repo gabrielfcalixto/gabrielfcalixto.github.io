@@ -13,9 +13,12 @@ Este é um projeto de portfólio minimalista para apresentar projetos, habilidad
 - [ ] Envio de e-mail (em andamento)
 
 ## Melhorias
-- [ ] Melhorar resposividade
-- [ ] Melhorar menu hamburguer 
-- [ ] Seção de Projetos 
+- [x] Melhorar resposividade
+- [x] Melhorar menu hamburguer 
+- [x] Seção de Projetos 
+
+## Ajustes
+- [ ] Menu hamburguer 
 
 
 ## Tecnologias
