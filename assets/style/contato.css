@@ -7,32 +7,33 @@
     text-align: center;
     min-height: 100vh; 
     background-color: var(--cor-fundo--); 
+    padding: 25px;
 }
 .contato h1 {
     text-align: center;
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
     background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-roxo-6--), var(--cor-roxo-4--));
     background-size: 300% 300%;
     animation: gradientShift 4s infinite; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
+
     transition: transform 0.3s ease, color 0.3s ease;
 }
 .formulario {
-    padding: 1.5em; 
-    border-radius: 20px; 
+    padding: 0.9em; 
+    border-radius: 30px; 
     background: linear-gradient(50deg, var(--cor-roxo-3--), var(--cor-roxo-4--));
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 100%; 
     max-width: 300px; 
 }
 h4 {
-    font-size:1.2em;
+    font-size:0.9em;
     color: var(--letras--);
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     text-shadow: #000000 1px 0px;
     text-transform: uppercase;
@@ -44,6 +45,7 @@ label {
     text-align: left;
     color: var(--letras--);
     font-weight: light;
+    font-size: 0.8em;
 }
 input, textarea, select {
     font-family: 'Poppins', sans-serif;
@@ -56,7 +58,7 @@ input, textarea, select {
     padding: 0.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 input:focus, textarea:focus, select:focus {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
@@ -68,7 +70,7 @@ input::placeholder, textarea::placeholder {
     font-style: italic;
 }
 select {
-    padding: 10px;
+    padding: 0.5em;
     border-radius:15px;
 }
 option {
@@ -81,11 +83,12 @@ option {
 }
 .button {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
+
 }
 .button button {
-    border-radius: 15px;
+    border-radius: 22px;
     background-color: var(--letras--);
     box-sizing: border-box;
     text-transform: uppercase;
@@ -108,56 +111,120 @@ option {
 }
 @media (max-width: 600px) {
     .contato h1 {
-        font-size: 1.8rem;
-        padding: 20px;
-        margin-top: 1px;
-        margin-bottom: 5px;
-        line-height: 1.0;
+        font-size: 0.9rem;
+        margin-top: 0;
+        margin-bottom: 10px;
     }
     .formulario {
-        padding: 0.9em; 
-        max-width: 70%; 
+        width:80%; /* Ocupa 90% da largura da tela */
+        max-width: 270px; /* Limita a largura máxima */
+        margin: 0 auto; /* Centraliza o formulário */
+        padding: 1em; /* Adiciona espaço interno */
+        background-color: #fff; /* Adiciona um fundo branco */
+        border-radius: 30px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+   .formulario h4{
+    font-size: 0.7rem;
+   }
+    label {
+        text-align: left;
+        color: var(--letras--);
+        font-weight: light;
+        font-size: 0.7rem;
     }
     h4 {
         font-size: 0.9em; 
     }
     input, textarea, select {
-        font-size: 0.5em; /
+        font-size: 0.7em; 
+        width: 100%; /* Garante que os campos ocupem toda a largura */
+        padding:0.6em; /* Espaço interno dos campos */
+        margin-bottom: 1px; /* Espaço entre os campos */
+        border: 1px solid #ccc; /* Borda leve */
+        border-radius:20px; /* Bordas arredondadas */
+        box-sizing: border-box; /* Inclui o padding no cálculo da largura */   
+     }
+    .button {
+        font-size: 0.9em; 
+        padding: 0.1em 0.1em; 
+    }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    .contato h1 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .formulario {
+        width:60%; /* Ocupa 90% da largura da tela */
+        max-width: 300px; /* Limita a largura máxima */
+        margin: 0 auto; /* Centraliza o formulário */
+        padding: 1em; /* Adiciona espaço interno */
+        background-color: #fff; /* Adiciona um fundo branco */
+        border-radius: 30px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+    label {
+        text-align: left;
+        color: var(--letras--);
+        font-weight: light;
+        font-size: small;
+    }
+    h4 {
+        font-size: 0.9em; 
+    }
+    input, textarea, select {
+        font-size: 0.9em; 
+        width: 100%; /* Garante que os campos ocupem toda a largura */
+        padding:0.6em; /* Espaço interno dos campos */
+        margin-bottom: 1px; /* Espaço entre os campos */
+        border: 1px solid #ccc; /* Borda leve */
+        border-radius:20px; /* Bordas arredondadas */
+        box-sizing: border-box; /* Inclui o padding no cálculo da largura */   
+     }
+    .button {
+        font-size: 0.9em; 
+        padding: 0.1em 0.1em; 
+    }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+    .contato h1 {
+        font-size: 1.9rem;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .formulario {
+        width: 70%; /* Ocupa 90% da largura da tela */
+        max-width: 330px; /* Limita a largura máxima */
+        margin: 0 auto; /* Centraliza o formulário */
+        padding: 1em; /* Adiciona espaço interno */
+        background-color: #fff; /* Adiciona um fundo branco */
+        border-radius: 30px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        margin-top: 0;
+    }
+    h4 {
+        font-size: 0.9em; 
+        
+    }
+    input, textarea, select {
+        font-size: 0.9em; 
+        width: 100%; /* Garante que os campos ocupem toda a largura */
+        padding: 0.5em; /* Espaço interno dos campos */
+        margin-bottom: 3px; /* Espaço entre os campos */
+        border: 1px solid #ccc; /* Borda leve */
+        border-radius:20px; /* Bordas arredondadas */
+        box-sizing: border-box; /* Inclui o padding no cálculo da largura */   
+     }
+     label {
+        text-align: left;
+        color: var(--letras--);
+        font-weight: light;
+        font-size: small;
     }
     .button {
-        font-size: 1.2em; 
-        padding: 0.1em 0.5em; 
+        font-size: 0.9em; 
+        padding: 0.1em 0.1em; 
     }
 }
-@media (max-width: 900px) {
-    .formulario {
-        padding: 2em; 
-        width: 80%; 
-    }
-    h4 {
-        font-size: 1.3em; 
-    }
-    input, textarea, select {
-        font-size: 1.1em; /
-    }
-    button {
-        font-size: 1.3em; 
-        padding: 1em 1.5em; 
-    }
-}
-@media (min-width: 1200px) {
-    .formulario {
-        padding: 2em; 
-        width: 50%; 
-    }
-    h4 {
-        font-size: 1.5em; 
-    }
-    input, textarea, select {
-        font-size: 1.2em; 
-    }
-    button {
-        font-size: 1.4em; 
-        padding: 1.2em 1.8em; 
-    }
-} 

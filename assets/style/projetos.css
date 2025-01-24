@@ -7,10 +7,11 @@
     gap: 5px; 
     min-height: 100vh; 
     background-color: var(--cor-fundo--); 
+    padding: 30px;
 }
 .projetos-content h1{
     text-align: center;
-    font-size: 4.4rem;
+    font-size: 2.1rem;
     margin-bottom:1px;
     background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-rosa--));
     background-size: 300% 300%;
@@ -20,25 +21,29 @@
     transition: transform 0.3s ease, color 0.3s ease;
 }
 .projetos-content p{
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     color: var(--cor-cinza-p--);
     text-align: center;
     margin-top: 1px;
 }
 .projetos-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define duas colunas */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 5px;
 }
 
 .card {
     background-color: var(--cor-fundo--);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(78, 70, 229, 0.296);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 350px;
+        height: max-content;
 }
 
 .card:hover {
@@ -53,13 +58,13 @@
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--cor-roxo-1--);
     margin: 10px 0;
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: var(--cor-cinza-p--);
     margin: 10px 15px;
 }
@@ -232,10 +237,10 @@
         padding: 8px 15px;
     }
 }
-@media (min-width: 1201px){
+/* @media (min-width: 1201px){
     .projetos-content {
         display: flex;
-        flex-direction: column; /* Alinha os itens em uma coluna */
+        flex-direction: column; 
     }
     .projetos-content h1 {
         text-align: center;
@@ -278,4 +283,4 @@
         padding: 8px 15px;
     }
 }
-
+ */

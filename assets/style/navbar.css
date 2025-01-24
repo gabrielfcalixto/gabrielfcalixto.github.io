@@ -177,12 +177,12 @@
 }
 @media (min-width: 1201px) {
     .navbar {
-        font-size: 1.0em;
+        font-size: 0.7em;
         display: flex; /* Ativa o Flexbox */
         align-items: center; /* Centraliza verticalmente */
         justify-content: center; /* Centraliza horizontalmente */
         padding: 15px 0; /* Aumenta o espaço interno na vertical */
-        max-height: 30px;
+        max-height: 20px;
     }
     .itens {
         display: flex; /* Torna os itens uma linha flexível */
