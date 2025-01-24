@@ -82,3 +82,10 @@ window.addEventListener('scroll', setActiveLink);
 
 // Chama a função quando a página for carregada (caso a página já esteja com algum scroll)
 document.addEventListener('DOMContentLoaded', setActiveLink);
+
+const menuToggle = document.querySelector('.menu-toggle');
+const menuItems = document.querySelector('.itens');
+
+menuToggle.addEventListener('click', () => {
+    menuItems.classList.toggle('active');
+});

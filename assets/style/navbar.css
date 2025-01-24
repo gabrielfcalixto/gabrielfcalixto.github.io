@@ -88,44 +88,44 @@
 .itens a:hover::after {
     width: 100%;
 }
+
+
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 1.5em;
     cursor: pointer;
-    color: #333;
+    color: var(--letras--);
 }
 
 @media (max-width: 600px) {
     .navbar {
-        top: 10px;
-        margin-left: 130px; 
-        margin-right: 10px; 
-       
+        padding: 10px 15px;
     }
 
     .itens {
-        display: none;
+        display: none; /* Esconde o menu por padrão */
         flex-direction: column;
-        position:absolute ;
-        gap: 10px;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
         background-color: var(--fundo--claro);
-        margin-top: 60px;
-        padding: 1px;
-        border-radius: 15px;
+        padding: 15px 0;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .itens.active {
+        display: flex; /* Mostra o menu quando ativo */
     }
 
     .menu-toggle {
-        display: block; 
-
-        font-size: 1.5em;
-        cursor: pointer;
-        color: #ffffff;
-        border-radius: 15px;
+        display: block; /* Mostra o botão menu sanduíche */
     }
 }
-
 
 @media (max-width: 900px) {
     .navbar {
@@ -163,16 +163,5 @@
     .itens li {
         text-align: center; /* Garante alinhamento central nos itens */
         padding: 1px;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .menu-toggle {
-        display: block; 
-    }
-
-    .itens.active {
-        display: flex; 
     }
 }
