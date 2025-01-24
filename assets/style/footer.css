@@ -1,9 +1,10 @@
 footer {
     background-color: var(--fundo--); /* Cor de fundo do rodapé */
     text-align: center;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     color: var(--letras--);
-
+    margin-top: 60px; /* Empurra o footer para o final */
+    text-align: center;
+ 
 
     
 }
