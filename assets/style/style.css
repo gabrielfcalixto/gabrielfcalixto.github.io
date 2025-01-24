@@ -13,28 +13,24 @@
     --cor-roxo-9--: #EDE7F6; /* Roxo muito claro */
     --cor-roxo-10--: #1A237E; /* Roxo quase preto */
     --cor-rosa--:#FF4181;
-    --cor-rosa-1--: #E91E63; /* Rosa vibrante */
-    --cor-rosa-2--: #880E4F; /* Rosa escuro */
-    --cor-rosa-3--: #F8BBD0; /* Rosa claro pastel */
-    --cor-rosa-4--: #F06292; /* Rosa médio */
+    --cor-rosa-1--: #E91E63; 
+    --cor-rosa-2--: #880E4F; 
+    --cor-rosa-3--: #F8BBD0;
+    --cor-rosa-4--: #F06292; 
     --cor-verde-agua--:#86FFF4;
     --cor-cinza--:#353334;
     --cor-cinza-p--:#998F8F;
 }
-
 body, html{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--fundo--);
     scroll-behavior: smooth; 
-
 }
-
   h1{
     font-weight: 600;
   }
-
   @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -112,70 +108,58 @@ body, html{
     font-weight: 700;
     font-style: normal;
   }
-  
   .poppins-extrabold {
     font-family: "Poppins", serif;
     font-weight: 800;
     font-style: normal;
   }
-  
   .poppins-black {
     font-family: "Poppins", serif;
     font-weight: 900;
     font-style: normal;
   }
-  
   .poppins-thin-italic {
     font-family: "Poppins", serif;
     font-weight: 100;
     font-style: italic;
   }
-  
   .poppins-extralight-italic {
     font-family: "Poppins", serif;
     font-weight: 200;
     font-style: italic;
   }
-  
   .poppins-light-italic {
     font-family: "Poppins", serif;
     font-weight: 300;
     font-style: italic;
   }
-  
   .poppins-regular-italic {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: italic;
   }
-  
   .poppins-medium-italic {
     font-family: "Poppins", serif;
     font-weight: 500;
     font-style: italic;
   }
-  
   .poppins-semibold-italic {
     font-family: "Poppins", serif;
     font-weight: 600;
     font-style: italic;
   }
-  
   .poppins-bold-italic {
     font-family: "Poppins", serif;
     font-weight: 700;
     font-style: italic;
   }
-  
   .poppins-extrabold-italic {
     font-family: "Poppins", serif;
     font-weight: 800;
     font-style: italic;
   }
-  
   .poppins-black-italic {
     font-family: "Poppins", serif;
     font-weight: 900;
     font-style: italic;
   }
-  

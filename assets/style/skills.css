@@ -24,18 +24,18 @@
     margin: 10px;
 }
 .linguagens-ferramentas {
-    display: flex; /* Define um layout flexível para organizar os elementos */
+    display: flex; 
     flex-wrap: wrap; /* Permite que os elementos se ajustem automaticamente em várias linhas */
-    gap: 15px; /* Espaçamento horizontal e vertical entre os elementos */
-    padding: 50px; /* Reduz o espaçamento interno para evitar áreas vazias excessivas */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Alinha os elementos verticalmente */
-    max-width: 1200px; /* Limita a largura do container para manter a estética */
-    margin: 0 auto; /* Centraliza o container dentro da página */
+    gap: 15px; 
+    padding: 50px; 
+    justify-content: center; 
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 .linguagem {
-    flex: auto; /* Permite que os elementos internos ocupem o mesmo espaço */
-    display: flex; /* Torna o elemento flexível para centralizar conteúdo interno */
+    flex: auto; 
+    display: flex; 
     justify-content: center; 
     align-items: center; 
 }
@@ -46,21 +46,21 @@
     align-items: center;
     max-width: 150px;
     height: auto;
-    padding: 5px; /* Adiciona espaçamento interno no card */
-    border: 2px solid var(--cor-roxo-1--); /* Define a borda do card */
-    border-radius: 10px; /* Arredonda os cantos do card */
-    text-align: center; /* Centraliza o conteúdo do card */
-    transition: all 0.4s ease; /* Animação suave para mudanças no card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao card */
+    padding: 5px;
+    border: 2px solid var(--cor-roxo-1--); 
+    border-radius: 10px;
+    text-align: center; 
+    transition: all 0.4s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 .card1:hover {
-    border-color: var(--cor-roxo-1--); /* Altera a cor da borda ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Aumenta a sombra ao passar o mouse */
-    transform: translateY(-10px); /* Move o card ligeiramente para cima */
+    border-color: var(--cor-roxo-1--); 
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); 
+    transform: translateY(-10px); 
 }
 .card1 i {
-    font-size: 60px; /* Define o tamanho do ícone no card */
-    color: var(--letras--); /* Define a cor do ícone */
+    font-size: 60px; 
+    color: var(--letras--); 
 }
 .card1 h2 {
     margin-top: 5px; 
@@ -68,7 +68,7 @@
     color: var(--letras--); 
 }
 .community-stats {
-    display: flex; /* Define um layout flexível para alinhar as estatísticas */
+    display: flex; 
     justify-content: center; 
     gap: 50px; 
     margin-top: 30px; 
