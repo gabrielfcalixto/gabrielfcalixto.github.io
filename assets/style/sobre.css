@@ -127,114 +127,92 @@
         border-color: var(--cor-roxo-3--);
     }
 }
+/* Para dispositivos pequenos (até 600px) */
 @media (max-width: 600px) {
     .sobre-content {
-        padding: 50px;
+        padding: 10px;
         flex-direction: column;
+        gap: 20px; /* Reduz o espaçamento */
         align-items: center;
         margin-top: 20px;
-        letter-spacing: 1px;
-
+        
+        
     }
 
     .sobre h1, .sobre h2 {
-        font-size: 2.5rem;
+        font-size: 3.1rem;
     }
 
     .sobre p {
-        font-size: 1em;
-        max-width: 100%;
-        text-align: justify;
+        font-size: 1.5em;
+        max-width: 300px;
     }
 
     .sobre-img-div {
         max-width: 280px;
-        max-height: 450px;
         margin-top: 10px;
-        margin-bottom: 5px;
     }
+ 
 }
-@media (max-width: 900px) {
+
+/* Para tablets (entre 600px e 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
     .sobre-content {
-        padding: 100px;
+        padding: 20px;
         flex-direction: column;
-        align-items: center;
+        gap: 40px; /* Ajusta o espaçamento */
     }
 
     .sobre h1, .sobre h2 {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
     }
 
     .sobre p {
         font-size: 1.2em;
-        max-width: 100%;
     }
 
     .sobre-img-div {
-        max-width: auto;
-        align-items: center;
+        max-width: 350px;
     }
 }
- @media (max-width: 1200px) {
+
+/* Para telas médias (entre 900px e 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
     .sobre-content {
-        padding: 150px;
-        flex-direction: column;
-        align-items: center;
+        padding: 50px;
+        flex-direction: row;
+        gap: 50px;
     }
 
     .sobre h1, .sobre h2 {
-        font-size:4.5rem;
-        letter-spacing: 12px
+        font-size: 4rem;
     }
 
     .sobre p {
         font-size: 1.4em;
-        max-width: 100%;
     }
 
     .sobre-img-div {
-        max-width: auto;
-        margin-bottom: -120px;
+        max-width: 400px;
     }
 }
 
-
-@media (max-width: 2500px) {
+/* Para telas grandes (acima de 1200px) */
+@media (min-width: 1201px) {
     .sobre-content {
-        display: flex;
-        align-items: center; /* Alinha verticalmente */
-        justify-content: center; /* Espaça os itens horizontalmente */
-        gap: 60px; /* Espaçamento entre os itens */
-        min-height: 100vh; /* Ocupa a altura total da tela */
+        padding: 80px;
+        gap: 60px;
     }
-    .sobre h1 {
+
+    .sobre h1, .sobre h2 {
         font-size: 5.6rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: rgba(255, 255, 255, 0);
-        background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-roxo-3--),var(--cor-roxo-7--));
-        background-size: 300% 300%;
-        animation: gradientShift 10s infinite; /* Aplica o gradiente animado */
-        -webkit-background-clip: text; /* Aplica o gradiente ao texto */
-        -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
-        transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
-        margin-top: 2px;
-        margin-bottom: 0; /* Remove o espaçamento inferior */
-        line-height: 1.0;
     }
-    .sobre h2{
-        font-size: 5.6rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        line-height: 1.0;
-        margin-top: 0; /* Remove o espaçamento superior */
-        margin-bottom: 8px; /* Adiciona um pequeno espaçamento inferior */
-    }
+
     .sobre p {
-    
-        width: 100%; /* Garante que o parágrafo ocupe todo o espaço disponível */
-       
+        font-size: 1.6em;
     }
 
-
-} 
+    .sobre-img-div {
+        max-width: 450px;
+    }
+}
