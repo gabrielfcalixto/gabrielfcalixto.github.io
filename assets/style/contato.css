@@ -115,7 +115,7 @@ option {
     transform: translateY(2px);
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .contato h1 {
         font-size: 2.5rem;
         padding: 20px;
@@ -179,10 +179,10 @@ option {
         font-size: 1.4em; 
         padding: 1.2em 1.8em; 
     }
-} */
+} 
 
 
-/* .container {
+ /* .container {
     display: block;
     position: relative;
     padding-left: 30px;
