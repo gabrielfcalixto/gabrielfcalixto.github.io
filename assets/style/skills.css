@@ -11,7 +11,7 @@
 .linguagens h1 {
     font-size: 3.0rem; /* Define o tamanho do título da seção */
     margin-bottom: 20px; /* Adiciona espaçamento inferior ao título */
-    background: linear-gradient(90deg,var(--cor-roxo-1--), var(--cor-rosa--));
+    background: linear-gradient(50deg,var(--cor-roxo-1--), var(--cor-roxo-8--), var(--cor-verde-agua--));
     background-size: 300% 300%;
     animation: gradientShift 4s infinite; /* Aplica o gradiente animado */
     -webkit-background-clip: text; /* Aplica o gradiente ao texto */
@@ -97,41 +97,36 @@
         padding: 2px;
         flex-direction: column;
         align-items: center;
-        margin-top: 5px;
     }
     .linguagens h1 {
-        font-size: 1.1rem;
-        padding: 20px;
-        margin-top: 5px;
+        font-size:1.5rem;
+        margin-top: 60px;
         line-height: 1.2;
-        margin-bottom: 5px;
-
+        margin-bottom: 0;
     }
     .card1 {
-        width: auto;
-        padding: 10px;
-        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.5rem;
+        min-width: 120px;
+        min-height: 70px;
     }
     .card1 i {
         font-size: 1.5rem;
-
         color: var(--letras--);
     }
     .community-stats {
         margin-top: auto;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
     .stat {
         text-align: center;
     }
     .stat h2 {
-        font-size: 1.5rem;
+        font-size: 2.0rem;
     }
     .stat p {
         font-size: 0.9rem; 
@@ -139,7 +134,7 @@
         text-align: center;
     }
 }
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
     .linguagens h1 {
         font-size: 3rem;
     }
@@ -165,8 +160,23 @@
         color: var(--letras--); 
     }
 }
-@media (min-width: 1800px) {
+@media (min-width: 901px) and (max-width: 1200px) {
     .linguagens h1 {
+        font-size: 6rem;
+    }
+    .linguagens-ferramentas {
+        padding: 100px;
+    }
+    .card1 {
+        width: 220px;
+    }
+    .stat h2 {
+        font-size: 6rem;
+    }
+} 
+
+@media (min-width: 1201px) {
+.linguagens h1 {
         font-size: 6rem;
     }
     .linguagens-ferramentas {
