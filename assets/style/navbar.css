@@ -16,8 +16,6 @@
     height: auto;
     flex: content;
 }
-
-
 .itens {
     display: flex;
     list-style: none;
@@ -26,8 +24,6 @@
 .itens li{
     position: relative;
 }
-
-
 .itens a {
     position: relative; /* Necessário para o posicionamento absoluto do marcador */
     padding-bottom: 5px; 
@@ -37,7 +33,6 @@
     font-size: 1.5em;
     font-weight: 400;
     justify-content: center;
-
 }
 .tooltip {
     position: absolute;
@@ -54,25 +49,21 @@
     visibility: hidden;
     transition:  0.2s ease, visibility 0.5s ease;
     pointer-events: none;
-    
 }
 .itens li:hover .tooltip {
     opacity: 1;
     visibility: visible;
 }
-
 .itens a.active::after {
     content: '';
     position: absolute;
     width: 100%; /* Largura do marcador */
     height: 4px; /* Altura do marcador */
-    background-color: var(--cor-roxo-1--); /* Cor de destaque para a seção ativa */
+    background-color: var(--cor-roxo-1--); 
     left: 0;
     bottom: 0; /* Alinha o marcador com a base do item */
     transition: width 0.3s ease, height 0.3s ease;
 }
-
-
 .itens a::after {
     content: '';
     position: absolute;
@@ -84,12 +75,9 @@
     transition: width 0.2s ease;
     border-radius: 3px;
 }
-
 .itens a:hover::after {
     width: 100%;
 }
-
-
 .menu-toggle {
     display: none;
     background: none;
@@ -98,15 +86,12 @@
     cursor: pointer;
     color: var(--letras--);
     z-index: 1100;
-    
-    
 }
 
 @media (max-width: 600px) {
     .navbar {
         padding: 2px 2px;
     }
-
     .itens {
         display: none; /* Esconde o menu por padrão */
         flex-direction: column;
@@ -127,11 +112,9 @@
         font-size: 0.8em;
         align-items: center;
     }
-
     .itens.active {
         display: flex; /* Mostra o menu quando ativo */
     }
-
     .menu-toggle {
         display: block; /* Mostra o botão menu sanduíche */
     }
@@ -151,16 +134,13 @@
         transition:  0.2s ease, visibility 0.5s ease;
         pointer-events: none;
     }
-    
 }
 
 @media (max-width: 900px) {
     .navbar {
         padding-top: 10px;
         font-size: 1.2em;
-        
     }
-
     .itens {
         background-color: var(--fundo--claro);
         border-radius: 15px;
@@ -168,7 +148,6 @@
         align-items: center;
     }
 }
-
 @media (min-width: 1200px) {
     .navbar {
         font-size: 0.8em;
@@ -178,7 +157,6 @@
         padding: 15px 0; /* Aumenta o espaço interno na vertical */
         min-height: 10px; /* Define uma altura mínima para a navbar */
     }
-
     .itens {
         display: flex; /* Torna os itens uma linha flexível */
         gap: 2px; /* Espaçamento entre os itens */
@@ -186,7 +164,6 @@
         padding: 0; /* Remove o padding padrão */
         margin: 0; /* Remove a margem padrão */
     }
-
     .itens li {
         text-align: center; /* Garante alinhamento central nos itens */
         padding: 1px;

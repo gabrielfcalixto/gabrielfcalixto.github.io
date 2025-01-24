@@ -34,6 +34,43 @@ body, html{
   h1{
     font-weight: 600;
   }
+
+  @keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes fadeBackground {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.3;
+    }
+    50% {
+        background-position: 50% 50%;
+        opacity: 0.8;
+    }
+    100% {
+        background-position: 100% 50%;
+        opacity: 0.3;
+    }
+}
+@keyframes pulsar {
+    0% {
+        border-color:var(--cor-roxo-2--);
+    }
+    50% {
+        border-color:var(--cor-roxo-1--);
+    }
+    100% {
+        border-color: var(--cor-roxo-3--);
+    }
+}
   .poppins-thin {
     font-family: "Poppins", serif;
     font-weight: 100;

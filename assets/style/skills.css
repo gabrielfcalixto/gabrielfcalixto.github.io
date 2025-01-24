@@ -1,12 +1,12 @@
 .linguagens-content{
     display: flex;
-    flex-direction: column; /* Organiza os itens em uma coluna */
+    flex-direction: column; 
     align-items: center; /* Centraliza horizontalmente */
     justify-content: center; /* Centraliza verticalmente */
     text-align: center;
-    gap: 20px; /* Espaçamento entre os elementos */
-    min-height: 100vh; /* Ocupa a altura total da tela */
-    padding: 20px; /* Espaço interno */
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
 }
 .linguagens h1 {
     font-size: 3.0rem; /* Define o tamanho do título da seção */
@@ -19,9 +19,9 @@
     transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
 }
 .linguagem i {
-    font-size: 3.0rem; /* Define o tamanho dos ícones */
-    color: var(--letras--); /* Garante que os ícones usem a cor definida no tema */
-    margin: 10px; /* Adiciona espaçamento ao redor dos ícones, se necessário */
+    font-size: 3.0rem; 
+    color: var(--letras--); 
+    margin: 10px;
 }
 .linguagens-ferramentas {
     display: flex; /* Define um layout flexível para organizar os elementos */
@@ -36,53 +36,46 @@
 .linguagem {
     flex: auto; /* Permite que os elementos internos ocupem o mesmo espaço */
     display: flex; /* Torna o elemento flexível para centralizar conteúdo interno */
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
+    justify-content: center; 
+    align-items: center; 
 }
 .card1 {
-    /* alinhamento */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 150px;
+    height: auto;
     padding: 5px; /* Adiciona espaçamento interno no card */
     border: 2px solid var(--cor-roxo-1--); /* Define a borda do card */
     border-radius: 10px; /* Arredonda os cantos do card */
     text-align: center; /* Centraliza o conteúdo do card */
-    width: 100%; /* Define a largura fixa do card */
     transition: all 0.4s ease; /* Animação suave para mudanças no card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao card */
 }
-
 .card1:hover {
     border-color: var(--cor-roxo-1--); /* Altera a cor da borda ao passar o mouse */
     box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Aumenta a sombra ao passar o mouse */
     transform: translateY(-10px); /* Move o card ligeiramente para cima */
 }
-
 .card1 i {
     font-size: 60px; /* Define o tamanho do ícone no card */
     color: var(--letras--); /* Define a cor do ícone */
 }
-
 .card1 h2 {
-    margin-top: 5px; /* Adiciona espaçamento superior ao título do card */
-    font-size: 18px; /* Define o tamanho do título do card */
-    color: var(--letras--); /* Define a cor do título */
+    margin-top: 5px; 
+    font-size: 18px; 
+    color: var(--letras--); 
 }
-
-/* Estilo para a seção de estatísticas */
 .community-stats {
     display: flex; /* Define um layout flexível para alinhar as estatísticas */
-    justify-content: center; /* Centraliza os elementos no container */
-    gap: 50px; /* Espaçamento entre as estatísticas */
-    margin-top: 30px; /* Adiciona um espaçamento superior à seção */
+    justify-content: center; 
+    gap: 50px; 
+    margin-top: 30px; 
 }
-
 .stat {
-    text-align: center; /* Centraliza o texto das estatísticas */
+    text-align: center;
 }
-
 .stat h2 {
     font-size: 3.0rem; 
     margin-bottom: 1px;
@@ -94,21 +87,17 @@
     transition: all 1s ease-in-out; 
     margin-top: 5px;
 }
-
 .stat p {
     font-size: 1.4rem; 
     color: var(--cor-cinza-p--);
     margin-top: 1px;
 }
-
-
 @media (max-width: 600px) {
     .linguagens-content{
         padding: 2px;
         flex-direction: column;
         align-items: center;
         margin-top: 5px;
-
     }
     .linguagens h1 {
         font-size: 1.1rem;
@@ -118,7 +107,6 @@
         margin-bottom: 5px;
 
     }
-
     .card1 {
         width: auto;
         padding: 10px;
@@ -127,9 +115,6 @@
         align-items: center;
         text-align: center;
         font-size: 0.9rem;
-        
-
-
     }
     .card1 i {
         font-size: 1.5rem;
@@ -141,34 +126,26 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        
     }
-    
     .stat {
         text-align: center;
     }
-    
     .stat h2 {
         font-size: 1.5rem;
     }
-    
     .stat p {
         font-size: 0.9rem; 
         color: var(--cor-cinza-p--);
         text-align: center;
     }
 }
-
-
 @media (max-width: 900px) {
     .linguagens h1 {
         font-size: 3rem;
     }
-
     .linguagens-ferramentas {
         padding: 30px;
     }
-
     .card1 {
         width: 130px;
     }
@@ -176,38 +153,29 @@
         margin-top: 10px;
         flex-direction: column;
         gap: 20px;
-        
     }
-    
     .stat {
         text-align: center; 
     }
-    
     .stat h2 {
         font-size: 1.5rem;
     }
-    
     .stat p {
         font-size: 1.2rem; 
         color: var(--letras--); 
     }
 }
-
-
 @media (min-width: 1800px) {
     .linguagens h1 {
         font-size: 6rem;
     }
-
     .linguagens-ferramentas {
         padding: 100px;
     }
-
     .card1 {
         width: 220px;
     }
-
     .stat h2 {
         font-size: 6rem;
     }
-} */
+} 

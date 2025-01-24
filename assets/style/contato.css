@@ -1,5 +1,4 @@
 
-/* Estilo geral da seção de contato */
 .contato-content {
     display: flex;
     flex-direction: column; /* Alinha os itens em uma coluna */
@@ -29,7 +28,6 @@
     text-align: left;
     width: 100%; 
     max-width: 300px; 
-    
 }
 h4 {
     font-size:1.2em;
@@ -47,7 +45,6 @@ label {
     color: var(--letras--);
     font-weight: light;
 }
-
 input, textarea, select {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -104,7 +101,6 @@ option {
     background-color: var(--cor-roxo-4--);
     transform: scale(1.05);
     color: #fff;
-
 }
 .button button:active {
     background-color: rgb(54, 27, 163);
@@ -125,11 +121,9 @@ option {
     h4 {
         font-size: 0.9em; 
     }
-
     input, textarea, select {
         font-size: 0.5em; /
     }
-
     .button {
         font-size: 1.2em; 
         padding: 0.1em 0.5em; 
@@ -140,15 +134,12 @@ option {
         padding: 2em; 
         width: 80%; 
     }
-
     h4 {
         font-size: 1.3em; 
     }
-
     input, textarea, select {
         font-size: 1.1em; /
     }
-
     button {
         font-size: 1.3em; 
         padding: 1em 1.5em; 
@@ -159,15 +150,12 @@ option {
         padding: 2em; 
         width: 50%; 
     }
-
     h4 {
         font-size: 1.5em; 
     }
-
     input, textarea, select {
         font-size: 1.2em; 
     }
-
     button {
         font-size: 1.4em; 
         padding: 1.2em 1.8em; 

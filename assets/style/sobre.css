@@ -88,46 +88,10 @@
     transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
 }
 .social-icons i:hover {
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
-    color: var(--cor-cinza-p--); /* Muda a cor do ícone ao passar o mouse */
+    transform: scale(1.2); 
+    color: var(--cor-cinza-p--); 
 }
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-@keyframes fadeBackground {
-    0% {
-        background-position: 0% 50%;
-        opacity: 0.3;
-    }
-    50% {
-        background-position: 50% 50%;
-        opacity: 0.8;
-    }
-    100% {
-        background-position: 100% 50%;
-        opacity: 0.3;
-    }
-}
-@keyframes pulsar {
-    0% {
-        border-color:var(--cor-roxo-2--);
-    }
-    50% {
-        border-color:var(--cor-roxo-1--);
-    }
-    100% {
-        border-color: var(--cor-roxo-3--);
-    }
-}
-/* Para dispositivos pequenos (até 600px) */
+
 @media (max-width: 600px) {
     .sobre-content {
         padding: 10px;
@@ -135,83 +99,62 @@
         gap: 20px; /* Reduz o espaçamento */
         align-items: center;
         margin-top: 20px;
-        
-        
     }
-
     .sobre h1, .sobre h2 {
         font-size: 3.1rem;
     }
-
     .sobre p {
         font-size: 1.1em;
         max-width: 300px;
     }
-
     .sobre-img-div {
         max-width: 280px;
         margin-top: 10px;
     }
- 
 }
-
-/* Para tablets (entre 600px e 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
     .sobre-content {
         padding: 20px;
         flex-direction: column;
-        gap: 40px; /* Ajusta o espaçamento */
+        gap: 40px; 
     }
-
     .sobre h1, .sobre h2 {
         font-size: 3.2rem;
     }
-
     .sobre p {
         font-size: 1.2em;
     }
-
     .sobre-img-div {
         max-width: 350px;
     }
 }
-
-/* Para telas médias (entre 900px e 1200px) */
 @media (min-width: 901px) and (max-width: 1200px) {
     .sobre-content {
         padding: 50px;
         flex-direction: row;
         gap: 50px;
     }
-
     .sobre h1, .sobre h2 {
         font-size: 4rem;
     }
-
     .sobre p {
         font-size: 1.4em;
     }
-
     .sobre-img-div {
         max-width: 400px;
     }
 }
-
-/* Para telas grandes (acima de 1200px) */
 @media (min-width: 1201px) {
     .sobre-content {
         padding: 40px;
         gap: 60px;
     }
-
     .sobre h1, .sobre h2 {
         font-size: 5.6rem;
     }
-
     .sobre p {
         font-size: 1.6em;
     }
-
     .sobre-img-div {
         max-width:auto;
     }
