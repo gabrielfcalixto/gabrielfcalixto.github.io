@@ -85,3 +85,50 @@ footer {
 .footer-copyright p {
     margin: 0;
 }
+/* Estilos para telas pequenas (até 600px) */
+@media (max-width: 600px) {
+    footer {
+        margin-top: 40px; /* Reduz o espaçamento superior */
+        padding: 10px; /* Adiciona padding para melhor visualização */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Alinha itens em coluna */
+        gap: 20px; /* Reduz o espaçamento entre itens */
+    }
+
+    .footer-content p {
+        font-size: 1em; /* Reduz o tamanho do texto */
+    }
+
+    .social-icon i {
+        font-size: 2em; /* Reduz o tamanho dos ícones */
+    }
+
+    .footer-copyright {
+        font-size: 1em; /* Reduz o tamanho do texto do copyright */
+    }
+}
+
+/* Estilos para telas médias (601px a 900px) */
+@media (max-width: 900px) {
+    footer {
+        margin-top: 60px; /* Ajusta o espaçamento superior */
+    }
+
+    .footer-content {
+        gap: 30px; /* Espaçamento moderado entre itens */
+    }
+
+    .footer-content p {
+        font-size: 1.1em; /* Ajusta o tamanho do texto */
+    }
+
+    .social-icon i {
+        font-size: 2.5em; /* Ajusta o tamanho dos ícones */
+    }
+
+    .footer-copyright {
+        font-size: 1.2em; /* Ajusta o tamanho do texto do copyright */
+    }
+}
