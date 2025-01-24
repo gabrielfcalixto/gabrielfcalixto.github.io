@@ -4,9 +4,7 @@
     justify-content: center; /* Espaça os itens horizontalmente */
     gap: 60px; /* Espaçamento entre os itens */
     min-height: 100vh; /* Ocupa a altura total da tela */
-    
 }
-
 .sobre h1 {
     font-size: 5.6rem;
     text-transform: uppercase;
@@ -23,7 +21,6 @@
     line-height: 1.0;
     letter-spacing: 1px;
 }
-
 .sobre h2{
     font-size: 5.6rem;
     text-transform: uppercase;
@@ -49,11 +46,8 @@
 
 
 }
-
-
-
 .sobre-img-div {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,11 +56,10 @@
     border-radius: 20px;
     border-style: outset;
     border-width: 10px;
-    animation: pulsar 2s infinite; /* Aplica a animação */
+    animation: pulsar 2s infinite; 
     max-width: 400px;
     width: 100%;
     overflow: hidden;
-    
 }
 .sobre-img-div img {
     width: auto;
