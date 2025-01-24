@@ -19,7 +19,6 @@
     margin-top: 2px;
     margin-bottom: 0; /* Remove o espaçamento inferior */
     line-height: 1.0;
-    letter-spacing: 1px;
 }
 .sobre h2{
     font-size: 5.6rem;
@@ -43,8 +42,6 @@
     white-space: normal; /* Permite quebra de linhas */
     margin-top: 2px;
     letter-spacing: 1px;
-
-
 }
 .sobre-img-div {
     flex: 1; 
@@ -90,13 +87,10 @@
     -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
     transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
 }
-
 .social-icons i:hover {
     transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
     color: var(--cor-cinza-p--); /* Muda a cor do ícone ao passar o mouse */
 }
-
-/* Animação do gradiente */
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -108,9 +102,6 @@
         background-position: 0% 50%;
     }
 }
-
-
-
 @keyframes fadeBackground {
     0% {
         background-position: 0% 50%;
@@ -136,55 +127,14 @@
         border-color: var(--cor-roxo-3--);
     }
 }
-/* @media (max-width: 1200px) {
-    .sobre-content {
-        padding: 150px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sobre h1, .sobre h2 {
-        font-size: 6rem;
-    }
-
-    .sobre p {
-        font-size: 1.4em;
-        max-width: 90%;
-    }
-
-    .sobre-img-div {
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 900px) {
-    .sobre-content {
-        padding: 100px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sobre h1, .sobre h2 {
-        font-size: 4.5rem;
-    }
-
-    .sobre p {
-        font-size: 1.2em;
-        max-width: 90%;
-    }
-
-    .sobre-img-div {
-        max-width: auto;
-        align-items: center;
-    }
-}
-
 @media (max-width: 600px) {
     .sobre-content {
         padding: 50px;
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
+        letter-spacing: 1px;
+
     }
 
     .sobre h1, .sobre h2 {
@@ -199,21 +149,92 @@
 
     .sobre-img-div {
         max-width: 280px;
+        max-height: 450px;
         margin-top: 10px;
         margin-bottom: 5px;
     }
 }
-
-@media (min-width: 1920px) {
+@media (max-width: 900px) {
     .sobre-content {
-        padding: 350px;
+        padding: 100px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .sobre h1, .sobre h2 {
-        font-size: 12rem;
+        font-size: 2.8rem;
+    }
+
+    .sobre p {
+        font-size: 1.2em;
+        max-width: 100%;
     }
 
     .sobre-img-div {
-        max-width: 600px;
+        max-width: auto;
+        align-items: center;
     }
-} */
+}
+ @media (max-width: 1200px) {
+    .sobre-content {
+        padding: 150px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre h1, .sobre h2 {
+        font-size:4.5rem;
+        letter-spacing: 12px
+    }
+
+    .sobre p {
+        font-size: 1.4em;
+        max-width: 100%;
+    }
+
+    .sobre-img-div {
+        max-width: auto;
+        margin-bottom: -120px;
+    }
+}
+
+
+@media (max-width: 2500px) {
+    .sobre-content {
+        display: flex;
+        align-items: center; /* Alinha verticalmente */
+        justify-content: center; /* Espaça os itens horizontalmente */
+        gap: 60px; /* Espaçamento entre os itens */
+        min-height: 100vh; /* Ocupa a altura total da tela */
+    }
+    .sobre h1 {
+        font-size: 5.6rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0);
+        background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-roxo-3--),var(--cor-roxo-7--));
+        background-size: 300% 300%;
+        animation: gradientShift 10s infinite; /* Aplica o gradiente animado */
+        -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+        -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
+        transition: transform 0.3s ease, color 0.3s ease; /* Animações ao passar o mouse */
+        margin-top: 2px;
+        margin-bottom: 0; /* Remove o espaçamento inferior */
+        line-height: 1.0;
+    }
+    .sobre h2{
+        font-size: 5.6rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.0;
+        margin-top: 0; /* Remove o espaçamento superior */
+        margin-bottom: 8px; /* Adiciona um pequeno espaçamento inferior */
+    }
+    .sobre p {
+    
+        width: 100%; /* Garante que o parágrafo ocupe todo o espaço disponível */
+       
+    }
+
+
+} 
