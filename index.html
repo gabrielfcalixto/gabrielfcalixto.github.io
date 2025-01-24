@@ -22,6 +22,29 @@
         rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "0GIzaxIiiP2CZZSpN",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -70,8 +93,8 @@
                     <h1>Gabriel <br>Calixto</h1>
                     <h2><span style="color: var(--letras--);">Software</span> <br> <span
                             style="color: var(--cor-roxo-1--);">Developer</span></h2>
-                    <p>Profissional formado em Análise e Desenvolvimento de Sistemas, com experiência prática em
-                        linguagens de programação, frameworks e desenvolvimento de projetos.</p>
+                            <p>Profissional formado em Análise e Desenvolvimento de Sistemas, com experiência prática em linguagens de programação, frameworks e desenvolvimento de projetos. Diariamente, aplico tecnologias como Java, Spring Boot, React e bancos de dados relacionais em meus projetos. Adoto uma abordagem focada em resultados, sempre buscando entregar soluções eficientes e de alta qualidade, além de estar em constante aprendizado para acompanhar as inovações do mercado de tecnologia.</p>
+
                 </div>
                 <div class="sobre-img-div">
                     <img src="assets/images/img-gabriel.jpeg" alt="Foto Gabriel Calixto">
@@ -233,6 +256,7 @@
                 </div>
             </div>
         </section>
+        
         <section class="contato" id="contact">
             <div class="contato-content">
                 <h1>Vamos falar sobre seu projeto?</h1>
@@ -264,8 +288,8 @@
                             </select>
                         </div>
                         <div>
-                            <label for="soma">11 + 5 = ?*</label>
-                            <input type="text" id="soma" name="soma" required />
+                            <label for="soma">Mensagem*</label>
+                            <input type="textarea" id="mensagem" name="mensagem" required />
                         </div>
 
                         <div class="button">

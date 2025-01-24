@@ -1,3 +1,12 @@
+.sobre-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Espaça os itens horizontalmente */
+    gap: 60px; /* Espaçamento entre os itens */
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    
+}
+
 .sobre h1 {
     font-size: 5.6rem;
     text-transform: uppercase;
@@ -12,6 +21,7 @@
     margin-top: 2px;
     margin-bottom: 0; /* Remove o espaçamento inferior */
     line-height: 1.0;
+    letter-spacing: 1px;
 }
 
 .sobre h2{
@@ -29,21 +39,18 @@
     color: var(--cor-cinza-p--); /* Cor do texto */
     margin: 0; /* Remove margens externas */
     line-height: 1.2; /* Ajusta o espaçamento entre linhas */
-    text-align: left; /* Justifica o texto */
-    max-width: 500px; /* Define uma largura máxima para o parágrafo */
+    text-align: justify; /* Justifica o texto */
+    max-width: 370px; /* Define uma largura máxima para o parágrafo */
     width: 100%; /* Garante que o parágrafo ocupe todo o espaço disponível */
     word-wrap: break-word; /* Quebra palavras longas */
     white-space: normal; /* Permite quebra de linhas */
     margin-top: 2px;
+    letter-spacing: 1px;
+
+
 }
 
-.sobre-content {
-    display: flex;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: space-between; /* Espaça os itens horizontalmente */
-    padding: 160px; /* Espaçamento interno */
-    gap: 5px; /* Espaçamento entre os itens */
-}
+
 
 .sobre-img-div {
     flex: 1; /* Ocupa o espaço restante */

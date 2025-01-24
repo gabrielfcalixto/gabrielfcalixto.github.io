@@ -58,9 +58,10 @@ input, textarea, select {
     background-color: #DBDBDB;
     border-radius: 15px;
     color: var(--cor-fundo--);
-    padding: 1.1em;
+    padding: 0.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    font-size: 1.1em;
 }
 input:focus, textarea:focus, select:focus {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
