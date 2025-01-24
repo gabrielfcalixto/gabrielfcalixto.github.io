@@ -154,7 +154,7 @@
     
     .stat p {
         font-size: 0.9rem; 
-        color: var(--letras--);
+        color: var(--cor-cinza-p--);
         text-align: center;
     }
 }
