@@ -1,16 +1,26 @@
 # Portfólio 
 
-Este é um projeto simples de portfólio para apresentar meus projetos, habilidades e contato.
+Este é um projeto de portfólio minimalista para apresentar projetos, habilidades e contato.
 
 ## Funcionalidades
-- [ ] Navbar (em desenvolvimento)
-- [ ] Apresentação pessoal (em desenvolvimento)
-- [ ] Seção de habilidades técnicas (em desenvolvimento)
-- [ ] Seção de Projetos (em desenvolvimento)
-- [ ] Formulário de contato (em desenvolvimento)
+- [x] Navbar
+- [x] Apresentação pessoal 
+- [x] Skills
+- [x] Seção de Projetos 
+- [x] Formulário de contato 
+- [x] Footer
+- [x] Botão Whatsapp
+- [ ] Envio de e-mail (em andamento)
+
+## Melhorias
+- [ ] Melhorar resposividade
+- [ ] Melhorar menu hamburguer 
+- [ ] Seção de Projetos 
+
 
 ## Tecnologias
 - HTML5
 - CSS3
+- JS
 
 
