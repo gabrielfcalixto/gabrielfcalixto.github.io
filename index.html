@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Calixto</title>
+    <meta name="description" content="Portfólio de Gabriel Calixto, desenvolvedor de software. Java, Spring Boot, Angular, .NET, React e bancos de dados relacionais.">
+    <meta name="theme-color" content="#f5f5f7">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gabriel Calixto">
+    <meta property="og:description" content="Projetos, stack e contato.">
+    <meta property="og:image" content="assets/images/gabriel-calixto-notebook.jpg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/skills.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/minimal.css">
+
+    <link rel="stylesheet" href="assets/css/tema.css">
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/idioma.js"></script>
+    <script defer src="assets/js/tema.js"></script>
+    <script defer src="assets/js/modules/dom.js"></script>
+    <script defer src="assets/js/modules/render.js"></script>
+    <script defer src="assets/js/modules/scrollspy.js"></script>
+    <script defer src="assets/js/modules/reveal.js"></script>
+    <script defer src="assets/js/modules/counters.js"></script>
+    <script defer src="assets/js/modules/contact.js"></script>
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header>
+        <nav class="navbar" aria-label="Navegação principal">
+            <a class="navbar__brand" href="#inicio">Gabriel Calixto</a>
+            <ul class="navbar__list">
+                <li><a class="navbar__link" href="#inicio" aria-label="Início"><i class="fas fa-house" aria-hidden="true"></i><span class="navbar__tooltip">Início</span></a></li>
+                <li><a class="navbar__link" href="#skills" aria-label="Skills"><i class="fas fa-code" aria-hidden="true"></i><span class="navbar__tooltip">Skills</span></a></li>
+                <li><a class="navbar__link" href="#projetos" aria-label="Projetos"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="navbar__tooltip">Projetos</span></a></li>
+                <li><a class="navbar__link" href="#contato" aria-label="Contato"><i class="fas fa-envelope" aria-hidden="true"></i><span class="navbar__tooltip">Contato</span></a></li>
+            </ul>
+            <button id="theme-toggle" type="button" aria-label="Modo escuro" aria-pressed="false"><span aria-hidden="true">◐</span></button>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero section" id="inicio">
+            <div class="container hero__grid">
+                <div class="hero__text reveal">
+                    <p class="eyebrow">Olá, eu sou</p>
+                    <h1 class="hero__name">Gabriel Calixto</h1>
+                    <h2 class="hero__role">Desenvolvedor Full Stack | Java • Spring Boot • Angular | APIs REST • Oracle | Sistemas Corporativos</h2>
+                    <p class="hero__bio">
+                        Formado em Análise e Desenvolvimento de Sistemas. No dia a dia trabalho com Java, Spring Boot,
+                        Angular, .NET, React e bancos de dados relacionais, com foco em entregar soluções eficientes,
+                        bem feitas e fáceis de manter.
+                    </p>
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+                        <a class="btn btn--ghost" href="#contato">Falar comigo</a>
+                    </div>
+                    <ul class="social" data-social aria-label="Redes sociais"></ul>
+                </div>
+                <div class="hero__photo reveal">
+                    <img src="assets/images/gabriel-calixto-notebook.jpg" alt="Foto de Gabriel Calixto" width="1083" height="1452">
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <div class="container">
+                <header class="section__header reveal">
+                    <h2 class="section__title">Linguagens e ferramentas</h2>
+                    <p class="section__subtitle">O que uso para construir, testar e colocar no ar.</p>
+                </header>
+                <div class="skills__showcase">
+                    <button class="skills__motion" type="button" aria-label="Pausar animação" aria-pressed="false" hidden><span aria-hidden="true">Ⅱ</span></button>
+                    <div class="skills__viewport">
+                        <div class="skills__track">
+                            <ul class="skills__grid" data-skills></ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="stats" data-stats></ul>
+            </div>
+        </section>
+
+        <section class="projects section" id="projetos">
+            <div class="container">
+                <header class="section__header reveal">
+                    <h2 class="section__title">Projetos</h2>
+                    <p class="section__subtitle">Alguns dos trabalhos que desenvolvi.</p>
+                </header>
+                <div class="projects__grid" data-projects></div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contato">
+            <div class="container contact__grid">
+                <header class="contact__intro reveal">
+                    <h2 class="section__title">Vamos falar sobre o seu projeto?</h2>
+                    <p class="section__subtitle">Envie uma mensagem por e-mail.</p>
+                </header>
+
+                <form class="form reveal" id="contact-form" method="post">
+                    <input type="hidden" name="_subject" value="Contato pelo portfólio de Gabriel Calixto">
+                    <div class="form__field">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="prazo">Quando pretende iniciar?</label>
+                        <select id="prazo" name="prazo" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option>Imediatamente</option>
+                            <option>Em um mês</option>
+                            <option>Entre 2 e 3 meses</option>
+                            <option>Daqui 4 ou 5 meses</option>
+                            <option>Mais de 5 meses</option>
+                            <option>Ainda não sei</option>
+                        </select>
+                    </div>
+                    <div class="form__field">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                    </div>
+                    <p class="form__status" role="status" aria-live="polite"></p>
+                    <button class="btn btn--primary btn--block" type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-title">
+        <form method="dialog"><button aria-label="Fechar">×</button></form>
+        <img class="project-dialog__image" alt="">
+        <div class="project-dialog__body">
+            <h2 id="project-title"></h2>
+            <p class="card__text"></p>
+            <ul class="tags"></ul>
+            <a class="card__link" target="_blank" rel="noopener">Ver projeto</a>
+            <span class="card__link--off">Projeto privado</span>
+        </div>
+    </dialog>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>&copy; <span data-year></span> Gabriel Calixto</p>
+            <ul class="social social--small" data-social aria-label="Redes sociais"></ul>
+        </div>
+    </footer>
+
+</body>
+</html>
+

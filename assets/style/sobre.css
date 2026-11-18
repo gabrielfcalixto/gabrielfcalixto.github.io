@@ -1,0 +1,172 @@
+.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px; 
+    min-height: 100vh;
+}
+.sobre h1 {
+    font-size: 5.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0);
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-roxo-3--),var(--cor-roxo-7--));
+    background-size: 300% 300%;
+    animation: gradientShift 10s infinite; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+    margin-top: 2px;
+    margin-bottom: 0; 
+    line-height: 1.0;
+}
+.sobre h2{
+    font-size: 5.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.0;
+    margin-top: 0; 
+    margin-bottom: 8px; 
+}
+.sobre p {
+    font-size: 1.4em; 
+    font-family: "Poppins", serif; 
+    font-weight: 400; 
+    color: var(--cor-cinza-p--);
+    margin: 0; /* Remove margens externas */
+    line-height: 1.2; 
+    text-align: justify; 
+    max-width: 370px; /* Define uma largura máxima para o parágrafo */
+    width: 100%; /* Garante que o parágrafo ocupe todo o espaço disponível */
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: normal; /* Permite quebra de linhas */
+    margin-top: 2px;
+    letter-spacing: 1px;
+}
+.sobre-img-div {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 20px;
+    border-radius: 20px;
+    border-width: 7px;
+    border-style: outset;
+    animation: pulsar 5s infinite; 
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;  /* Oculta o conteúdo que ultrapassa a largura do contêiner */
+}
+.sobre-img-div img {
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    animation: pulsar 5s infinite;
+    display: block;
+    box-shadow: inset  0 0 50px rgba(0, 0, 0, 0.5);
+}
+.social-icons{
+    position: absolute; 
+    bottom: 10px;
+    left: 50%; 
+    transform: translateX(-50%);
+    display: flex; 
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.621); 
+    padding: 5px 10px; 
+    border-radius: 10px; 
+}
+.social-icons i {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg,var(--cor-roxo-1--) , var(--cor-roxo-6--));
+    background-size: 300% 300%;
+    animation: gradientShift 5s infinite; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+.social-icons i:hover {
+    transform: scale(1.2); 
+    color: var(--cor-cinza-p--); 
+}
+
+@media (max-width: 600px) {
+    .sobre-content {
+        padding: 10px;
+        flex-direction: column;
+        gap: 20px; 
+        align-items: center;
+        margin-top: 60px;
+    }
+    .sobre h1, .sobre h2 {
+        font-size: 3.1rem;
+    }
+    .sobre p {
+        font-size: 1.1em;
+        max-width: 300px;
+    }
+    .sobre-img-div {
+        max-width: 280px;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    .sobre-content {
+        padding: 20px;
+        flex-direction: column;
+        gap: 40px; 
+        margin-top: 70px;
+    }
+    .sobre h1, .sobre h2 {
+        font-size: 3.2rem;
+    }
+    .sobre p {
+        font-size: 1.2em;
+    }
+    .sobre-img-div {
+        max-width: 350px;
+    }
+    .social-icons i {
+        font-size: 1.5rem;
+
+    }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+    .sobre-content {
+        padding: 40px;
+        flex-direction: row;
+        gap: 50px;
+    }
+    .sobre h1, .sobre h2 {
+        font-size: 4rem;
+    }
+    .sobre p {
+        font-size: 1.1em;
+    }
+    .sobre-img-div {
+        max-width: 400px;
+    }
+}
+@media (min-width: 1201px) {
+    .sobre-content {
+        padding: 90px;
+        gap: 60px;
+        padding: 10px;
+        gap: 50px; 
+        align-items: center;
+        margin-top: 20px;
+    }
+    .sobre h1, .sobre h2 {
+        font-size: 4.3rem;
+
+    }
+    .sobre p {
+        font-size: 1.1em;
+        max-width: 400px;
+    }
+    .sobre-img-div {
+        max-width:auto;
+    }
+}
