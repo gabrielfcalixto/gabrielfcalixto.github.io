@@ -12,6 +12,6 @@ document.querySelectorAll("[data-year]").forEach((s) => (s.textContent = new Dat
 
 iniciarScrollSpy();
 iniciarReveal();
-iniciarContadores(CONTATO.githubUser);
+const newLocal = iniciarContadores(CONTATO.githubUser);
 iniciarContato(CONTATO);
 

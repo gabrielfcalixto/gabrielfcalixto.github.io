@@ -11,7 +11,6 @@ const traducoes = {
     "Pular para o conteúdo": {"en":"Skip to content","es":"Saltar al contenido"},
     "Olá, eu sou": {"en":"Hello, I’m","es":"Hola, soy"},
     "Desenvolvedor Full Stack | Java • Spring Boot • Angular | APIs REST • Oracle | Sistemas Corporativos": {"en":"Full Stack Developer | Java • Spring Boot • Angular | REST APIs • Oracle | Enterprise Systems","es":"Desarrollador Full Stack | Java • Spring Boot • Angular | API REST • Oracle | Sistemas Empresariales"},
-    "Formado em Análise e Desenvolvimento de Sistemas. No dia a dia trabalho com Java, Spring Boot, Angular, .NET, React e bancos de dados relacionais, com foco em entregar soluções eficientes, bem feitas e fáceis de manter.": {"en":"I have a degree in Systems Analysis and Development. I work with Java, Spring Boot, Angular, .NET, React and relational databases to build efficient software that’s easy to maintain.","es":"Soy graduado en Análisis y Desarrollo de Sistemas. Trabajo con Java, Spring Boot, Angular, .NET, React y bases de datos relacionales para crear soluciones eficientes y fáciles de mantener."},
     "Ver projetos": {"en":"View projects","es":"Ver proyectos"},
     "Falar comigo": {"en":"Contact me","es":"Contáctame"},
     "Redes sociais": {"en":"Social profiles","es":"Redes sociales"},

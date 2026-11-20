@@ -14,7 +14,7 @@ function renderSkills(lista) {
     ));
     const faixa = ul.closest(".skills__showcase");
     const copia = ul.cloneNode(true);
-    copia.removeAttribute("data-skills");
+    delete copia.dataset.skills;
     copia.setAttribute("aria-hidden", "true");
     ul.parentElement.append(copia);
 
