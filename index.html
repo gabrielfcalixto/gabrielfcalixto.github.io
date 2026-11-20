@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Calixto</title>
     <meta name="description" content="Portfólio de Gabriel Calixto, desenvolvedor de software. Java, Spring Boot, Angular, .NET, React e bancos de dados relacionais.">
-    <meta name="theme-color" content="#f5f5f7">
+    <meta name="theme-color" content="#fcf3e1">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Gabriel Calixto">
@@ -48,16 +48,22 @@
 <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header>
+    <header class="site-header">
         <nav class="navbar" aria-label="Navegação principal">
             <a class="navbar__brand" href="#inicio">Gabriel Calixto</a>
-            <ul class="navbar__list">
-                <li><a class="navbar__link" href="#inicio" aria-label="Início"><i class="fas fa-house" aria-hidden="true"></i><span class="navbar__tooltip">Início</span></a></li>
-                <li><a class="navbar__link" href="#skills" aria-label="Skills"><i class="fas fa-code" aria-hidden="true"></i><span class="navbar__tooltip">Skills</span></a></li>
-                <li><a class="navbar__link" href="#projetos" aria-label="Projetos"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="navbar__tooltip">Projetos</span></a></li>
-                <li><a class="navbar__link" href="#contato" aria-label="Contato"><i class="fas fa-envelope" aria-hidden="true"></i><span class="navbar__tooltip">Contato</span></a></li>
+            <button class="navbar__menu navbar__control" type="button" aria-label="Menu" aria-controls="navbar-links" aria-expanded="false" hidden>
+                <span aria-hidden="true"></span>
+            </button>
+            <ul class="navbar__list" id="navbar-links">
+                <li><a class="navbar__link" href="#inicio" aria-current="location">Início</a></li>
+                <li><a class="navbar__link" href="#skills">Skills</a></li>
+                <li><a class="navbar__link" href="#projetos">Projetos</a></li>
+                <li><a class="navbar__link" href="#contato">Contato</a></li>
             </ul>
-            <button id="theme-toggle" type="button" aria-label="Modo escuro" aria-pressed="false"><span aria-hidden="true">◐</span></button>
+            <button class="navbar__control" id="theme-toggle" type="button" aria-label="Modo escuro" aria-pressed="false">
+                <span class="navbar__moon" aria-hidden="true">☾</span>
+                <span class="navbar__sun" aria-hidden="true">☀</span>
+            </button>
         </nav>
     </header>
 
@@ -86,8 +92,7 @@
                     <h2 class="section__title">Linguagens e ferramentas</h2>
                     <p class="section__subtitle">O que uso para construir, testar e colocar no ar.</p>
                 </header>
-                <div class="skills__showcase">
-                    <button class="skills__motion" type="button" aria-label="Pausar animação" aria-pressed="false" hidden><span aria-hidden="true">Ⅱ</span></button>
+                <div class="skills__showcase" tabindex="0">
                     <div class="skills__viewport">
                         <div class="skills__track">
                             <ul class="skills__grid" data-skills></ul>
@@ -150,7 +155,15 @@
 
     <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-title">
         <form method="dialog"><button aria-label="Fechar">×</button></form>
-        <img class="project-dialog__image" alt="">
+        <div class="project-gallery" role="group" aria-label="Imagens do projeto">
+            <div class="project-gallery__track" id="project-images"></div>
+            <div class="project-gallery__controls" hidden>
+                <button type="button" data-gallery-prev aria-label="Imagem anterior" aria-controls="project-images"><span aria-hidden="true">‹</span></button>
+                <span class="project-gallery__position" role="status"></span>
+                <button type="button" data-gallery-next aria-label="Próxima imagem" aria-controls="project-images"><span aria-hidden="true">›</span></button>
+                <button type="button" data-gallery-pause aria-label="Pausar carrossel" aria-pressed="false" aria-controls="project-images"><span aria-hidden="true">Ⅱ</span></button>
+            </div>
+        </div>
         <div class="project-dialog__body">
             <h2 id="project-title"></h2>
             <p class="card__text"></p>

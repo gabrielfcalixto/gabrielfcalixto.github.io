@@ -6,7 +6,7 @@ try { temaEscolhido = localStorage.getItem("tema"); } catch {}
 function aplicarTema() {
     const escuro = temaEscolhido ? temaEscolhido === "dark" : sistemaEscuro.matches;
     document.documentElement.dataset.theme = escuro ? "dark" : "light";
-    document.querySelector('meta[name="theme-color"]').content = escuro ? "#18181b" : "#f5f5f7";
+    document.querySelector('meta[name="theme-color"]').content = escuro ? "#000000" : "#fcf3e1";
     botaoTema.setAttribute("aria-pressed", String(escuro));
 }
 

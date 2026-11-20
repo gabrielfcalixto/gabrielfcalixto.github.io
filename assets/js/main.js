@@ -10,6 +10,7 @@ aplicarIdioma();
 
 document.querySelectorAll("[data-year]").forEach((s) => (s.textContent = new Date().getFullYear()));
 
+iniciarMenuNavbar();
 iniciarScrollSpy();
 iniciarReveal();
 const newLocal = iniciarContadores(CONTATO.githubUser);

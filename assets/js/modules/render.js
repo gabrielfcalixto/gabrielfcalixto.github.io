@@ -10,21 +10,12 @@ function renderSkills(lista) {
     const ul = document.querySelector("[data-skills]");
     if (!ul) return;
     ul.replaceChildren(...lista.map(({ nome, icone: ic }) =>
-        el("li", { class: "skill" }, icone(ic + " colored"), el("span", { text: nome }))
+        el("li", { class: "skill" }, icone(ic), el("span", { text: nome }))
     ));
-    const faixa = ul.closest(".skills__showcase");
     const copia = ul.cloneNode(true);
     delete copia.dataset.skills;
     copia.setAttribute("aria-hidden", "true");
     ul.parentElement.append(copia);
-
-    const botao = faixa.querySelector(".skills__motion");
-    botao.hidden = false;
-    botao.addEventListener("click", () => {
-        const pausado = faixa.classList.toggle("is-paused");
-        botao.setAttribute("aria-pressed", String(pausado));
-        botao.firstElementChild.textContent = pausado ? "▶" : "Ⅱ";
-    });
 }
 
 function renderStats(lista) {
@@ -38,10 +29,101 @@ function renderStats(lista) {
     ));
 }
 
+function prepararGaleria(dialog) {
+    const galeria = dialog.querySelector(".project-gallery");
+    const faixa = galeria.querySelector(".project-gallery__track");
+    const controles = galeria.querySelector(".project-gallery__controls");
+    const posicao = galeria.querySelector(".project-gallery__position");
+    const pausa = galeria.querySelector("[data-gallery-pause]");
+    const reduzirMovimento = matchMedia("(prefers-reduced-motion: reduce)");
+    let timer;
+    let mouseSobreGaleria = false;
+    let inicioToque;
+
+    function slideAtual() {
+        return Math.round(faixa.scrollLeft / (faixa.clientWidth || 1));
+    }
+
+    function atualizarPosicao() {
+        const texto = `${slideAtual() + 1} / ${faixa.childElementCount}`;
+        if (posicao.textContent !== texto) posicao.textContent = texto;
+    }
+
+    function mover(direcao, automatico = false) {
+        const total = faixa.childElementCount;
+        const destino = slideAtual() + direcao;
+        const indice = (destino + total) % total;
+        posicao.setAttribute("aria-live", automatico ? "off" : "polite");
+        faixa.scrollTo({
+            left: indice * faixa.clientWidth,
+            behavior: destino === indice ? "auto" : "instant",
+        });
+    }
+
+    faixa.addEventListener("scroll", atualizarPosicao, { passive: true });
+    faixa.addEventListener("touchstart", (evento) => {
+        inicioToque = evento.touches.length === 1 ? evento.touches[0] : undefined;
+    }, { passive: true });
+    faixa.addEventListener("touchend", (evento) => {
+        const inicio = inicioToque;
+        inicioToque = undefined;
+        if (!inicio || controles.hidden || evento.touches.length) return;
+        const fim = evento.changedTouches[0];
+        const horizontal = fim.clientX - inicio.clientX;
+        const vertical = fim.clientY - inicio.clientY;
+        if (Math.abs(horizontal) >= 40 && Math.abs(horizontal) > Math.abs(vertical)) {
+            mover(horizontal < 0 ? 1 : -1);
+        }
+    }, { passive: true });
+    faixa.addEventListener("touchcancel", () => { inicioToque = undefined; }, { passive: true });
+    galeria.querySelector("[data-gallery-prev]").addEventListener("click", () => mover(-1));
+    galeria.querySelector("[data-gallery-next]").addEventListener("click", () => mover(1));
+    pausa.addEventListener("click", () => {
+        const pausado = pausa.getAttribute("aria-pressed") === "false";
+        pausa.setAttribute("aria-pressed", String(pausado));
+        pausa.firstElementChild.textContent = pausado ? "▶" : "Ⅱ";
+    });
+    galeria.addEventListener("keydown", (evento) => {
+        if (controles.hidden || (evento.key !== "ArrowLeft" && evento.key !== "ArrowRight")) return;
+        evento.preventDefault();
+        mover(evento.key === "ArrowLeft" ? -1 : 1);
+    });
+    galeria.addEventListener("pointerenter", (evento) => {
+        if (evento.pointerType === "mouse") mouseSobreGaleria = true;
+    });
+    galeria.addEventListener("pointerleave", () => { mouseSobreGaleria = false; });
+    dialog.addEventListener("close", () => {
+        if (!dialog.open) clearInterval(timer);
+    });
+
+    return (imagens) => {
+        clearInterval(timer);
+        mouseSobreGaleria = false;
+        inicioToque = undefined;
+        faixa.replaceChildren(...imagens.map(({ src, alt }) => el("img", { src, alt: traduzir(alt), decoding: "async" })));
+        controles.hidden = imagens.length < 2;
+        pausa.setAttribute("aria-pressed", "false");
+        pausa.firstElementChild.textContent = "Ⅱ";
+        posicao.setAttribute("aria-live", "off");
+        dialog.showModal();
+        dialog.scrollTop = 0;
+        faixa.scrollTo({ left: 0, behavior: "instant" });
+        atualizarPosicao();
+
+        if (controles.hidden) return;
+        timer = setInterval(() => {
+            if (!dialog.open || document.hidden || reduzirMovimento.matches || mouseSobreGaleria || inicioToque ||
+                galeria.contains(document.activeElement) || pausa.getAttribute("aria-pressed") === "true") return;
+            mover(1, true);
+        }, 5000);
+    };
+}
+
 function renderProjetos(lista) {
     const grid = document.querySelector("[data-projects]");
     if (!grid) return;
     const dialog = document.querySelector("#project-dialog");
+    const abrirGaleria = prepararGaleria(dialog);
     dialog.addEventListener("click", event => {
         if (event.target !== dialog) return;
         const box = dialog.getBoundingClientRect();
@@ -49,16 +131,13 @@ function renderProjetos(lista) {
             event.clientY < box.top || event.clientY > box.bottom) dialog.close();
     });
 
-    grid.replaceChildren(...lista.map(({ titulo, descricao, imagem, tags = [], link }, indice) => {
+    grid.replaceChildren(...lista.map(({ titulo, descricao, imagem, imagens = [], tags = [], link }, indice) => {
         const tituloId = "card-title-" + indice;
         const botao = el("button", {
             type: "button", class: "card__details", text: "Ver detalhes",
             "aria-haspopup": "dialog", "aria-describedby": tituloId
         });
         botao.addEventListener("click", () => {
-            const foto = dialog.querySelector("img");
-            foto.src = imagem;
-            foto.alt = traduzir(titulo);
             dialog.querySelector("h2").textContent = traduzir(titulo);
             dialog.querySelector(".card__text").textContent = traduzir(descricao);
             dialog.querySelector(".tags").replaceChildren(...tags.map(tag => el("li", { text: traduzir(tag) })));
@@ -67,7 +146,7 @@ function renderProjetos(lista) {
             if (link) destino.href = link;
             else destino.removeAttribute("href");
             dialog.querySelector(".card__link--off").hidden = Boolean(link);
-            dialog.showModal();
+            abrirGaleria([{ src: imagem, alt: titulo }, ...imagens]);
         });
 
         return el("article", { class: "card reveal" },

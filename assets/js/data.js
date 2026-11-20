@@ -39,6 +39,7 @@ const STATS = [
     { valor: 7308684, rotulo: "Linhas de código" },
 ];
 
+// "imagem" é a capa. Use "imagens" para capturas adicionais do projeto.
 // Deixe "link" vazio para projetos sem página pública.
 const PROJETOS = [
     {
@@ -59,6 +60,12 @@ const PROJETOS = [
         titulo: "Daily Motivation",
         descricao: "App de motivação diária com frases inspiradoras, publicado na Play Store.",
         imagem: "assets/images/img-slide/img3.jpeg",
+        imagens: [
+            { src: "assets/images/img-slide/daily-motivation-1.webp", alt: "Tela inicial do aplicativo" },
+            { src: "assets/images/img-slide/daily-motivation-2.webp", alt: "Lista de frases" },
+            { src: "assets/images/img-slide/daily-motivation-3.webp", alt: "Tela do plano Premium" },
+            { src: "assets/images/img-slide/daily-motivation-4.webp", alt: "Tela de ajuda" },
+        ],
         tags: ["React Native"],
         link: "https://play.google.com/store/apps/details?id=br.com.gfc.feemotivacao",
     },
@@ -87,6 +94,10 @@ const PROJETOS = [
         titulo: "Site institucional",
         descricao: "Site institucional completo com interface amigável.",
         imagem: "assets/images/img-slide/img2.jpeg",
+        imagens: [
+            { src: "assets/images/img-slide/gfctech-sobre.jpeg", alt: "Seção Sobre nós do site institucional" },
+            { src: "assets/images/img-slide/gfctech-servicos.jpeg", alt: "Seção de serviços do site institucional" },
+        ],
         tags: ["HTML", "CSS", "JS"],
         link: "https://github.com/gabrielfcalixto/GFCTech_",
     },
@@ -94,6 +105,9 @@ const PROJETOS = [
         titulo: "Landing page",
         descricao: "Landing page responsiva com design limpo e funcional.",
         imagem: "assets/images/img-slide/img1.jpeg",
+        imagens: [
+            { src: "assets/images/img-slide/landing-page-mobile.jpeg", alt: "Formulário da landing page no celular" },
+        ],
         tags: ["HTML", "CSS"],
         link: "https://github.com/gabrielfcalixto/pgweb",
     },

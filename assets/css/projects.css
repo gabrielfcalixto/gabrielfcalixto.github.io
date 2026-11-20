@@ -63,31 +63,86 @@ html:has(.project-dialog[open]) { overflow: hidden; }
 .project-dialog form {
     position: sticky;
     top: 0;
+    z-index: 1;
     height: 0;
     display: flex;
     justify-content: flex-end;
 }
-.project-dialog button {
+.project-dialog form button {
     margin: .75rem;
     width: 44px;
     height: 44px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent);
     border-radius: 50%;
     background: var(--bg);
+    color: var(--accent-light);
     font-size: 1.6rem;
+    line-height: 1;
     cursor: pointer;
 }
-.project-dialog__image {
+.project-gallery { background: var(--bg-soft); }
+.project-gallery__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    height: min(50svh, 30rem);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    touch-action: pan-y pinch-zoom;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.project-gallery__track::-webkit-scrollbar { display: none; }
+.project-gallery__track img {
     width: 100%;
     height: min(50svh, 30rem);
     object-fit: contain;
-    background: var(--bg-soft);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.project-gallery__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    padding: .5rem;
+}
+.project-gallery__controls[hidden] { display: none; }
+.project-gallery__controls button {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent-light);
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.project-gallery__controls button:hover,
+.project-gallery__controls button[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--on-accent);
+}
+.project-gallery__position {
+    min-width: 3.25rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--fs-sm);
+    font-variant-numeric: tabular-nums;
 }
 .project-dialog__body { display: grid; gap: .65rem; padding: clamp(1rem, 4vw, 2rem); }
 .project-dialog__body [hidden] { display: none; }
 
+@media (prefers-reduced-motion: reduce) {
+    .project-gallery__controls [data-gallery-pause] { display: none; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
-    .projects__grid { scroll-behavior: smooth; }
+    .projects__grid, .project-gallery__track { scroll-behavior: smooth; }
 
     .project-dialog {
         opacity: 0;
