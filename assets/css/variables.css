@@ -1,0 +1,37 @@
+:root {
+    /* Cores */
+    --bg: #151312;
+    --bg-soft: #1c1a19;
+    --bg-raised: #23201f;
+    --border: #2e2b2a;
+    --text: #f5f3f2;
+    --text-muted: #998f8f;
+    --accent: #4f46e5;
+    --accent-light: #7c74ff;
+    --accent-soft: rgba(79, 70, 229, 0.14);
+    --success: #34d399;
+    --danger: #f87171;
+
+    /* Tipografia */
+    --font: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+    --fs-2xl: clamp(2.5rem, 1.8rem + 3.5vw, 4.25rem);
+
+    /* Espaçamento e forma */
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --space-8: 5rem;
+    --radius: 14px;
+    --radius-sm: 8px;
+    --container: 1120px;
+
+    /* Movimento */
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --dur: 0.3s;
+}

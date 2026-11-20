@@ -6,7 +6,6 @@
     font-size: 0.9em;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
-    top: 0;
     left: 50%; /* Centraliza a posição horizontalmente */
     transform: translateX(-50%); /* Ajusta a posição para ficar centralizado */
     width: auto;

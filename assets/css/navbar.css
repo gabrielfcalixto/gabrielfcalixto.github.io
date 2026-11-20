@@ -1,0 +1,30 @@
+.navbar {
+    position: fixed; top: 0.75rem; left: 50%; transform: translateX(-50%); z-index: 1000;
+    padding: 0.35rem;
+    background: rgba(28, 26, 25, 0.8);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border); border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.navbar__list { display: flex; gap: 0.25rem; }
+.navbar__link {
+    position: relative; display: grid; place-items: center;
+    width: 2.75rem; height: 2.75rem; border-radius: 50%;
+    color: var(--text-muted); font-size: 1.05rem;
+    transition: color var(--dur), background var(--dur);
+}
+.navbar__link:hover { color: var(--text); }
+.navbar__link[aria-current="true"] { color: #fff; background: var(--accent); }
+
+.navbar__tooltip {
+    position: absolute; top: calc(100% + 0.6rem); left: 50%; transform: translateX(-50%) translateY(-4px);
+    padding: 0.25rem 0.6rem; border-radius: var(--radius-sm);
+    background: var(--bg-raised); border: 1px solid var(--border);
+    font-size: 0.75rem; color: var(--text); white-space: nowrap;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s var(--ease);
+}
+.navbar__link:hover .navbar__tooltip,
+.navbar__link:focus-visible .navbar__tooltip { opacity: 1; transform: translateX(-50%); }
+
+@media (hover: none) { .navbar__tooltip { display: none; } }
