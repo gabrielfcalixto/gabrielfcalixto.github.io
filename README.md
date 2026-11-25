@@ -1,4 +1,4 @@
-﻿# Portfólio — Gabriel Calixto
+﻿# Portfólio 
 
 Site pessoal feito com HTML, CSS e JavaScript puros, sem framework e sem etapa de build.
 Publicado com GitHub Pages: https://gabrielfcalixto.github.io
